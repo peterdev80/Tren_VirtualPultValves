@@ -1,0 +1,30 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+    <RadialGradientBrush x:Key="gr" RadiusX="12.5" PresentationOptions:Freeze="True" >
+        <GradientStop Color="Black" Offset="1"/>
+        <GradientStop Color="#FF3872E4"/>
+    </RadialGradientBrush>
+    <DrawingBrush x:Key="brushL"  ViewportUnits="Absolute" 
+                          PresentationOptions:Freeze="True" 
+                          Viewport="3.4,0,7,7"  TileMode="Tile">
+        <DrawingBrush.Drawing>
+            <GeometryDrawing Brush="{StaticResource gr}" 
+                                     PresentationOptions:Freeze="True" 
+                                     Geometry="M0.50000105,29.71006 L62.574675,29.141001 63.833001,60.167005 z M62.575002,29.140965 L61.500322,0.5 0.5,29.71"/>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+    <DrawingBrush x:Key="brushR"  ViewportUnits="Absolute" 
+                          PresentationOptions:Freeze="True" 
+                          Viewport="3.4,0,7,7"  TileMode="Tile">
+        <DrawingBrush.Drawing>
+            <GeometryDrawing Brush="{StaticResource gr}" 
+                                     PresentationOptions:Freeze="True" 
+                                     Geometry="M106.83406,29.322197 L62.574675,29.141001 63.833001,60.167005 z M62.575002,29.140965 L61.500322,0.5 106.83406,28.310892"/>
+
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+</ResourceDictionary>

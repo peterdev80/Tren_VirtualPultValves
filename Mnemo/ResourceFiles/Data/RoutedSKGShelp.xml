@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<ArrayOfRoute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Route>
+    <Name>pca</Name>
+    <NamePen />
+    <NameGraphics>
+      <StringItem>
+        <Value>clrInd13_4</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__MNEMO_RES_16</ValueName>
+    <TypRoute>2</TypRoute>
+    <ValueType>Float</ValueType>
+    <ValuePos>0</ValuePos>
+  </Route>
+  <Route>
+    <Name>pbo</Name>
+    <NamePen />
+    <NameGraphics>
+      <StringItem>
+        <Value>clrInd14_10</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__MNEMO_RES_19</ValueName>
+    <TypRoute>2</TypRoute>
+    <ValueType>Float</ValueType>
+    <ValuePos>0</ValuePos>
+  </Route>
+  <Route>
+    <Name>pcy</Name>
+    <NamePen />
+    <NameGraphics>
+      <StringItem>
+        <Value>clrInd7_3</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__MNEMO_RES_20</ValueName>
+    <TypRoute>2</TypRoute>
+    <ValueType>Float</ValueType>
+    <ValuePos>0</ValuePos>
+  </Route>
+  <Route>
+    <Name>pob</Name>
+    <NamePen />
+    <NameGraphics>
+      <StringItem>
+        <Value>clrInd8_2</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__MNEMO_RES_17</ValueName>
+    <TypRoute>2</TypRoute>
+    <ValueType>Float</ValueType>
+    <ValuePos>0</ValuePos>
+  </Route>
+</ArrayOfRoute>

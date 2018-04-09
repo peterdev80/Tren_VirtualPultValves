@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E58D934E-5F77-4C84-B56E-36DAA4E934EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ResourceFiles</RootNamespace>
+    <AssemblyName>ResourceFiles</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <_FMSObjDir Condition="'$(FMSObjDir)' != ''">$(FMSObjDir)\fmsw\Peter\Mnemo\ResourceFiles\</_FMSObjDir>
+    <OutputPath>$(_FMSObjDir)bin\$(Configuration)\</OutputPath>
+    <BaseIntermediateOutputPath>$(_FMSObjDir)obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\AnimPen.xml" />
+    <Resource Include="Data\BlankRouted.xml" />
+    <Resource Include="Data\KDURouted.xml" />
+    <Resource Include="Data\RoutedFKDU.xml" />
+    <Resource Include="Data\RoutedRAZ.xml" />
+    <Resource Include="Data\RoutedSEP.xml" />
+    <Resource Include="Data\RoutedSEP_MC.xml" />
+    <Resource Include="Data\RoutedSKGShelp.xml" />
+    <Resource Include="Data\RoutedSOTRkok_MC.xml" />
+    <Resource Include="Data\RoutedSOTR_MC.xml" />
+    <Resource Include="Data\RoutedUDPO_MC.xml" />
+    <Resource Include="Data\RoutedUKDU_MC.xml" />
+    <Resource Include="Data\SerializationBlank.xml" />
+    <Resource Include="Data\SerializationFKDU.xml" />
+    <Resource Include="Data\SerializationHelper.xml" />
+    <Resource Include="Data\SerializationKDU.xml" />
+    <Resource Include="Data\SerializationRAZ.xml" />
+    <Resource Include="Data\SerializationSEP.xml" />
+    <Resource Include="Data\SerializationSEP_MC.xml" />
+    <Resource Include="Data\SerializationSKGShelp.xml" />
+    <Resource Include="Data\SerializationSotrkok_MC.xml" />
+    <Resource Include="Data\SerializationSOTR_MC.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\SerializationSTD.xml" />
+    <Resource Include="Data\SerializationUDPO_MC.xml" />
+    <Resource Include="Data\SerializationUKDU_MC.xml" />
+    <Resource Include="Data\STDRouted.xml" />
+    <Resource Include="Data\testRouted.xml" />
+    <Resource Include="Data\XValue.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\XMLVH.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\My.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\RoutedSOTRknr_MC.xml" />
+    <Resource Include="Data\SerializationSOTRknr_MC.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\RoutedSOTRkvo_MC.xml" />
+    <Resource Include="Data\SerializationSOTRkvo_MC.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\RoutedSotrXSASA_MC.xml" />
+    <Resource Include="Data\SerializationSOTRxsasa_MC.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\RoutedPitSSVP_MC.xml" />
+    <Resource Include="Data\SerializationPitSSVP_MC.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\RoutedFKDU_MC.xml" />
+    <Resource Include="Data\SerializationFKDU_MC.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\SerializationSR32_MC.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\RoutedSR32_MC.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\RoutedPR12_MC.xml" />
+    <Resource Include="Data\SerializationPR12_MC.xml" />
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <Resource>
+      <GZipIt>True</GZipIt>
+    </Resource>
+  </ItemDefinitionGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(ProjectDir)..\..\..\..\BuildTools\buildtools.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

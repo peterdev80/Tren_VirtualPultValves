@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C568869-1C80-42A4-82C3-930F1C0B1CFC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WPFMnemoLibrary</RootNamespace>
+    <AssemblyName>WPFMnemoLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20901.0</ExpressionBlendVersion>
+    <_FMSObjDir Condition="'$(FMSObjDir)' != ''">$(FMSObjDir)\fmsw\Peter\Mnemo\WPFMnemoLibrary\</_FMSObjDir>
+    <OutputPath>$(_FMSObjDir)bin\$(Configuration)\</OutputPath>
+    <BaseIntermediateOutputPath>$(_FMSObjDir)obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlLibrary\3StateKey.cs" />
+    <Compile Include="ControlLibrary\BasicMnemoKey.cs" />
+    <Compile Include="ControlLibrary\KeyBADPOif.cs" />
+    <Compile Include="ControlLibrary\KeyBADPOM.cs" />
+    <Compile Include="ControlLibrary\keyBADPOOC.cs" />
+    <Compile Include="ControlLibrary\KeyControl.cs" />
+    <Compile Include="ControlLibrary\KeyKDUPiroklapan.cs" />
+    <Compile Include="ControlLibrary\KeyType2Button.cs" />
+    <Compile Include="ControlLibrary\KeyTypeButtonLeft.cs" />
+    <Compile Include="ControlLibrary\KeyTypeKeyLeft.cs" />
+    <Compile Include="ControlLibrary\MBtnKey.cs" />
+    <Compile Include="ControlLibrary\MColorLabel.cs" />
+    <Compile Include="ControlLibrary\MDvigTypA.cs" />
+    <Compile Include="ControlLibrary\MKeyEM.cs" />
+    <Compile Include="ControlLibrary\MKeyEU.cs" />
+    <Compile Include="ControlLibrary\MKeyKey.cs" />
+    <Compile Include="ControlLibrary\MKlapanKKS.cs" />
+    <Compile Include="ControlLibrary\MKlapanKVD.cs" />
+    <Compile Include="ControlLibrary\MnemoAnimatePribor.cs" />
+    <Compile Include="ControlLibrary\MnemoAnimListPatch.cs" />
+    <Compile Include="ControlLibrary\MnemoAnimPatchList.cs" />
+    <Compile Include="ControlLibrary\MnemoDateVisualer.cs" />
+    <Compile Include="ControlLibrary\MnemoTransporant.cs" />
+    <Compile Include="ControlLibrary\MnemoVolt.cs" />
+    <Compile Include="ControlLibrary\MZaglushka.cs" />
+    <Compile Include="ControlLibrary\OKCommand.cs" />
+    <Compile Include="ControlLibrary\VentTypeA.cs" />
+    <Compile Include="Converters.cs" />
+    <Compile Include="Model\LinkInpu.cs" />
+    <Compile Include="Model\LinkInpuLinux.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Model\MnemoTwoStateValue.cs" />
+    <Compile Include="Model\MnemoTwoStateVar.cs" />
+    <Compile Include="ViewModel\CiclTK708ViewModel.cs" />
+    <Compile Include="ViewModel\CommandViewModel.cs" />
+    <Compile Include="ViewModel\DvigViewModel.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\MnemoViewModel.cs" />
+    <Compile Include="ViewModel\OtvodPodvodViewModel.cs" />
+    <Compile Include="ViewModel\PitSSWPViewModel.cs" />
+    <Compile Include="ViewModel\SepViewModel.cs" />
+    <Compile Include="ViewModel\SMVViewModel.cs" />
+    <Compile Include="ViewModel\SotrMCViewModel.cs" />
+    <Compile Include="ViewModel\SOTRViewModel.cs" />
+    <Compile Include="ViewModel\SUViewModel.cs" />
+    <Compile Include="ViewModel\UKDUViewModel.cs" />
+    <Compile Include="ViewModel\UpravBADPOViewModel.cs" />
+    <Compile Include="ViewModel\UpravNaduvViewModel.cs" />
+    <Compile Include="ViewModel\UpravProg12ViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\BADPOView.xaml.cs">
+      <DependentUpon>BADPOView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DvigView.xaml.cs">
+      <DependentUpon>DvigView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KDUFuncView.xaml.cs">
+      <DependentUpon>KDUFuncView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainUser.xaml.cs">
+      <DependentUpon>MainUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NaduvView.xaml.cs">
+      <DependentUpon>NaduvView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PitSSWP.xaml.cs">
+      <DependentUpon>PitSSWP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pr12View.xaml.cs">
+      <DependentUpon>Pr12View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SMVView.xaml.cs">
+      <DependentUpon>SMVView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SotrMCView.xaml.cs">
+      <DependentUpon>SotrMCView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SOTRView.xaml.cs">
+      <DependentUpon>SOTRView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SRView.xaml.cs">
+      <DependentUpon>SRView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\STDView.xaml.cs">
+      <DependentUpon>STDView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SULiteView.xaml.cs">
+      <DependentUpon>SULiteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SUView.xaml.cs">
+      <DependentUpon>SUView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpravKDU.xaml.cs">
+      <DependentUpon>UpravKDU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewCiclogramm.xaml.cs">
+      <DependentUpon>ViewCiclogramm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewControl.xaml.cs">
+      <DependentUpon>ViewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewDPOisSSWP_MC.xaml.cs">
+      <DependentUpon>ViewDPOisSSWP_MC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewEP.xaml.cs">
+      <DependentUpon>ViewEP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewFKDU_MC.xaml.cs">
+      <DependentUpon>ViewFKDU_MC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewNaduvMC.xaml.cs">
+      <DependentUpon>ViewNaduvMC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewOK29_MC.xaml.cs">
+      <DependentUpon>ViewOK29_MC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewOtvodPodvod.xaml.cs">
+      <DependentUpon>ViewOtvodPodvod.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewPitSEP_MC.xaml.cs">
+      <DependentUpon>ViewPitSEP_MC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewPR12_MC.xaml.cs">
+      <DependentUpon>ViewPR12_MC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewSEP.xaml.cs">
+      <DependentUpon>ViewSEP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewSEPMC.xaml.cs">
+      <DependentUpon>ViewSEPMC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewSIG.xaml.cs">
+      <DependentUpon>ViewSIG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewSios.xaml.cs">
+      <DependentUpon>ViewSios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewSUSl.xaml.cs">
+      <DependentUpon>ViewSUSl.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Images\rasp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\fmsnet\fmslapi\fmslapi.csproj">
+      <Project>{dfbf2c76-486b-44fc-be13-82c41efee1af}</Project>
+      <Name>fmslapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PatchMnemoLib\PatchMnemoLib.csproj">
+      <Project>{97A7996E-0EE8-4FA4-B2B3-C330B3A89DA2}</Project>
+      <Name>PatchMnemoLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MnemoTools\MnemoTools.csproj">
+      <Project>{7FE3D7E6-9F0E-4CDD-A0CE-E8F64B336E85}</Project>
+      <Name>MnemoTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValueModel\ValueModel.csproj">
+      <Project>{8fe10a49-5b2e-4a5c-8847-9e7f5e4fe9c8}</Project>
+      <Name>ValueModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ControlLibrary\ResourceMnemoKey\BrushDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlLibrary\ResourceMnemoKey\MDvigTyoA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\BADPOView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DvigView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KDUFuncView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NaduvView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PitSSWP.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Pr12View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SMVView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SotrMCView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SOTRView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SRView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\STDView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SULiteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SUView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UpravKDU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ViewCiclogramm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ViewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewDPOisSSWP_MC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewEP.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ViewFKDU_MC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewNaduvMC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewOK29_MC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewOtvodPodvod.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ViewPitSEP_MC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewPR12_MC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewSEP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewSEPMC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewSIG.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ViewSios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewSUSl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sios.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Пит_ССВП_МС.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

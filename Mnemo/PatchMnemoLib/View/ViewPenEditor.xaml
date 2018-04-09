@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="PatchMnemoLib.View.ViewPenEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:libconvert="clr-namespace:MUtilites;assembly=MUtilites"
+             mc:Ignorable="d" 
+             d:DesignHeight="290" d:DesignWidth="566" Unloaded="UserControl_Unloaded">
+    <UserControl.Resources>
+        <libconvert:ColorToBrushConverter x:Key="convColorToBrush"/>
+    </UserControl.Resources>
+    <TabControl  HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="563" Height="288" SelectionChanged="tabControl1_SelectionChanged">
+        <TabItem Header="Анимация" Name="tabItem1">
+            <Grid Name="GridAnim">
+                <ListBox Height="230" HorizontalAlignment="Left" Margin="12,12,0,0" Name="listBoxAnim" VerticalAlignment="Top" Width="189" ItemsSource="{Binding}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border Margin="5" BorderThickness="2" BorderBrush="SteelBlue" CornerRadius="4">
+                                <Grid Margin="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock FontWeight="Bold" Text="{Binding Name}"/>
+                                </Grid>
+                            </Border>
+
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Grid Height="230" HorizontalAlignment="Right" Margin="0,12,121,0" Name="grid1" VerticalAlignment="Top" Width="217" DataContext="{Binding ElementName=listBoxAnim, Path=SelectedItem}">
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="15,9,0,0" Name="textBlock1" Text="ToValue" VerticalAlignment="Top" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="15,43,0,0" Name="textBlock2" Text="Dooration" VerticalAlignment="Top" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="15,72,0,0" Name="textBlock3" Text="To" VerticalAlignment="Top" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="15,108,0,0" Name="textBlock4" Text="By" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="68,6,0,0" Name="textBox2" VerticalAlignment="Top" Width="76" Text="{Binding ToValue}" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="68,35,0,0" Name="textBox3" VerticalAlignment="Top" Width="76" Text="{Binding Dooration}" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="68,69,0,0" Name="textBox4" VerticalAlignment="Top" Width="76" Text="{Binding To}" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="68,105,0,0" Name="textBox5" VerticalAlignment="Top" Width="76" Text="{Binding By}" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="169,136,0,0" Name="textBlock8" Text="Name" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="87,136,0,0" Name="tbName" VerticalAlignment="Top" Width="76" IsReadOnly="True" Text="{Binding Name}" />
+                    <Button Content="Новая анимация" Height="23" HorizontalAlignment="Left" Margin="6,134,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+                    <Button Content="Сохранить" Height="23" HorizontalAlignment="Left" Margin="6,163,0,0" Name="btnSaveAnim" VerticalAlignment="Top" Width="75" Click="button2_Click" IsEnabled="False" />
+                </Grid>
+
+
+
+            </Grid>
+        </TabItem>
+        <TabItem Header="Кисти" >
+            <Grid Name="GridPen">
+                <ListBox Height="236" HorizontalAlignment="Left" Margin="7,5,0,0" Name="listBoxPen" VerticalAlignment="Top" Width="196" ItemsSource="{Binding}" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border Margin="5" BorderThickness="2" BorderBrush="SteelBlue" CornerRadius="4">
+                                <Grid Margin="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock FontWeight="Bold" Text="{Binding PenName}"/>
+                                </Grid>
+                            </Border>
+
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Grid Height="243" HorizontalAlignment="Left" Margin="210,8,0,0" Name="grid2" VerticalAlignment="Top" Width="228" DataContext="{Binding ElementName=listBoxPen, Path=SelectedItem}">
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="25,46,0,0" Name="textBlock6" Text="Размер" VerticalAlignment="Top" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="23,135,0,0" Name="textBlock7" Text="Анимация" VerticalAlignment="Top" />
+                    <CheckBox Content="Анимация" Height="16" HorizontalAlignment="Left" Margin="23,155,0,0" Name="checkBox1" VerticalAlignment="Top" Width="73" IsChecked="{Binding Animate}" />
+                   <TextBox Height="23" HorizontalAlignment="Left" Margin="85,46,0,0" Name="textBox6" VerticalAlignment="Top" Width="120" Text="{Binding PenSize}" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="85,126,0,0" Name="comboBox1" VerticalAlignment="Top" Width="118" ItemsSource="{Binding ElementName=GridAnim, Path=DataContext}" SelectedValue="{Binding AnimateName,Mode=TwoWay}" SelectedValuePath="Name">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="source" FontWeight="Bold" Text="{Binding Name}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Button Content="Новая кисть" Height="23" HorizontalAlignment="Left" Margin="6,178,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click_1" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="7,203,0,0" Name="tbPenName" VerticalAlignment="Top" Width="120" Text="{Binding PenName}" IsReadOnly="True" />
+                    <Button Content="Сохранить" Height="23" HorizontalAlignment="Left" Margin="130,201,0,0" Name="btnSavePen" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="btnSavePen_Click" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="85,67,0,0" Name="textBox7" Text="{Binding LineDas}" VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="85,88,0,0" Name="textBox8" Text="{Binding SpaceDash}" VerticalAlignment="Top" Width="120" />
+                    <Label Content="LineDas" Height="28" HorizontalAlignment="Left" Margin="23,62,0,0" Name="label1" VerticalAlignment="Top" />
+                <StackPanel Orientation="Horizontal" Margin="0,6,6,203">
+                    <TextBox Height="23" Name="textBoxms" Width="88" Text="{Binding ColorPen}" />
+                    <Border BorderBrush="Silver" BorderThickness="1" Height="27" Width="30" Background="{Binding ColorPen, Mode=OneWay,
+                               Converter={StaticResource convColorToBrush}}" />
+                    <Button Content="Цвет Заливки" Height="23" Width="89" Click="Button_Click" />
+                </StackPanel>
+                </Grid>
+               
+            </Grid>
+        </TabItem>
+    </TabControl>
+</UserControl>

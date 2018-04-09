@@ -1,0 +1,209 @@
+﻿<UserControl x:Class="PatchMnemoLib.View.ViewRouted"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:PatchMnemoLib.ViewModelRout"
+             xmlns:local="clr-namespace:PatchMnemoLib"
+             mc:Ignorable="d" d:DesignWidth="682" Loaded="UserControl_Loaded" Height="840.194">
+    <UserControl.Resources>
+
+        <vm:ViewModelRouted x:Key="RoutList" />
+        <Style x:Key="StyleComboBox" TargetType="ComboBox">
+            <Setter Property="ItemsSource" Value="{Binding Path=AllVar, Source={StaticResource RoutList}}"/>
+            <Setter Property="SelectedValuePath" Value="VarName"/>
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate >
+                        <TextBlock x:Name="source" FontWeight="Bold" Text="{Binding VarName}"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+        <Style x:Key="StyleComboBox1" TargetType="ComboBox">
+            <Setter Property="ItemsSource" Value="{Binding Path=AllPen, Source={StaticResource RoutList}}"/>
+            <Setter Property="SelectedValuePath" Value="PenName"/>
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate >
+                        <TextBlock x:Name="source" FontWeight="Bold" Text="{Binding PenName}"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+    </UserControl.Resources>
+    <TabControl Height="599" HorizontalAlignment="Left" Margin="13,8,0,0" Name="tabControl1" VerticalAlignment="Top" Width="671">
+        <TabItem Header="tabItem1" Name="tabItem1">
+            <Grid Name="root" DataContext="{Binding Source={StaticResource RoutList}}" Height="837">
+        
+        <ListBox Height="239" HorizontalAlignment="Left" Margin="16,20,0,0" Name="listBox1" VerticalAlignment="Top" Width="165" ItemsSource="{Binding Path=RoutList}" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="5" BorderThickness="2" BorderBrush="SteelBlue" CornerRadius="4">
+                        <Grid Margin="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock FontWeight="Bold" Text="{Binding Name}"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <GroupBox Header="Свойства маршрута" Height="307" HorizontalAlignment="Left" Margin="198,12,0,0" Name="groupBox1" VerticalAlignment="Top" Width="247" DataContext="{Binding ElementName=listBox1, Path=SelectedItem}">
+            <Grid DataContext="{Binding ElementName=listBox1, Path=SelectedItem}" Name="sgrid" Height="289">
+                <ListBox Height="105" HorizontalAlignment="Left" Margin="15,28,0,0" Name="listBox2" VerticalAlignment="Top" Width="201" ItemsSource="{Binding Path=ListPen, Mode=TwoWay, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True}" SelectionChanged="listBox2_SelectionChanged" IsManipulationEnabled="False" SelectionMode="Single">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border Margin="5" BorderThickness="2" BorderBrush="SteelBlue" CornerRadius="4">
+                                <Grid Margin="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock FontWeight="Bold" Text="{Binding}"/>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button Content="Добавить" Height="23" HorizontalAlignment="Left" Margin="15,192,0,0" Name="button1" VerticalAlignment="Top" Width="57" Click="button1_Click" />
+                <Button Content="Удалить" Height="23" HorizontalAlignment="Left" Margin="82,192,0,0" Name="button2" VerticalAlignment="Top" Width="53" Click="button2_Click" />
+                <Button Content="заменить" Height="23" HorizontalAlignment="Right" Margin="0,163,19,0" Name="button3" VerticalAlignment="Top" Width="62" Click="button3_Click" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="65,221,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120" Style="{StaticResource StyleComboBox}" SelectedValue="{Binding Mode=TwoWay, Path=ValueName, UpdateSourceTrigger=PropertyChanged}" />
+                <Label Content="Обмен" Height="28" HorizontalAlignment="Left" Margin="16,221,0,0" Name="label1" VerticalAlignment="Top"  />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="65,252,0,0" Name="textBox1" VerticalAlignment="Top" Width="120" Text="{Binding ValuePos}" />
+                <Label Content="номер" Height="28" HorizontalAlignment="Left" Margin="15,247,0,0" Name="label2" VerticalAlignment="Top" />
+                <Label Content="кисти" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label4" VerticalAlignment="Top" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="15,163,0,0" Name="comboBox2" VerticalAlignment="Top" Width="120" Style="{StaticResource StyleComboBox1}" IsEnabled="True" SelectedValue="{Binding ElementName=listBox2, Path=SelectedValue, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+                <Label Content="Label" Height="28" HorizontalAlignment="Left" Margin="15,139,0,0" Name="label5" VerticalAlignment="Top" />
+            </Grid>
+        </GroupBox>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="16,265,0,0" Name="textBox2" VerticalAlignment="Top" Width="146" />
+        <Button Content="Добавить" Height="23" HorizontalAlignment="Left" Margin="12,296,0,0" Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" />
+        <Button Content="Удалить" Height="23" HorizontalAlignment="Left" Margin="98,296,0,0" Name="button5" VerticalAlignment="Top" Width="64" Click="button5_Click" />
+        <GroupBox Header="{Binding Path=SelectedItem.Name, ElementName=listBox1}" DataContext="{Binding ElementName=listBox1, Path=SelectedItem}" HorizontalAlignment="Left" Margin="0,325,0,0" VerticalAlignment="Top" Height="236" Width="182">
+            <ListBox HorizontalAlignment="Stretch" Margin="10,22,0,0" VerticalAlignment="Stretch"  ItemsSource="{Binding Path=ListGraphics}" Name="lbm" />
+
+        </GroupBox>
+        <Button Content="Добавить" Height="23" HorizontalAlignment="Left" Margin="188,434,0,0" Name="button6" VerticalAlignment="Top" Width="75" Click="button6_Click" />
+        <Button Content="Удалить" Height="23" HorizontalAlignment="Left" Margin="188,395,0,0" Name="button7" VerticalAlignment="Top" Width="75" Click="button7_Click" />
+        <ListBox Height="225" HorizontalAlignment="Left" Margin="296,325,0,0" Name="listView1" VerticalAlignment="Top" Width="143" ItemsSource="{Binding AllPatch}" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>                  
+                            <TextBlock FontWeight="Bold" Text="{Binding Name}"/>
+                      </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label DataContext="{Binding Path=SelectedValue, ElementName=listView1}" Height="28" HorizontalAlignment="Left" Margin="198,478,0,0" Name="label3" VerticalAlignment="Top" Content="{Binding Name}" />
+        <Label Content="{Binding Path=SelectedValue, ElementName=lbm}" Height="28" HorizontalAlignment="Left" Margin="188,361,0,0" Name="label6" VerticalAlignment="Top" />
+        <Button Content="сохранить" Height="23" HorizontalAlignment="Left" Margin="193,527,0,0" Name="button8" VerticalAlignment="Top" Width="75" Click="button8_Click" />
+                <ListBox Height="239" HorizontalAlignment="Left" ItemsSource="{Binding Path=FindEl}" Margin="451,20,0,0" Name="listBox4" VerticalAlignment="Top" Width="165" DataContext="{Binding}" SelectionChanged="listBox4_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="4" Margin="5">
+                                <Grid Margin="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="451,265,0,0" Name="textBox6" VerticalAlignment="Top" Width="120" />
+                <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="577,265,0,0" Name="button9" VerticalAlignment="Top" Width="30" Click="button9_Click" />
+            </Grid> </TabItem>
+        <TabItem Header="Значение">
+            <Grid DataContext="{Binding ElementName=root, Path=DataContext}" Height="837" Name="root2" Background="#FFFFBEBE">
+                <ListBox Height="239" HorizontalAlignment="Left" ItemsSource="{Binding Path=ShowerList}" Margin="16,20,0,0" Name="listBox3" VerticalAlignment="Top" Width="165">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="4" Margin="5">
+                                <Grid Margin="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <GroupBox DataContext="{Binding ElementName=listBox3, Path=SelectedItem}" Header="Свойства маршрута" Height="307" HorizontalAlignment="Left" Margin="198,12,0,0" Name="groupBox2" VerticalAlignment="Top" Width="247">
+                    <Grid DataContext="{Binding ElementName=listBox3, Path=SelectedItem}" Height="289" Name="sgrid2">
+                        <ComboBox Height="23" HorizontalAlignment="Left" Margin="65,221,0,0" Name="comboBox3" SelectedValue="{Binding Mode=TwoWay, Path=ValueName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StyleComboBox}" VerticalAlignment="Top" Width="120" />
+                        <Label Content="Обмен" Height="28" HorizontalAlignment="Left" Margin="16,221,0,0" Name="label7" VerticalAlignment="Top" />
+                        <TextBox Height="23" HorizontalAlignment="Left" Margin="54,38,0,0" Name="textBox3" VerticalAlignment="Top" Width="120" Text="{Binding ValueType}" />
+                        <TextBox Height="23" HorizontalAlignment="Left" Margin="54,75,0,0" Name="textBox5" VerticalAlignment="Top" Width="120" Text="{Binding ValueRem}" />
+                    </Grid>
+                </GroupBox>
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="16,265,0,0" Name="textBox4" VerticalAlignment="Top" Width="146" />
+                <Button Content="Добавить" Height="23" HorizontalAlignment="Left" Margin="12,296,0,0" Name="button12" VerticalAlignment="Top" Width="75" Click="button12_Click" />
+                <Button Content="Удалить" Height="23" HorizontalAlignment="Left" Margin="98,296,0,0" Name="button13" VerticalAlignment="Top" Width="64" Click="button13_Click" />
+                <GroupBox DataContext="{Binding ElementName=listBox3, Path=SelectedItem}" Header="{Binding Path=SelectedItem.Name, ElementName=listBox1}" Height="236" HorizontalAlignment="Left" Margin="0,325,0,0" VerticalAlignment="Top" Width="182">
+                    <ListBox HorizontalAlignment="Stretch" ItemsSource="{Binding Path=ListGraphics}" Margin="10,22,0,0" Name="listBox5" VerticalAlignment="Stretch" />
+                </GroupBox>
+                <Button Content="Добавить" Height="23" HorizontalAlignment="Left" Margin="188,434,0,0" Name="button14" VerticalAlignment="Top" Width="75" Click="button14_Click" />
+                <Button Content="Удалить" Height="23" HorizontalAlignment="Left" Margin="188,395,0,0" Name="button15" VerticalAlignment="Top" Width="75" Click="button15_Click" />
+                <ListBox Height="225" HorizontalAlignment="Left" ItemsSource="{Binding AllLabel}" Margin="296,325,0,0" Name="listView2" VerticalAlignment="Top" Width="143">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Label Content="{Binding Name}" DataContext="{Binding Path=SelectedValue, ElementName=listView2}" Height="28" HorizontalAlignment="Left" Margin="198,478,0,0" Name="label11" VerticalAlignment="Top" />
+                <Label Content="{Binding Path=SelectedValue, ElementName=listBox5}" Height="28" HorizontalAlignment="Left" Margin="188,361,0,0" Name="label12" VerticalAlignment="Top" />
+                <Button Click="button8_Click" Content="сохранить" Height="23" HorizontalAlignment="Left" Margin="193,527,0,0" Name="button16" VerticalAlignment="Top" Width="75" />
+            </Grid>
+        </TabItem>
+        <TabItem Header="tabItem1" Name="tabItem2">
+            <Grid DataContext="{Binding ElementName=root, Path=DataContext}" Height="837" Name="grid1" Background="#FFD8F9BC">
+                <ListBox Height="239" HorizontalAlignment="Left" ItemsSource="{Binding Path=VisiblirList}" Margin="16,20,0,0" Name="listBoxVis" VerticalAlignment="Top" Width="165">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="SteelBlue" BorderThickness="2" CornerRadius="4" Margin="5">
+                                <Grid Margin="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <GroupBox DataContext="{Binding ElementName=listBoxVis, Path=SelectedItem}" Header="Свойства маршрута" Height="307" HorizontalAlignment="Left" Margin="198,12,0,0" Name="groupBox3" VerticalAlignment="Top" Width="247">
+                    <Grid DataContext="{Binding ElementName=listBoxVis, Path=SelectedItem}" Height="289" Name="grid2">
+                        <ComboBox Height="23" HorizontalAlignment="Left" Margin="65,221,0,0" Name="comboBox4" SelectedValue="{Binding Mode=TwoWay, Path=ValueName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StyleComboBox}" VerticalAlignment="Top" Width="120" />
+                        <Label Content="Обмен" Height="28" HorizontalAlignment="Left" Margin="16,221,0,0" Name="label8" VerticalAlignment="Top" />
+                        <TextBox Height="23" HorizontalAlignment="Left" Margin="65,252,0,0" Name="textBox7" Text="{Binding ValuePos}" VerticalAlignment="Top" Width="120" />
+                        <Label Content="номер" Height="28" HorizontalAlignment="Left" Margin="15,247,0,0" Name="label9" VerticalAlignment="Top" />
+                    </Grid>
+                </GroupBox>
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="16,265,0,0" Name="textBox8" VerticalAlignment="Top" Width="146" />
+                <Button Content="Добавить" Height="23" HorizontalAlignment="Left" Margin="12,296,0,0" Name="button18" VerticalAlignment="Top" Width="75" Click="button18_Click" />
+                <Button Content="Удалить" Height="23" HorizontalAlignment="Left" Margin="98,296,0,0" Name="button19" VerticalAlignment="Top" Width="64" Click="button19_Click" />
+                <GroupBox DataContext="{Binding ElementName=listBoxVis, Path=SelectedItem}" Header="{Binding Path=SelectedItem.Name, ElementName=listBox1}" Height="236" HorizontalAlignment="Left" Margin="0,325,0,0" VerticalAlignment="Top" Width="182">
+                    <ListBox HorizontalAlignment="Stretch" ItemsSource="{Binding Path=ListGraphics}" Margin="10,22,0,0" Name="listBox8" VerticalAlignment="Stretch" />
+                </GroupBox>
+                <Button Content="Добавить" Height="23" HorizontalAlignment="Left" Margin="188,434,0,0" Name="button20" VerticalAlignment="Top" Width="75" Click="button20_Click" />
+                <Button Content="Удалить" Height="23" HorizontalAlignment="Left" Margin="188,395,0,0" Name="button21" VerticalAlignment="Top" Width="75" Click="button21_Click" />
+                <ListBox Height="225" HorizontalAlignment="Left" ItemsSource="{Binding AllPatch}" Margin="296,325,0,0" Name="lw1" VerticalAlignment="Top" Width="143">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Label Content="{Binding Name}" DataContext="{Binding Path=SelectedValue, ElementName=lw1}" Height="28" HorizontalAlignment="Left" Margin="198,478,0,0" Name="label_3" VerticalAlignment="Top" />
+                <Label Content="{Binding Path=SelectedValue, ElementName=listBox8}" Height="28" HorizontalAlignment="Left" Margin="188,361,0,0" Name="label_6" VerticalAlignment="Top" />
+                <Button Click="button8_Click" Content="сохранить" Height="23" HorizontalAlignment="Left" Margin="193,527,0,0" Name="button22" VerticalAlignment="Top" Width="75" />
+            </Grid>
+        </TabItem>
+    </TabControl>
+</UserControl>

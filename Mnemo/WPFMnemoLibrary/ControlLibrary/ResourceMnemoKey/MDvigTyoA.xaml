@@ -1,0 +1,557 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:WPFMnemoLibrary.ControlLibrary"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Style TargetType="{x:Type local:MDvigTypA}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MDvigTypA}">
+                    <Grid  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.6*"/>
+                            <ColumnDefinition Width="0.4*"/>
+                        </Grid.ColumnDefinitions>
+                        <Path x:Name="Rect"  Grid.Column="1" Margin="0,1,0,1" Data="M0.5,0.5 L12.633,0.5 L12.633,10.333 L0.5,10.333 z" Fill="#FFF4F4F5" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" Width="Auto" Height="Auto" />
+                        <Path x:Name="Tria"  Grid.Column="0" Data="M0.4695,0.5 L10.638005,5.5128134 10.637204,6.1738333 10.61739,6.8289857 0.50000005,11.653 z" Fill="#FFF4F4F5" Width="Auto" Height="Auto" Stretch="Fill" Stroke="Black"  StrokeStartLineCap="Round" StrokeEndLineCap="Round" VerticalAlignment="Top"  HorizontalAlignment="Stretch" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="State" Value="1">
+                            <Setter TargetName="Rect" Property="Fill" Value="Yellow"/>
+                            <Setter  TargetName="Tria" Property="Fill" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  TargetType="{x:Type local:MnemoAnimatePribor}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type  local:MnemoAnimatePribor}">
+                    <Grid>
+                        <Path x:Name="Korpus" Stretch="Fill" Stroke="Black">
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathFigure StartPoint="0.500035962110296,1.00099844027586">
+                                        <LineSegment Point="19.1673167715116,1.00099844027586"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="28.5003323233615,9.83501702449654">
+                                        <LineSegment Point="37.0010079331921,9.83402325492477"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="28.3336656566948,15.6689997820327">
+                                        <LineSegment Point="36.6650232071381,15.6689997820327"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="36.5000138527813,9.8350096854281">
+                                        <LineSegment Point="36.3339734171593,16.0009986146724"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="0.500007803822316,6.66800428921989">
+                                        <LineSegment Point="6.83398591389175,6.66800428921989"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="28.5540081223489,15.5684457425224">
+                                        <BezierSegment IsSmoothJoin="True" Point3="16.916890478378,23.5839982458795" Point2="22.3970652858995,23.5839982458795" Point1="27.0310099739374,20.2089292168152"/>
+                                        <PolyBezierSegment Points="10.197306,23.583998 4.7500078,18.509668 4.7500078,12.250164 4.7500078,10.249753 5.3063475,8.3703846 6.2827582,6.7389984"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="16.9170077798915,0.91699845986365">
+                                        <BezierSegment Point3="28.7200077932396,9.48799826344645" Point2="27.3959967090031,4.56386934803972" Point1="22.6137099817733,0.91699845986365"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="0.499999995708436,0.499999999981299">
+                                        <LineSegment Point="0.499999995708436,7.1670034840833"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                        <Path x:Name="Lopasti" HorizontalAlignment="Stretch" Margin="6.038,1.884,9.472,1.252" Stretch="Fill" Stroke="Black" Width="Auto" RenderTransformOrigin="0.5,0.5">
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathFigure IsClosed="True" StartPoint="10.4919999403954,13.5400000381279">
+                                        <BezierSegment IsSmoothJoin="True" Point3="13.7000001615772,10.5819999871254" Point2="11.9282705602416,10.5819999871254" Point1="10.4919999403954,11.9063415665608"/>
+                                        <BezierSegment Point3="16.9079999403953,13.5399999871254" Point2="16.9079999403953,11.9063415665608" Point1="15.4717295417309,10.5819999871254"/>
+                                        <BezierSegment IsSmoothJoin="True" Point3="13.6999997192135,16.4979999871254" Point2="15.4717290993672,16.4979999871254" Point1="16.9079999403953,15.1736585176092"/>
+                                        <BezierSegment Point3="10.4919999403954,13.5399999871254" Point2="10.4919999403954,15.1736585176092" Point1="11.9282701178779,16.4979999871254"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="2.78579803590982,8.33711847741172">
+                                        <PolyLineSegment Points="7.3103931,9.8127492 11.103597,12.273708 11.286313,12.360183"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="8.74470729944692,23.8317337485135">
+                                        <PolyLineSegment Points="10.0292,19.656137 12.509309,16.083637"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="16.3595745691269,14.7612204652195">
+                                        <PolyLineSegment Points="20.404418,17.531215 23.777238,18.2718"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="14.9249033183536,11.1119936394925">
+                                        <PolyLineSegment Points="17.498107,7.6565784 18.436573,3.884467"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                            <Path.RenderTransform>
+                                <RotateTransform x:Name="TransRotate"
+										 Angle="0" />
+                            </Path.RenderTransform>
+                        </Path>
+
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="State" Value="1">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard  x:Name="spin">
+                                    <Storyboard>
+                                        <DoubleAnimation  
+                             Storyboard.TargetName="TransRotate" 
+                             Storyboard.TargetProperty="Angle"
+                             By="360" 
+                             Duration="0:0:01"  
+                             AutoReverse="False" 
+                             RepeatBehavior="Forever" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="spin"></StopStoryboard>
+                            </Trigger.ExitActions>
+
+                        </Trigger>
+
+                        <Trigger Property="State" Value="2">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard  x:Name="spinL">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                             Storyboard.TargetName="TransRotate" 
+                             Storyboard.TargetProperty="Angle"
+                             By="-360" 
+                             Duration="0:0:01"  
+                             AutoReverse="False" 
+                             RepeatBehavior="Forever" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="spinL"></StopStoryboard>
+                            </Trigger.ExitActions>
+
+                        </Trigger>
+
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  TargetType="{x:Type local:VentTypeA}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:VentTypeA}">
+                    <ControlTemplate.Resources>
+                        <SolidColorBrush x:Key="W" Color="White"/>
+                        <SolidColorBrush x:Key="Y" Color="Yellow"/>
+
+                    </ControlTemplate.Resources>
+                    <Grid Height="31.375" Width="17.375">
+                        <Path x:Name="V_2" Fill="#FFF4F4F5" Height="14.5" Stretch="Fill" Stroke="Black" Width="Auto" Margin="3.5,0,5.876,0" VerticalAlignment="Bottom">
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathFigure IsClosed="True" StartPoint="0.5,5.125">
+                                        <BezierSegment IsSmoothJoin="True" Point3="3.0625,0.5" Point2="1.6472704410553,0.5" Point1="0.5,2.57068300247192"/>
+                                        <BezierSegment Point3="5.625,5.125" Point2="5.625,2.57068300247192" Point1="4.47772979736328,0.5"/>
+                                        <BezierSegment IsSmoothJoin="True" Point3="3.0625,9.75" Point2="4.47772979736328,9.75" Point1="5.625,7.67931699752808"/>
+                                        <BezierSegment Point3="0.5,5.125" Point2="0.5,7.67931699752808" Point1="1.64727008342743,9.75"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                        <Path x:Name="V_1" Fill="#FFF4F4F5" Height="Auto" Stretch="Fill" Stroke="Black" Width="Auto" Margin="3.5,2.375,5.876,14.5" VerticalAlignment="Stretch">
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathFigure IsClosed="True" StartPoint="0.5,5.125">
+                                        <BezierSegment IsSmoothJoin="True" Point3="3.0625,0.5" Point2="1.6472704410553,0.5" Point1="0.5,2.57068300247192"/>
+                                        <BezierSegment Point3="5.625,5.125" Point2="5.625,2.57068300247192" Point1="4.47772979736328,0.5"/>
+                                        <BezierSegment IsSmoothJoin="True" Point3="3.0625,9.75" Point2="4.47772979736328,9.75" Point1="5.625,7.67931699752808"/>
+                                        <BezierSegment Point3="0.5,5.125" Point2="0.5,7.67931699752808" Point1="1.64727008342743,9.75"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="State" Value="1">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="ost">
+                                    <Storyboard  AutoReverse="False"   RepeatBehavior="Forever" >
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="V_1" >
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource W}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{StaticResource Y}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{StaticResource W}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="V_2" >
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Y}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{StaticResource W}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{StaticResource Y}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="ost"/>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="State" Value="2">
+                            <Setter TargetName="V_1" Property="Fill" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type local:BasicMnemoKey}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:BasicMnemoKey}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}" Height="19" Width="49">
+                        <Canvas Height="Auto" Width="Auto">
+                            <Path Data="M6.2606809,22.63738 L-15.237565,29.304335 -15.072238,14.970764 z M8.5939325,22.637522 L29.926851,30.970658 29.593198,14.637767 z" Height="18.333"  StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="#FF111112" StrokeThickness="2" VerticalAlignment="Bottom"/>
+                        </Canvas>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+
+
+
+
+
+
+    <Style TargetType="{x:Type local:MnemoDateVisualer}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MnemoDateVisualer}">
+
+                    <Border x:Name="Ramka" BorderThickness="1"
+                         Padding="{TemplateBinding Control.Padding}"
+                         BorderBrush="{TemplateBinding Border.BorderBrush}"
+                         Background="{TemplateBinding Panel.Background}"
+                         SnapsToDevicePixels="True">
+                        <StackPanel>
+                            <TextBlock TextWrapping="Wrap" Text="{TemplateBinding Caption}" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="{TemplateBinding CaptionValue}" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:MBtnKey}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MBtnKey}">
+                    <Border Width="15.417" Height="20">
+                        <Canvas Width="20" Height="20" Margin="-2.417,0,-2.167,0">
+                            <Path x:Name="OpenKey" Data="M1,1 L1,18.875 M2.9585268,10 L6.0625,10" Fill="#FFF4F4F5" Height="19.875" Stretch="Fill" Stroke="Black" Width="7.062" StrokeThickness="2" StrokeStartLineCap="Square" StrokeEndLineCap="Square"/>
+                            <Path x:Name="CloseKey" Data="M1,1 L1,18.875 M2.6251605,10 L6.0625,10" Fill="#FFF4F4F5" Height="19.875" Stretch="Fill" Stroke="Black" Width="7.062" StrokeThickness="2" StrokeStartLineCap="Square" StrokeEndLineCap="Square" Canvas.Left="7.062" Visibility="Hidden"/>
+                            <Path Height="18.875" Canvas.Left="9.562" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="Black" StrokeThickness="2" Canvas.Top="0.5" Width="5.875">
+                                <Path.Data>
+                                    <PathGeometry>
+                                        <PathFigure IsClosed="True" StartPoint="1,2.875">
+                                            <BezierSegment IsSmoothJoin="True" Point3="2.9375,1" Point2="1.86744833603883,1" Point1="1,1.83946610751905"/>
+                                            <BezierSegment Point3="4.875,2.875" Point2="4.875,1.83946610751905" Point1="4.00755185347337,1"/>
+                                            <BezierSegment IsSmoothJoin="True" Point3="2.9375,4.75" Point2="4.00755147444896,4.75" Point1="4.875,3.91053408070614"/>
+                                            <BezierSegment Point3="1,2.875" Point2="1,3.91053408070614" Point1="1.86744814652663,4.75"/>
+                                        </PathFigure>
+                                        <PathFigure IsClosed="True" StartPoint="1,16">
+                                            <BezierSegment IsSmoothJoin="True" Point3="2.9375,14.125" Point2="1.86744833603883,14.125" Point1="1,14.9644661075191"/>
+                                            <BezierSegment Point3="4.875,16" Point2="4.875,14.9644661075191" Point1="4.00755185347337,14.125"/>
+                                            <BezierSegment IsSmoothJoin="True" Point3="2.9375,17.875" Point2="4.00755147444896,17.875" Point1="4.875,17.0355340807061"/>
+                                            <BezierSegment Point3="1,16" Point2="1,17.0355340807061" Point1="1.86744814652663,17.875"/>
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                        </Canvas>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="State" Value="1">
+                            <Setter TargetName="OpenKey" Property="Visibility" Value="Hidden"/>
+                            <Setter  TargetName="CloseKey" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  TargetType="{x:Type local:MKlapanKVD}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MKlapanKVD}">
+                    <Border Height="56.667" Width="47">
+
+                        <Canvas Background="Transparent"  Width="Auto" Height="Auto"  Margin="0" >
+                            <Path x:Name="LKey" Height="16.284" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="Black" StrokeThickness="2" Width="22.03" Margin="0" Canvas.Top="7.916" Data="M21.02951,8.2046943 L1.0428454,1 1,15.283511 z"/>
+                            <Path x:Name="RKey" Height="16.284" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="Black" StrokeThickness="2" Width="22.03" Margin="0" Canvas.Top="7.714" Data="M0.99999999,8.2046945 L20.986664,1.0000002 21.029509,15.283511 z" Canvas.Left="24.97"/>
+                            <Path x:Name="Key6" Height="7.231" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="Black" StrokeThickness="2" Width="18.875" Margin="0" Canvas.Top="36.407" Data="M0.99999998,1.2009999 L0.99999998,6.231 M17.875,1 L17.875,6.231" Canvas.Left="14.855"/>
+                            <Path x:Name="OpenLine" Height="3.875" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="Black" StrokeThickness="2" Width="11.5" Canvas.Left="18.5" Canvas.Top="50.125" Data="M1,1 L1,2.875 M2,2.875 L9.4999998,2.875 M10.5,2.875 L10.5,1"/>
+                            <Path x:Name="Key" Height="47.667" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="Black" StrokeThickness="2" Width="17.978" Margin="0" Canvas.Top="1" Canvas.Left="15.232">
+                                <Path.Data>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="1.0000000526114,1">
+                                            <LineSegment Point="16.978000432833,1"/>
+                                        </PathFigure>
+                                        <PathFigure StartPoint="8.62299998092646,15.5830000553131">
+                                            <LineSegment Point="8.49799998092652,1.45800005531308"/>
+                                        </PathFigure>
+                                        <PathFigure StartPoint="8.68299994507512,15.607000027358">
+                                            <LineSegment Point="8.8789999526857,30.6649992141111"/>
+                                        </PathFigure>
+                                        <PathFigure IsClosed="True" StartPoint="1.78499998950913,39.0225000854945">
+                                            <BezierSegment IsSmoothJoin="True" Point3="9.15199979065031,31.3779999878882" Point2="5.08331851318469,31.3779999878882" Point1="1.78499998950913,34.8005589874618"/>
+                                            <BezierSegment Point3="16.5189995917912,39.0225000854945" Point2="16.5189995917912,34.8005589874618" Point1="13.2206824224714,31.3779999878882"/>
+                                            <BezierSegment IsSmoothJoin="True" Point3="9.15199979065031,46.6670001831007" Point2="13.2206810681158,46.6670001831007" Point1="16.5189995917912,43.2444411835272"/>
+                                            <BezierSegment Point3="1.78499998950913,39.0225000854945" Point2="1.78499998950913,43.2444411835272" Point1="5.08331749741813,46.6670001831007"/>
+                                        </PathFigure>
+                                        <PathFigure StartPoint="6.71800000985176,41.2259997857175">
+                                            <LineSegment Point="6.71800000985176,36.2622766623884"/>
+                                        </PathFigure>
+                                        <PathFigure StartPoint="7.16428484265882,36.3837096224188">
+                                            <LineSegment Point="8.80657401912941,38.4434464524314"/>
+                                        </PathFigure>
+                                        <PathFigure StartPoint="8.81149990148235,38.443446568082">
+                                            <LineSegment Point="10.5848177455765,36.3767707263209"/>
+                                        </PathFigure>
+                                        <PathFigure StartPoint="10.905,36.142">
+                                            <LineSegment Point="10.905,41.1774263102659"/>
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                            <Path x:Name="CloseLine" Height="3.875" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="Black" StrokeThickness="2" Width="11.5" Canvas.Left="18.5" Canvas.Top="46.726" Data="M1,1 L1,2.875 M2,2.875 L9.4999998,2.875 M10.5,2.875 L10.5,1" Visibility="Hidden"/>
+                        </Canvas>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="State" Value="1">
+                            <Setter TargetName="OpenLine" Property="Visibility"
+					Value="Hidden"/>
+
+                            <Setter TargetName="CloseLine" Property="Visibility"
+					Value="Visible"/>
+                            <Setter TargetName="LKey" Property="Fill"
+							   Value="Yellow"/>
+                        </Trigger>
+                        <Trigger Property="State" Value="2">
+                            <Setter TargetName="OpenLine" Property="Visibility"
+					Value="Hidden"/>
+
+                            <Setter TargetName="CloseLine" Property="Visibility"
+					Value="Visible"/>
+                            <Setter TargetName="RKey" Property="Fill"
+							   Value="Yellow"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type local:MColorLabel}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MColorLabel}">
+                    <Border x:Name="Ramka" BorderThickness="{TemplateBinding Border.BorderThickness}"
+        Padding="{TemplateBinding Control.Padding}"
+        BorderBrush="{TemplateBinding Border.BorderBrush}"
+        Background="{TemplateBinding Panel.Background}"
+        SnapsToDevicePixels="True">
+                        <TextBlock TextWrapping="Wrap" Text="{TemplateBinding Caption}" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                    </Border>
+                    <!--   <ControlTemplate.Triggers>
+                        <Trigger Property="State" Value="1">
+                            <Setter TargetName="Ramka" Property="Background" Value="{TemplateBinding AColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>-->
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:MKeyKey}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MKeyKey}">
+                    <Border Height="20.375" Width="19.5" >
+                        <Canvas  >
+                            <Path Data="M10.083,21.416 L7.8330002,21.332999 M5,2.7910004 L10.25,2.9160004" Height="20.625" Canvas.Left="11.625" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="Black" StrokeThickness="2" Width="7.25"/>
+                            <Path x:Name="CloseKey" Data="M14.514891,18.545452 L10.672304,0.44210144" Height="20.709" Canvas.Left="10.043" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="Black" StrokeThickness="2" Width="5.75" Visibility="Hidden" Canvas.Top="-0.634"/>
+                            <Path x:Name="OpenKey" Data="M19.333884,21.166294 L7.7509383,4.0837633" Height="19.084" Canvas.Left="2.125" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="Black" StrokeThickness="2" Canvas.Top="1.125" Width="13.583"/>
+                        </Canvas>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="State" Value="1">
+                            <Setter TargetName="OpenKey" Property="Visibility" Value="Hidden"/>
+                            <Setter  TargetName="CloseKey" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type local:MKlapanKKS}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MKlapanKKS}">
+                    <Border  Height="19" Width="49">
+                        <Canvas Height="Auto" Width="Auto">
+                            <Path x:Name="LKey" Data="M22.498246,8.6666674 L1,15.333667 1.165327,1 z" Height="16.334"  StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="#FF111112" StrokeThickness="2" VerticalAlignment="Bottom" Canvas.Top="0.333" Width="23.498"/>
+                            <Path x:Name="RKey" Data="M1.0000003,8.9998087 L22.332919,17.333001 21.999266,1 z" Height="18.333"  StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" Stroke="#FF111112" StrokeThickness="2" VerticalAlignment="Bottom" Canvas.Left="23.831" Width="23.333"/>
+                        </Canvas>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="State" Value="1">
+                            <Setter TargetName="LKey" Property="Fill"
+							   Value="Yellow"/>
+                        </Trigger>
+                        <Trigger Property="State" Value="2">
+
+
+                            <Setter TargetName="RKey" Property="Fill"
+							   Value="Yellow"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type local:MKeyEU}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MKeyEU}">
+                    <Border Width="15.417" Height="14">
+                        <Canvas Width="Auto" Height="Auto">
+                            <Path Data="M0.16683333,14 L0.2085,10.666671" Fill="#FFF4F4F5" Height="4.334" Canvas.Left="0.125" Stretch="Fill" Stroke="Black" Canvas.Top="10.162" Width="1.041"/>
+                            <Path Data="M14.9585,14 L14.9585,10.708" Fill="#FFF4F4F5" Height="4.292" Canvas.Left="14.412" Stretch="Fill" Stroke="Black" Canvas.Top="10.162" Width="1"/>
+                            <Path x:Name="CloseKey" Data="M0.125,10.162 L15.417,10.162" Fill="#FFF4F4F5" Height="1" Canvas.Left="-0.337" Stretch="Fill" Stroke="Black" Canvas.Top="9.658" Width="16.292" Visibility="Hidden"/>
+                            <Path x:Name="OpenKey" Data="M0.125,10.162 L15.417,10.162" Fill="#FFF4F4F5" Height="1" Canvas.Left="-0.337" Stretch="Fill" Stroke="Black" Canvas.Top="5.325" Width="16.292"/>
+                        </Canvas>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="State" Value="1">
+                            <Setter TargetName="OpenKey" Property="Visibility" Value="Hidden"/>
+                            <Setter  TargetName="CloseKey" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style  TargetType="{x:Type local:MKeyEM}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MKeyEM}">
+                    <Canvas>
+                        <Path x:Name="EM1" Data="M11.126561,21.004002 L21.126999,0.99999998 1,0.99999998 z M27.127001,6.083 L48.957001,6.083 48.957001,21.004002 27.127001,21.004002 z"  Stroke="Black" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" />
+                        <Path x:Name="EM2" Data="M11.12656,1.252 L21.126999,20.250002 1,20.250002 z M27.127,1 L48.957,1 48.957,15.669001 27.127,15.669001 z"                             Stroke="Black" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,19.754,0,0" />
+                        <Path Data="M1.8984375,2.0814581 C2.736979,2.0814581 3.3867188,2.3412237 3.8476563,2.860755 C4.3085938,3.3802862 4.5390625,4.1179166 4.5390625,5.0736456 C4.5390625,5.9981251 4.2949219,6.7351041 3.8066406,7.2845831 C3.3183594,7.8340621 2.6796875,8.1088018 1.890625,8.1088018 C1.5572916,8.1088018 1.2428385,8.0755987 0.94726563,8.0091925 C0.65169269,7.9427862 0.39192706,7.8574996 0.16796872,7.7533331 L0.16796872,6.8978643 L0.22656249,6.8978643 C0.4140625,7.0671353 0.65234375,7.201901 0.94140625,7.3021612 C1.2304688,7.4024215 1.5390625,7.4525518 1.8671875,7.4525518 C2.4270833,7.4525518 2.8828125,7.2481246 3.234375,6.8392706 C3.5859373,6.4304166 3.7617185,5.8913541 3.7617188,5.2220831 L0.92578125,5.2220831 L0.92578125,4.5463018 L3.7226563,4.5463018 C3.6627603,3.9838018 3.4680986,3.5417447 3.1386719,3.22013 C2.8092446,2.8985157 2.3854165,2.7377081 1.8671875,2.7377081 C1.546875,2.7377081 1.2473958,2.7871876 0.96874994,2.8861456 C0.69010413,2.9851041 0.44791663,3.1231251 0.2421875,3.3002081 L0.18359374,3.3002081 L0.18359374,2.4408331 C0.39192706,2.3444791 0.6477865,2.2604947 0.95117188,2.18888 C1.2545573,2.1172657 1.5703125,2.0814581 1.8984375,2.0814581 z M5.3865104,2.1869268 L6.4411979,2.1869268 L7.8943229,5.4252081 L9.2966671,2.1869268 L10.370886,2.1869268 L10.370886,8.0033331 L9.5974483,8.0033331 L9.5974483,2.9916143 L8.0818233,6.4017706 L7.6130729,6.4017706 L6.1091666,2.9916143 L6.1091666,8.0033331 L5.3865104,8.0033331 z M13.042031,2.1673956 L13.6475,2.1673956 L13.6475,7.4095831 L14.67875,7.4095831 L14.67875,8.0033331 L11.842813,8.0033331 L11.842813,7.4095831 L12.8975,7.4095831 L12.8975,3.5111456 L11.842813,3.5111456 L11.842813,2.9798956 C12.24125,2.9798956 12.53487,2.923255 12.723672,2.8099737 C12.912474,2.6966925 13.018594,2.4825001 13.042031,2.1673956 z" Fill="Black" Height="6.028" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="14.511" HorizontalAlignment="Left" Margin="32,10.428,0,0" VerticalAlignment="Top">
+
+                        </Path>
+                        <Path Data="M11.625,19.831 L26,19.831" Margin="10.625,19.831,19.511,19.502" Stretch="Fill" Stroke="Black" StrokeThickness="2"/>
+                        <Path Data="M1.8984375,2.0814581 C2.736979,2.0814581 3.3867188,2.3412237 3.8476563,2.860755 C4.3085938,3.3802862 4.5390625,4.1179166 4.5390625,5.0736456 C4.5390625,5.9981251 4.2949219,6.7351041 3.8066406,7.2845831 C3.3183594,7.8340621 2.6796875,8.1088018 1.890625,8.1088018 C1.5572916,8.1088018 1.2428385,8.0755987 0.94726563,8.0091925 C0.65169269,7.9427862 0.39192706,7.8574996 0.16796872,7.7533331 L0.16796872,6.8978643 L0.22656249,6.8978643 C0.4140625,7.0671353 0.65234375,7.201901 0.94140625,7.3021612 C1.2304688,7.4024215 1.5390625,7.4525518 1.8671875,7.4525518 C2.4270833,7.4525518 2.8828125,7.2481246 3.234375,6.8392706 C3.5859373,6.4304166 3.7617185,5.8913541 3.7617188,5.2220831 L0.92578125,5.2220831 L0.92578125,4.5463018 L3.7226563,4.5463018 C3.6627603,3.9838018 3.4680986,3.5417447 3.1386719,3.22013 C2.8092446,2.8985157 2.3854165,2.7377081 1.8671875,2.7377081 C1.546875,2.7377081 1.2473958,2.7871876 0.96874994,2.8861456 C0.69010413,2.9851041 0.44791663,3.1231251 0.2421875,3.3002081 L0.18359374,3.3002081 L0.18359374,2.4408331 C0.39192706,2.3444791 0.6477865,2.2604947 0.95117188,2.18888 C1.2545573,2.1172657 1.5703125,2.0814581 1.8984375,2.0814581 z M5.3865104,2.1869268 L6.4411979,2.1869268 L7.8943229,5.4252081 L9.2966671,2.1869268 L10.370886,2.1869268 L10.370886,8.0033331 L9.5974483,8.0033331 L9.5974483,2.9916143 L8.0818233,6.4017706 L7.6130729,6.4017706 L6.1091666,2.9916143 L6.1091666,8.0033331 L5.3865104,8.0033331 z M12.999063,2.0658331 C13.54073,2.0658331 13.965208,2.2097135 14.2725,2.4974737 C14.579792,2.7852345 14.733438,3.1752081 14.733438,3.6673956 C14.733438,3.8939581 14.706745,4.1035938 14.653359,4.2963018 C14.599974,4.4890103 14.526406,4.6673956 14.432656,4.8314581 C14.336302,5.0007291 14.220417,5.1686978 14.085,5.3353643 C13.949583,5.5020313 13.806355,5.6660938 13.655313,5.8275518 C13.410521,6.0931768 13.137734,6.3692188 12.836953,6.6556768 C12.536172,6.9421353 12.295938,7.1686978 12.11625,7.3353643 L14.975625,7.3353643 L14.975625,8.0033331 L11.385781,8.0033331 L11.385781,7.1869268 C11.643594,6.9421353 11.887083,6.7077603 12.11625,6.4838018 C12.345417,6.2598438 12.569375,6.0267706 12.788125,5.7845831 C13.230833,5.2976041 13.532917,4.90763 13.694375,4.6146612 C13.855833,4.3216925 13.936563,4.0189581 13.936563,3.7064581 C13.936563,3.5450001 13.911172,3.4030728 13.860391,3.2806768 C13.809609,3.1582813 13.739948,3.0567188 13.651406,2.9759893 C13.560261,2.8978643 13.454792,2.8392706 13.335,2.8002081 C13.215208,2.7611456 13.083698,2.7416143 12.940469,2.7416143 C12.802448,2.7416143 12.662474,2.7591925 12.520547,2.7943487 C12.37862,2.829505 12.242552,2.8731251 12.112344,2.9252081 C12.002969,2.9694791 11.8975,3.0228643 11.795938,3.0853643 C11.694375,3.1478643 11.612344,3.2012501 11.549844,3.2455206 L11.506875,3.2455206 L11.506875,2.4173956 C11.668333,2.3366666 11.892942,2.2578907 12.180703,2.1810675 C12.468464,2.1042447 12.74125,2.0658331 12.999063,2.0658331 z" Fill="Black" Height="6.028" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="14.511" HorizontalAlignment="Left" Margin="32,25.428,0,0" VerticalAlignment="Top">
+
+                        </Path>
+                    </Canvas>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="State" Value="1">
+                            <Setter TargetName="EM1" Property="Fill" Value="Yellow"/>
+
+                        </Trigger>
+                        <Trigger Property="State" Value="2">
+                            <Setter TargetName="EM2" Property="Fill" Value="Yellow"/>
+
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:MZaglushka}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MZaglushka}">
+                    <Border Width="29.583" Height="23.5">
+                        <Canvas x:Name="Show" Margin="0" >
+
+                            <Path Data="M0.5,0.5 L11.068,0.5 L11.068,2.624 L0.5,2.624 z" Fill="#FF936945" HorizontalAlignment="Left" Height="4.625" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="16.504" Canvas.Left="12.201" Canvas.Top="4.856" >
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="0.989" ScaleX="1.011"/>
+                                        <SkewTransform AngleY="-1.929"/>
+                                        <RotateTransform Angle="-31.814"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+                            <Path Fill="#FF936945" HorizontalAlignment="Left" Height="16.722" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="14.152"  Canvas.Left="7.134" Canvas.Top="3.889">
+                                <Path.Data>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="0.500399256089084,5.16679672408288">
+                                            <BezierSegment IsSmoothJoin="True" Point3="4.41922613292027,0.50048704240188" Point2="2.4406838984915,0.528080817573711" Point1="0.467770525235032,2.77810333367878"/>
+                                            <PolyBezierSegment Points="5.3360635,0.48770035 6.7592471,0.72325496 7.7392719,1.6143997 8.8741482,2.646352 9.4017024,4.4313113 9.4199445,5.7130968"/>
+                                            <BezierSegment IsSmoothJoin="True" Point3="4.43875237098396,10.7960712714501" Point2="6.41729482876837,10.7684774931632" Point1="9.45257282208757,8.10179002263918"/>
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                            <Path Fill="#FF936945" HorizontalAlignment="Left" Height="14.286" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="11.655"  Canvas.Left="6.864" Canvas.Top="6.416">
+                                <Path.Data>
+                                    <PathGeometry>
+                                        <PathFigure IsClosed="True" StartPoint="0.500497309032004,4.87492750676001">
+                                            <BezierSegment IsSmoothJoin="True" Point3="4.02352925366293,0.500294718389242" Point2="2.04498701923416,0.52788849356107" Point1="0.467868578177951,2.48623411635586"/>
+                                            <BezierSegment Point3="7.66718153126391,4.77497702054181" Point2="7.63318631323157,2.38630288255389" Point1="6.00207126473603,0.472700946332442"/>
+                                            <BezierSegment IsSmoothJoin="True" Point3="4.14414957763533,9.14960916371663" Point2="6.12269203541973,9.12201538542981" Point1="7.69980981269228,7.16367022253581"/>
+                                            <BezierSegment Point3="0.500497306317621,4.87492731211983" Point2="0.534492077638662,7.26360145633786" Point1="2.16560778991787,9.17720293265845"/>
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                            <Path Fill="#FF936945" HorizontalAlignment="Left" Height="14.064" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="3.567"  Data="M1.999954,0.50000014 L0.5,8.999996" Canvas.Left="11.011" Canvas.Top="7.02" RenderTransformOrigin="0.5,0.5">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="0.992" ScaleX="1.008"/>
+                                        <SkewTransform AngleY="-1.755"/>
+                                        <RotateTransform Angle="-27.076"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+                        </Canvas>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="State" Value="1">
+                            <Setter TargetName="Show" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

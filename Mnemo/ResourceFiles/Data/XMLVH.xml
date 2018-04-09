@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ROOT>
+  
+  
+  <APIHost ComponentID="4D1E209C-8EA1-4F12-B4C0-A8F8BDDE1A61" ID="Mnemo2" EndPoint="Mnemo2" OpacityMask="#FF7C7878" >
+    <VariablesManager VariablesMap="VarNeptun" Endpoint="VarNeptun" Channel="Neptun_Variables" Key="PeterNeptun" IgnoreInitEvents="True" />
+    <VariablesManager VariablesMap="FMSControl" Endpoint="FMSControl" Channel="FMSControl_Variables" Key="PeterFMSControl" IgnoreInitEvents="True" />
+  </APIHost>
+  
+  <APIHost EndPoint="Mnemo" ID="Mnemo">
+    <VariablesManager VariablesMap="VarModel" Channel="Mnemo_Variables"
+                         Endpoint="Mnemo" Key="Mnemo" />
+  </APIHost>
+  
+  
+  
+  
+  
+  <VH Key="Mnemo2/PeterNeptun" ID="Pult"/>
+  <VH Key="Mnemo2/PeterFMSControl" ID="PultFMS"/>
+  <VH Key="Mnemo/Mnemo" ID="Mnemo"/>
+</ROOT>

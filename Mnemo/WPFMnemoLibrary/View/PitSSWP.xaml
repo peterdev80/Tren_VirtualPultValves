@@ -1,0 +1,1322 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:WPFMnemoLibrary_ControlLibrary="clr-namespace:WPFMnemoLibrary.ControlLibrary"
+	xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+	mc:Ignorable="d"
+	 xmlns:WPFMnemoLibrary="clr-namespace:WPFMnemoLibrary"
+	  xmlns:mnemoLib="clr-namespace:MnemoTools;assembly=MnemoTools"
+      xmlns:vm="clr-namespace:WPFMnemoLibrary.ViewModel"
+	x:Class="WPFMnemoLibrary.View.PitSSWP"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="Auto" Height="Auto" Loaded="UserControl_Loaded">
+
+    <UserControl.Resources>
+        <vm:PitSSWPViewModel x:Key="PSSWPVM" />
+        <ControlTemplate x:Key="_3StateKeyControlTemplate_Sep" TargetType="{x:Type WPFMnemoLibrary_ControlLibrary:_3StateKey}">
+            <Grid 
+                            >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Path x:Name="OPEN" Data="M18.218714,20.043284 L18.276238,2.8999291" Fill="#FFF4F4F5" Grid.Row="0" Stretch="Fill" Stroke="Black" StrokeThickness="2" Visibility="Hidden" Grid.ColumnSpan="1" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Grid.Column="1" HorizontalAlignment="Right" Margin="0,-0.092,0.184,-0.039" Width="2.031"/>
+                <Path x:Name="CLOSE" Data="M1.625,18 L1.875,2.5" Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Grid.Row="0" Grid.RowSpan="1" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="Auto" StrokeStartLineCap="Round" StrokeEndLineCap="Round" VerticalAlignment="Stretch" d:LayoutOverrides="Width, GridBox"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="KeyValue" Value="0">
+                    <Setter Property="Visibility" TargetName="CLOSE" Value="Hidden"/>
+                    <Setter Property="Visibility" TargetName="OPEN" Value="Visible"/>
+                </Trigger>
+                <Trigger Property="KeyValue" Value="2">
+                    <Setter Property="Stroke" TargetName="CLOSE" Value="{Binding ActivColor, RelativeSource={RelativeSource TemplatedParent}}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+
+        </ControlTemplate>
+        <ControlTemplate x:Key="_3StateKeyControlTemplate_R" TargetType="{x:Type WPFMnemoLibrary_ControlLibrary:_3StateKey}">
+            <Grid 
+                            >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Path x:Name="OPEN" Data="M0,20 L18.625,3" Fill="#FFF4F4F5" Grid.Row="0" Stretch="Fill" Stroke="Black" StrokeThickness="2" Visibility="Hidden" d:LayoutOverrides="GridBox" Grid.ColumnSpan="2" StrokeStartLineCap="Round" StrokeEndLineCap="Round"/>
+                <Path x:Name="CLOSE" Data="M1.625,18 L1.875,2.5" Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Grid.Row="0" Grid.RowSpan="1" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="Auto" StrokeStartLineCap="Round" StrokeEndLineCap="Round" VerticalAlignment="Stretch" d:LayoutOverrides="Width, GridBox"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="KeyValue" Value="0">
+                    <Setter Property="Visibility" TargetName="CLOSE" Value="Hidden"/>
+                    <Setter Property="Visibility" TargetName="OPEN" Value="Visible"/>
+                </Trigger>
+                <Trigger Property="KeyValue" Value="1">
+                    <Setter Property="Visibility" TargetName="CLOSE" Value="Visible"/>
+                    <Setter Property="Visibility" TargetName="OPEN" Value="Hidden"/>
+                </Trigger>
+                <Trigger Property="KeyValue" Value="2">
+                    <Setter Property="Stroke" TargetName="CLOSE" Value="{Binding ActivColor, RelativeSource={RelativeSource TemplatedParent}}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+
+        </ControlTemplate>
+        <ControlTemplate x:Key="_3StateKeyControlTemplate1" TargetType="{x:Type WPFMnemoLibrary_ControlLibrary:_3StateKey}">
+            <Grid Margin="0.5,0,-14,-21" 
+                            >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Path Grid.ColumnSpan="1" Grid.Column="1" Height="Auto" Margin="-0.812,11.663,11.13,21.25" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="Black" StrokeThickness="1" Width="Auto">
+                    <Path.Data>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="6.14500001072883,13.1224993625348">
+                                <BezierSegment IsSmoothJoin="True" Point3="13.6760000107288,5.375" Point2="9.51674374927672,5.375" Point1="6.14500001072883,8.84367375684799"/>
+                                <BezierSegment Point3="21.2070000107288,13.1224997690343" Point2="21.2070000107288,8.84367375684799" Point1="17.8352567336975,5.375"/>
+                                <BezierSegment IsSmoothJoin="True" Point3="13.6760000107288,20.87" Point2="17.8352558106644,20.87" Point1="21.2070000107288,17.401326243152"/>
+                                <BezierSegment Point3="6.14500001072883,13.1224997690343" Point2="6.14500001072883,17.401326243152" Point1="9.51674282624354,20.87"/>
+                            </PathFigure>
+                            <PathFigure IsClosed="True" StartPoint="0.500000010728835,13.4974995883021">
+                                <BezierSegment IsSmoothJoin="True" Point3="13.5385009464614,0.5" Point2="6.3375355889317,0.5" Point1="0.500000010728835,6.3191785290142"/>
+                                <BezierSegment Point3="26.5770000107288,13.4975" Point2="26.5770000107288,6.3191785290142" Point1="20.7394658361248,0.5"/>
+                                <BezierSegment IsSmoothJoin="True" Point3="13.5384990749962,26.495" Point2="20.7394639646596,26.495" Point1="26.5770000107288,20.6758205353088"/>
+                                <BezierSegment Point3="0.500000010728835,13.4975" Point2="0.500000010728835,20.6758205353088" Point1="6.3375341853328,26.495"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Path.Data>
+                </Path>
+                <Path x:Name="CLOSE" Grid.ColumnSpan="1" Grid.Column="1" Data="M20.26557,16.914438 C20.148244,17.129326 24.624323,20.34768 24.48233,20.565701 22.158069,24.134472 18.124819,26.494999 13.538499,26.494999 9.8385629,26.494999 6.4985745,24.958725 4.1254342,22.491166 3.9900569,22.350403 9.269507,19.123733 9.140535,18.977021 M9.140535,18.987438 C10.480584,20.250959 11.714971,20.869999 13.676,20.869999 16.489792,20.869999 18.943163,19.28249 20.235985,16.930603" Height="Auto" Margin="2.532,28.078,13.5,21.25" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="Black" StrokeThickness="1" Width="Auto" VerticalAlignment="Stretch" Fill="Black" />
+                <Path x:Name="OPEN" Grid.ColumnSpan="1" Grid.Column="1" Data="M20.389094,17.065558 C20.260121,17.292336 24.622848,20.4363 24.480855,20.654321 22.156594,24.223092 18.124819,26.494999 13.538499,26.494999 9.8385629,26.494999 6.4985745,24.958725 4.1254342,22.491166 3.9900569,22.350403 9.2565319,19.039754 9.1275599,18.893042 M9.140535,18.893684 C10.480584,20.157205 11.714971,20.869999 13.676,20.869999 16.489792,20.869999 19.101734,19.43196 20.394556,17.080073" Height="10.415" Margin="2.865,11.071,13.168,0" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" StrokeThickness="1" Width="Auto" VerticalAlignment="Top" Fill="Black" RenderTransformOrigin="0.5,0.5" >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-171.651"/>
+                            <TranslateTransform X="-0.0098228779463340743" Y="0.14828304812695592"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="KeyValue" Value="0">
+                    <Setter Property="Visibility" TargetName="CLOSE" Value="Hidden"/>
+                    <Setter Property="Visibility" TargetName="OPEN" Value="Visible"/>
+                </Trigger>
+                <Trigger Property="KeyValue" Value="1">
+                    <Setter Property="Visibility" TargetName="CLOSE" Value="Visible"/>
+                    <Setter Property="Visibility" TargetName="OPEN" Value="Hidden"/>
+                </Trigger>
+                <Trigger Property="KeyValue" Value="2">
+                    <Setter Property="Stroke" TargetName="CLOSE" Value="{Binding ActivColor, RelativeSource={RelativeSource TemplatedParent}}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+
+        </ControlTemplate>
+        <ControlTemplate x:Key="_3StateKeyControlTemplate_knopka" TargetType="{x:Type WPFMnemoLibrary_ControlLibrary:_3StateKey}">
+            <Grid 
+                            >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="0.8*"/>
+                </Grid.ColumnDefinitions>
+                <Path x:Name="OPEN" Data="M7.6049999,19.749 L7.5673357,0.99965785 M7.5163221,9.9886699 L0.99803887,10.013292" Fill="#FFF4F4F5" Grid.Row="0" Stretch="Fill" Stroke="Black" StrokeThickness="2" Visibility="Hidden" Grid.ColumnSpan="3" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Grid.Column="0" HorizontalAlignment="Right" Margin="0,0,0,-0.131" Width="8.607"/>
+                <Path Grid.ColumnSpan="2" Data="M3.8835817,7.993 L9.3258734E-15,8" Fill="#FFF4F4F5" Margin="-1.001,6.762,-0.262,7.224" StrokeStartLineCap="Flat" Stretch="Fill" StrokeEndLineCap="Flat" Stroke="Black" StrokeThickness="2"/>
+                <Path x:Name="CLOSE" Data="M1.625,18 L1.875,2.5" Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Grid.RowSpan="1" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="Auto" StrokeStartLineCap="Round" StrokeEndLineCap="Round" VerticalAlignment="Stretch" d:LayoutOverrides="Width" Grid.Column="1"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="KeyValue" Value="0">
+                    <Setter Property="Visibility" TargetName="CLOSE" Value="Hidden"/>
+                    <Setter Property="Visibility" TargetName="OPEN" Value="Visible"/>
+                </Trigger>
+                <Trigger Property="KeyValue" Value="1">
+                    <Setter Property="Visibility" TargetName="CLOSE" Value="Visible"/>
+                    <Setter Property="Visibility" TargetName="OPEN" Value="Hidden"/>
+                </Trigger>
+                <Trigger Property="KeyValue" Value="2">
+                    <Setter Property="Stroke" TargetName="CLOSE" Value="{Binding ActivColor, RelativeSource={RelativeSource TemplatedParent}}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+
+        </ControlTemplate>
+    </UserControl.Resources>
+
+    <Viewbox Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+        <Canvas x:Name="LayoutRoot" Background="#FFFBF9F9" Margin="0,0,2,-1" DataContext="{Binding Source={StaticResource PSSWPVM}}" Height="707" Width="1100" d:LayoutOverrides="Width, Height">
+            <Path Data="M588.27259,112.87057 L650.90823,113.31416" Height="1.103" Canvas.Left="113.688" Stretch="Fill" Canvas.Top="114.332" Width="63.197" Stroke="Black" StrokeDashArray="1 1"/>
+            <Path Data="M805.6034,116.39348 L890.85955,116.08434" Height="1.072" Canvas.Left="561.62" Stretch="Fill" Canvas.Top="115.081" Width="85.659" Stroke="Black" StrokeDashArray="1 1"/>
+            <Path Data="M1,1 L411.96,1 L411.96,194.782 L1,194.782 z" Fill="#FFCCCCCC" Height="195.782" Canvas.Left="743.569" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="273.383" Width="348.431"/>
+            <Path Data="M1,1 L411.96,1 L411.96,194.782 L1,194.782 z" Fill="#FFCCCCCC" Height="195.782" Canvas.Left="479" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="273.383" Width="249.46"/>
+            <Path Data="M1,1 L183.4752,1 183.9759,84.285803 964.58156,83.785094 964.269,196.645 1,196.645 z" Height="197.645" Canvas.Left="109.488" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="486.022" Width="965.582" Fill="#FFEACAB3"/>
+            <Path Data="M1,1 L169.253,1 L169.253,83.522 L1,83.522 z" Fill="#FFE9975F" Height="90.844" Canvas.Left="743.569" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="583.111" Width="315.117"/>
+            <Path Data="M1,1 L169.253,1 L169.253,83.522 L1,83.522 z" Fill="#FFE9975F" Height="90.844" Canvas.Left="460.062" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="583.111" Width="271.749"/>
+            <Path Data="M1,1 L411.96,1 L411.96,194.782 L1,194.782 z" Fill="#FFCCCCCC" Height="195.782" Canvas.Left="56.79" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="273.383" Width="412.96"/>
+            <Path Data="M0.5,0.5 L88.678,0.5 L88.678,6.426 L0.5,6.426 z" Height="6.926" Canvas.Left="159.591" Stretch="Fill" Stroke="Black" Canvas.Top="614.704" Width="89.178">
+                <Path.Fill>
+                    <LinearGradientBrush MappingMode="RelativeToBoundingBox">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="0.598"/>
+                        <GradientStop Color="#FF212121" Offset="0.975"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Data="M1,1 L169.253,1 L169.253,83.522 L1,83.522 z" Fill="#FFE9975F" Height="90.844" Canvas.Left="271.406" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="583.111" Width="176.729"/>
+            <Path Data="M105.66667,19 L936.66667,19" Height="4" Canvas.Left="103.667" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFF91010" StrokeThickness="4" Canvas.Top="17" Width="835"/>
+            <Path Data="M110.66667,288 L123.66667,288" Height="4" Canvas.Left="108.667" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFF91010" StrokeThickness="4" Canvas.Top="286" Width="17"/>
+            <Path Data="M133,286 L149.66667,286" Height="4" Canvas.Left="129" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFF91010" StrokeThickness="4" Canvas.Top="286" Width="20.667"/>
+            <Path Data="M155.667,288 L171.66667,288" Height="4" Canvas.Left="153.667" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFF91010" StrokeThickness="4" Canvas.Top="286" Width="20"/>
+            <Path Data="M320.875,327 L356.75,327" Height="4" Canvas.Left="318.875" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFF91010" StrokeThickness="4" Canvas.Top="325" Width="39.875"/>
+            <Path Data="M481,327.33333 L516.83333,327.5" Height="4.167" Canvas.Left="479" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFF91010" StrokeThickness="4" Canvas.Top="325.333" Width="39.833"/>
+            <Path Data="M560.6875,327 L593.125,327.125" Height="4.125" Canvas.Left="558.688" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFF91010" StrokeThickness="4" Canvas.Top="325" Width="36.437"/>
+            <Path Data="M605.5,327 L642.5,327.16667" Height="4.167" Canvas.Left="603.5" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFF91010" StrokeThickness="4" Canvas.Top="325" Width="41"/>
+            <Path Data="M684.66667,327.16667 L720.33333,327" Height="4.167" Canvas.Left="682.667" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFF91010" StrokeThickness="4" Canvas.Top="325" Width="39.666"/>
+            <Path Data="M769.83333,327.66667 L803.5,327.5" Height="4.167" Canvas.Left="767.833" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFF91010" StrokeThickness="4" Canvas.Top="325.5" Width="37.667"/>
+            <Path Data="M916.16667,327 L974.16667,327.33333" Height="4.333" Canvas.Left="914.167" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FFF91010" StrokeThickness="4" Canvas.Top="325" Width="62"/>
+            <Path x:Name="l10" Data="M176.75,90 L196.25,90" Height="4" Canvas.Left="174.75" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="88" Width="23.5"/>
+            <Path x:Name="l91" Data="M372.75,92 L392.75,92" Height="4" Canvas.Left="370.75" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="90" Width="24"/>
+            <Path x:Name="l92" Data="M574.5,90 L595.125,90" Height="4" Canvas.Left="572.5" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="88" Width="24.625"/>
+            <Path x:Name="l93" Data="M644.5,90 L663.75,90" Height="4" Canvas.Left="642.5" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="88" Width="23.25"/>
+            <Path x:Name="l94" Data="M805.5,90 L824.5,90" Height="4" Canvas.Left="803.5" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="88" Width="23"/>
+            <Path x:Name="l95" Data="M933,90 L952.75,90" Height="4" Canvas.Left="931" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="88" Width="23.75"/>
+            <Path x:Name="l96" Data="M984,325.5 L1037.75,325.5" Height="4" Canvas.Left="982.75" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="325" Width="57.75"/>
+            <Path x:Name="l97" Data="M812.5,329 L867.5,329" Height="4" Canvas.Left="811.75" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="325.5" Width="59"/>
+            <Path x:Name="l98" Data="M648.5,325.5 L678.667,325.5" Height="4" Canvas.Left="647.25" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="325" Width="34.167"/>
+            <Path x:Name="l99" Data="M526.75,325.5 L552,325.333" Height="4.167" Canvas.Left="524.75" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="325.083" Width="29.25"/>
+            <Path x:Name="l100" Data="M366.25,325.5 L416,325.5" Height="4" Canvas.Left="362.75" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="325.5" Width="53.75"/>
+            <Path x:Name="l101" Data="M129,338 L129,408.66667" Height="74.667" Canvas.Left="129" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="336.667" Width="4"/>
+            <Path x:Name="l111" Data="M335,689.66667 L352,690" Height="4.333" Canvas.Left="333" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="687.667" Width="21"/>
+            <Path Data="M149.667,637.66667 L202.33333,638" Height="4.333" Canvas.Left="147.667" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="635.667" Width="56.666"/>
+            <Path x:Name="l107" Data="M311.25,443.75 L326.75,444" Height="4.25" Canvas.Left="309.25" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="441.75" Width="19.5"/>
+            <Path Data="M436,441.75 L452.5,441.75" Height="4" Canvas.Left="433.5" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="442" Width="20.5"/>
+            <Path Data="M764.5,442 L780.25,441.75" Height="4.25" Canvas.Left="761.75" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="442" Width="19.75"/>
+            <Path Data="M879.75,442 L895.25,441.75" Height="4.25" Canvas.Left="877.75" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="439.75" Width="19.5"/>
+            <Path Data="M934,444 L949,444" Height="4" Canvas.Left="932" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="442" Width="19"/>
+            <Path Data="M1051.5,444 L1066.75,444" Height="4" Canvas.Left="1049.5" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="442" Width="19.25"/>
+            <Path x:Name="l1" Data="M4.6449991,1 L4.6449991,88.396001 1,88.395673 M4.5620016,266 L4.4396951,103.49103 1.3949991,103.491" Height="267" Canvas.Left="113.688" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="20" Width="5.645"/>
+            <Path x:Name="l2" Data="M4.6449991,1 L4.6449991,88.396001 1,88.395673 M4.5620016,266 L4.4396951,103.49103 1.3949991,103.491" Height="267" Canvas.Left="136.188" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="20" Width="5.645"/>
+            <Path x:Name="l3" Data="M4.6449991,1 L4.6449991,88.396001 1,88.395673 M4.5620016,266 L4.4396951,103.49103 1.3949991,103.491" Height="267" Canvas.Left="159.165" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="20" Width="5.645"/>
+            <Path x:Name="l4" Data="M4.5620016,266 L4.4396951,103.49103 1.3949991,103.491 M4.6449991,71.0625 L4.6449991,88.396001 1,88.395673" Height="196.938" Canvas.Left="181.809" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="90.062" Width="5.645"/>
+            <Path x:Name="l5" Data="M4.6449991,1 L4.6449991,88.396001 1,88.395673 M4.5620016,305 L4.4396951,103.49103 1.3949991,103.491" Height="306" Canvas.Left="347.165" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="20" Width="5.645"/>
+            <Path x:Name="l6" Data="M4.5620016,305 L4.4396951,103.49103 1.3949991,103.491 M4.6449991,72 L4.6449991,88.396001 1,88.395673" Height="235" Canvas.Left="377.847" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="91" Width="5.645"/>
+            <Path x:Name="l7" Data="M4.6449991,1 L4.6449991,88.396001 1,88.395673 M4.5620016,278.33311 L4.4396951,103.49103 1.3949991,103.491" Height="279.328" Canvas.Left="561.272" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="20" Width="5.645"/>
+            <Path x:Name="l8" Data="M565.83333,298 L565.83333,325" Height="29" Canvas.Left="564.833" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="297" Width="2"/>
+            <Path x:Name="l9" Data="M55.396,1.4169898 L1,1.4169898 M1.9799795,0.99999998 L2.001,28.938" Height="29.938" Canvas.Left="510.437" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="296.583" Width="56.396"/>
+            <Path x:Name="l11" Data="M41.851004,220.473 L41.728697,32.48727 38.684001,32.48724 M41.934002,1 L41.934002,17.394043 38.289001,17.393715 M41.750001,220 L1.0000015,219.99902 M1.9980015,219.406 L1.9350015,234.531" Height="235.531" Canvas.Left="544.25" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="91" Width="42.934"/>
+            <Path x:Name="l12" Data="M4.6449991,1 L4.6449991,88.396001 1,88.395673 M4.5620016,278.33311 L4.4396951,103.49103 1.3949991,103.491" Height="279.328" Canvas.Left="631.265" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="20" Width="5.645"/>
+            <Path x:Name="l13" Data="M4.5620016,305 L4.4396951,103.49103 1.3949991,103.491 M4.6449991,72 L4.6449991,88.396001 1,88.395673" Height="235" Canvas.Left="651.194" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="91" Width="5.645"/>
+            <Path x:Name="l14" Data="M565.83333,298 L565.83333,325" Height="29" Canvas.Left="634.833" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="297" Width="2"/>
+            <Path x:Name="l15" Data="M55.396,1.4169898 L1,1.4169898 M54.386224,0.99999998 L54.407244,28.938" Height="29.938" Canvas.Left="635.437" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="296.583" Width="56.396"/>
+            <Path x:Name="l16" Data="M4.6449991,1 L4.6449991,88.396001 1,88.395673 M4.5620016,305 L4.4396951,103.49103 1.3949991,103.491" Height="306" Canvas.Left="793.854" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="20" Width="5.645"/>
+            <Path x:Name="l17" Data="M4.5620016,305 L4.4396951,103.49103 1.3949991,103.491 M4.6449991,72 L4.6449991,88.396001 1,88.395673" Height="235.521" Canvas.Left="811.869" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="91" Width="5.645"/>
+            <Path x:Name="l29" Data="M4.6449991,1 L4.6449991,88.396001 1,88.395673 M4.5620016,305 L4.4396951,103.49103 1.3949991,103.491" Height="306" Canvas.Left="921.203" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="20" Width="5.645"/>
+            <Path x:Name="l30" Data="M49.880987,305.47793 L49.880985,279.03706 4.6214609,278.78792 4.4396951,103.49103 1.3949991,103.491 M4.6449991,72 L4.6449991,88.396001 1,88.395673" Height="236" Canvas.Left="938.369" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="91" Width="50.881"/>
+            <Path x:Name="l31" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l18}" Height="9.916" Canvas.Left="1003.406" Stretch="Fill" Stroke="Black" Canvas.Top="224.556" Width="8.647"/>
+            <Path x:Name="l32" Data="M0,6.818 L5.11,1.896 5.11,11.74 z M5.11,6.818 L11.235,1.896 11.235,11.74 z M5.6100039,-0.44798889 L5.6100039,14.312" Fill="Black" Height="14.726" Canvas.Left="986.436" Stretch="Fill" Canvas.Top="222.33" Width="12.236" Stroke="#FF0E0C0C"/>
+            <Path x:Name="l33" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l18}" Height="6.876" Canvas.Left="181.809" Stretch="Fill" Stroke="Black" Canvas.Top="112.038" Width="7.022"/>
+            <Path x:Name="l19" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l18}" Height="7.959" Canvas.Left="941.527" Stretch="Fill" Stroke="Black" Canvas.Top="111.748" Width="7.022"/>
+            <Path x:Name="l34" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l18}" Height="6.916" Canvas.Left="378.117" Stretch="Fill" Stroke="Black" Canvas.Top="111.748" Width="5.375"/>
+            <Path x:Name="l20" Data="M24.611549,67.167029 L24.666985,7.6670054 17.916986,0.54200003 8.0025591,0.5" Height="67.667" Canvas.Left="655.018" Stretch="Fill" Stroke="Black" Canvas.Top="114.833" Width="17.652"/>
+            <Path x:Name="l35" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l20}" Height="7.166" Canvas.Left="651.194" Stretch="Fill" Stroke="Black" Canvas.Top="111.748" Width="5.334"/>
+            <Path x:Name="l18" Data="M801.60299,114.79519 L24.000046,114.915 18.000032,108.66719 17.535612,6.4172879 11.501512,0.58447154 0.50000001,0.5 M789.29197,114.94799 L782.44822,108.292 782.54197,7.6670022 775.79197,0.54200253 758.37499,0.50000235 M220.95899,114.948 L214.11575,108.29201 214.20949,7.6670074 207.45999,0.54200238 197.35696,0.50000235 M493.58698,114.948 L486.74298,108.29196 486.78087,67.624999 M818.67699,114.56301 L813.29202,114.58399" Height="115.448" Canvas.Left="185.333" Stretch="Fill" Stroke="Black" Canvas.Top="114.833" Width="819.177"/>
+            <TextBlock Height="24" Canvas.Left="1012.553" TextWrapping="Wrap" Canvas.Top="186.75" Width="67.947" FontSize="13.333" FontWeight="Bold" Foreground="{Binding Stroke, ElementName=ld8}"><Run Language="ru-ru" Text="ПК,КР-Д8"/><InlineUIContainer>
+					<Path x:Name="ld8" Data="M15.197,14.75 L1.447,14.75" Height="1" Stretch="Fill" Stroke="Black" Width="14.75"/>
+				</InlineUIContainer></TextBlock>
+            <TextBlock Height="14.541" Canvas.Left="1016.51" TextWrapping="Wrap" Canvas.Top="208" Width="82.49" FontWeight="Bold" Foreground="{Binding Stroke, ElementName=l12_6}"><Run Language="ru-ru" Text="Пр12-6(12м)"/><InlineUIContainer>
+					<Path x:Name="l12_6" Data="M1.1368684E-13,10.33 L14.24,10" Height="1.33" Stretch="Fill" Stroke="Black" Width="15.24"/>
+				</InlineUIContainer></TextBlock>
+            <TextBlock Height="24" Canvas.Left="1016.053" TextWrapping="Wrap" Canvas.Top="222.33" Width="67.947" FontSize="13.333" FontWeight="Bold" Foreground="{Binding Stroke, ElementName=ld5}"><Run Language="ru-ru" Text="ПК,КР-Д5"/><InlineUIContainer>
+					<Path x:Name="ld5" Data="M0.457,14.726 L17.697,14.67" Height="1.056" Stretch="Fill" Stroke="Black" Width="18.24"/>
+				</InlineUIContainer></TextBlock>
+            <TextBlock Height="22.5" Canvas.Left="982.187" TextWrapping="Wrap" Canvas.Top="203.473" Width="26.823" FontWeight="Bold" FontSize="13.333"><Run Language="ru-ru" Text="-12"/></TextBlock>
+            <Path x:Name="l21" Data="M0.5,182.11301 L0.50032825,178.19603 63.311836,178.30162 70.083251,172.0702 69.56543,53.993393 76.333273,47.435286 599.96049,47.588041 606.02299,41.43481 606.02299,1.0149974 M366.67698,47.671998 L373.71661,40.880244 373.71697,22.005001 M151.33798,47.672001 L158.37761,40.879006 158.37797,0.5" Height="182.613" Canvas.Left="161.31" Stretch="Fill" Stroke="Black" Canvas.Top="160.12" Width="606.523"/>
+            <Path x:Name="l28" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l22}" Height="10.75" Canvas.Left="743.569" Stretch="Fill" Stroke="Black" Canvas.Top="161.656" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l27" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l23}" Height="10.75" Canvas.Left="743.569" Stretch="Fill" Stroke="Black" Canvas.Top="138.906" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l22" Data="M748.81244,167 L761.00016,167 766.75024,160.92118" Height="7.08" Canvas.Left="748.813" Stretch="Fill" Stroke="Black" Canvas.Top="160.672" Width="18.937"/>
+            <Path x:Name="l23" Data="M748.81244,167 L761.00016,167 766.75024,160.92118" Height="7.08" Canvas.Left="748.813" Stretch="Fill" Stroke="Black" Canvas.Top="138.172" Width="18.937"/>
+            <Path x:Name="l24" Data="M767.75,161.08333 L767.75,137.54167" Height="24.541" Canvas.Left="766.833" Stretch="Fill" Stroke="Black" Canvas.Top="137.459" Width="1"/>
+            <Path x:Name="l25" Data="M766.833,138.172 L766.81251,120.8125 772.875,115.0625 783.62499,115.0625" Height="24.11" Canvas.Left="766.812" Stretch="Fill" Stroke="Black" Canvas.Top="115.062" Width="17.813"/>
+            <Path x:Name="l26" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l25}" Height="6.626" Canvas.Left="784" Stretch="Fill" Stroke="Black" Canvas.Top="112.038" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l203" Data="M12.437,4.8279999 L8.1089998,0.5 8.1089998,9.1559999 z" Height="11.5" Canvas.Left="501.75" Stretch="Fill" Stroke="Black" Canvas.Top="183.041" Width="7.366"/>
+            <Path x:Name="l36" Data="M508.41667,188.5 L527.83348,188.5 534.58333,182.08333" Height="7.417" Canvas.Left="508.417" Stretch="Fill" Stroke="Black" Canvas.Top="182.083" Width="27.166"/>
+            <Path x:Name="l108" Data="M535.583,160.672 L535.583,182.083" Height="22.411" Canvas.Left="534.583" Stretch="Fill" Stroke="Black" Canvas.Top="160.672" Width="1"/>
+            <Path x:Name="l28_Copy" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l37}" Height="10.75" Canvas.Left="501.75" Stretch="Fill" Stroke="Black" Canvas.Top="161.656" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l37" Data="M740.5724,167.08132 L761.00016,167 766.75024,160.92118" Height="7.162" Canvas.Left="507.833" Stretch="Fill" Stroke="Black" Canvas.Top="160.672" Width="27.177"/>
+            <Path x:Name="l28_Copy1" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l38}" Height="10.75" Canvas.Left="501.75" Stretch="Fill" Stroke="Black" Canvas.Top="139.156" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l38" Data="M740.5724,167.08132 L761.00016,167 766.91691,160.92118" Height="7.162" Canvas.Left="507.833" Stretch="Fill" Stroke="Black" Canvas.Top="138.172" Width="27.345"/>
+            <Path x:Name="l41" Data="M535.583,160.672 L535.583,184.08229" Height="24.427" Canvas.Left="534.583" Stretch="Fill" Stroke="Black" Canvas.Top="137.292" Width="1"/>
+            <Path x:Name="l39" Data="M534.67668,137.459 L534.6277,121.04166 540.37685,115.08333 550.95833,115.062" Height="23.397" Canvas.Left="534.541" Stretch="Fill" Stroke="Black" Canvas.Top="115.062" Width="17.333"/>
+            <Path x:Name="l40" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l39}" Height="6.626" Canvas.Left="551" Stretch="Fill" Stroke="Black" Canvas.Top="112.288" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l28_Copy2" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l43}" Height="10.75" Canvas.Left="271.406" Stretch="Fill" Stroke="Black" Canvas.Top="139.156" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l43" Data="M724.82268,167.08132 L761.00016,167 766.91691,160.92118" Height="7.162" Canvas.Left="276.864" Stretch="Fill" Stroke="Black" Canvas.Top="137.922" Width="43.095"/>
+            <Path x:Name="l28_Copy3" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l42}" Height="10.75" Canvas.Left="271.406" Stretch="Fill" Stroke="Black" Canvas.Top="161.786" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l42" Data="M0.5,6.663999 L36.678135,6.5826281 42.594992,0.49999999 M7.1360105,6.9479902 L13.136022,12.947387 12.969346,233.94348 19.969346,241.235 26.053023,241.235" Height="241.735" Canvas.Left="276.864" Stretch="Fill" Stroke="Black" Canvas.Top="160.552" Width="43.095"/>
+            <Path x:Name="l47" Data="M302.79167,401.79167 L308.04167,401.79167" Height="1" Canvas.Left="302.5" Stretch="Fill" Stroke="Black" Canvas.Top="401.287" Width="6.25"/>
+            <Path x:Name="l46" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l45}" Height="6.626" Canvas.Left="336.5" Stretch="Fill" Stroke="Black" Canvas.Top="112.288" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l48" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l47}" Height="6.626" Canvas.Left="307.653" Stretch="Fill" Stroke="Black" Canvas.Top="398.395" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l44" Data="M319.959,160.672 L319.959,137.459" Height="24.213" Canvas.Left="319.214" Stretch="Fill" Stroke="Black" Canvas.Top="137.459" Width="1"/>
+            <Path x:Name="l45" Data="M319.214,137.922 L319.05089,121.6617 325.22916,114.95016 335.875,114.833" Height="24.089" Canvas.Left="319.051" Stretch="Fill" Stroke="Black" Canvas.Top="114.833" Width="17.824"/>
+            <Path x:Name="l50" Data="M0,12.25 L12.25,0 12.25,24.5 z" Height="10.626" Canvas.Left="696.502" Stretch="Fill" Canvas.Top="183.041" Width="6.079" Stroke="Black"/>
+            <Path x:Name="l49" Data="M696.502,188.16667 L678.25023,188.16667 671.58333,181.33333" Height="7.834" Canvas.Left="671.583" Stretch="Fill" Stroke="Black" Canvas.Top="181.333" Width="25.919"/>
+            <TextBlock Height="24" Canvas.Left="703.831" TextWrapping="Wrap" Canvas.Top="180" Width="67.947" FontWeight="Bold" Text="ПР12-5" Foreground="{Binding Stroke, ElementName=l49}"/>
+            <TextBlock Height="24" Canvas.Left="676.866" TextWrapping="Wrap" Canvas.Top="157.333" Width="67.947" FontWeight="Bold" Text="ПК,КР-Д17" Foreground="{Binding Stroke, ElementName=l22}"/>
+            <TextBlock Height="24" Canvas.Left="677.531" TextWrapping="Wrap" Canvas.Top="136.12" Width="67.947" FontWeight="Bold" Text="ПК,КР-Д15" Foreground="{Binding Stroke, ElementName=l23}"/>
+            <TextBlock Height="24" Canvas.Left="426.5" TextWrapping="Wrap" Canvas.Top="133.656" Width="71.25" FontWeight="Bold" Text="ПК,КР-Д9" Foreground="{Binding Stroke, ElementName=l38}"/>
+            <TextBlock Height="24" Canvas.Left="426.5" TextWrapping="Wrap" Canvas.Top="158.156" Width="71.25" FontWeight="Bold" Text="ПК,КР-Д11" Foreground="{Binding Stroke, ElementName=l37}"/>
+            <TextBlock Height="24" Canvas.Left="426.5" TextWrapping="Wrap" Canvas.Top="183.041" Width="71.25" FontWeight="Bold" Text="ПР12-4" Foreground="{Binding Stroke, ElementName=l36}"/>
+            <TextBlock Height="24" Canvas.Left="206.632" TextWrapping="Wrap" Canvas.Top="133.786" Width="60.774" FontWeight="Bold" Text="ПК-Г17,КР" Foreground="{Binding Stroke, ElementName=l43}"/>
+            <TextBlock Height="24" Canvas.Left="205.965" TextWrapping="Wrap" Canvas.Top="158.465" Width="70.232" FontWeight="Bold" Text="ПК,КР-Д13" Foreground="{Binding Stroke, ElementName=l42}"/>
+            <Path x:Name="l53" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l51}" Height="6.626" Canvas.Left="103.25" Stretch="Fill" Stroke="Black" Canvas.Top="112.288" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l51" Data="M103.25,115.062 L91.890625,115.10938" Height="1.047" Canvas.Left="91.891" Stretch="Fill" Stroke="Black" Canvas.Top="115.062" Width="12.359"/>
+            <Path x:Name="l153" Data="M10.652,8.1459951 L6.0759988,4.124995 6.0759988,12.166995 z M5.0759997,8.1459951 L0.50000001,4.124995 0.50000001,12.166995 z M5.1519994,0.50000008 L5.1940097,15.375" Fill="Black" Height="15.875" Canvas.Left="68.834" Stretch="Fill" Stroke="Black" Canvas.Top="107.45" Width="11.152"/>
+            <Path x:Name="l52" Data="M29.042003,0.517999 L15.625,0.517999 M5.4590004,0.51799463 L0.5,0.5" Height="1.018" Canvas.Left="63.875" Stretch="Fill" Stroke="Black" Canvas.Top="115.062" Width="29.542"/>
+            <Path x:Name="l46_Copy1" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l51}" Height="11.345" Canvas.Left="58.241" Stretch="Fill" Stroke="Black" Canvas.Top="109.85" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l54" Data="M79.5,160.58333 L85.999999,154.16666 86.083333,121.66666 91.891,115.062" Height="46.521" Canvas.Left="79.5" Stretch="Fill" Stroke="Black" Canvas.Top="115.062" Width="13.391"/>
+            <Path x:Name="l57" Data="M79.125,160.62525 L85.625,167.375 85.5,213.5" Height="53.875" Canvas.Left="79.125" Stretch="Fill" Stroke="Black" Canvas.Top="160.625" Width="7.5"/>
+            <Path x:Name="l58" Data="M63.875,207.041 L79.1875,207.0625 85.25,212.75" Height="6.709" Canvas.Left="63.875" Stretch="Fill" Stroke="Black" Canvas.Top="207.041" Width="22.375"/>
+            <Path x:Name="l60" Data="M86.25,213.75 L86.25,384.625" Height="171.877" Canvas.Left="85.586" Stretch="Fill" Stroke="Black" Canvas.Top="213.501" Width="1"/>
+            <Path x:Name="l61" Data="M85.74968,384.29133 L85.74968,394.95807 92.291337,401.70833 97.499966,401.70833" Height="18.416" Canvas.Left="85.603" Stretch="Fill" Stroke="Black" Canvas.Top="384.292" Width="12.753"/>
+            <Path x:Name="l62" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l61}" Height="6.626" Canvas.Left="97.523" Stretch="Fill" Stroke="Black" Canvas.Top="398.803" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l59" Data="M12.437,4.8279999 L8.1089998,0.5 8.1089998,9.1559999 z" Height="11.5" Canvas.Left="56.79" Stretch="Fill" Stroke="Black" Canvas.Top="201.869" Width="7.366"/>
+            <TextBlock Height="24" TextWrapping="Wrap" Canvas.Top="105.617" Width="60.774" FontWeight="Bold" Text="ПК,КР-Д7" Foreground="{Binding Stroke, ElementName=l52}"/>
+            <TextBlock Height="24" TextWrapping="Wrap" Canvas.Top="198.541" Width="44.774" FontWeight="Bold" Text="ПР12-4" Canvas.Left="8.016" Foreground="{Binding Stroke, ElementName=l58}"/>
+            <Path x:Name="l55" Data="M15.819619,0.51799463 L0.5,0.5" Height="1.018" Canvas.Left="64.156" Stretch="Fill" Stroke="Black" Canvas.Top="160.565" Width="16.251"/>
+            <Path x:Name="l56" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l55}" Height="11.345" Canvas.Left="58.241" Stretch="Fill" Stroke="Black" Canvas.Top="155.35" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="pryam" Data="M0.5,0.5 L8.3119997,0.5 L8.3119997,18 L0.5,18 z M23.25,0.5 L31.062,0.5 31.062,18 23.25,18 z M45.75,0.5 L53.562,0.5 53.562,18 45.75,18 z M234.5,0.5 L242.312,0.5 242.312,18 234.5,18 z M448.5,0.5 L456.312,0.5 456.312,18 448.5,18 z M518,0.5 L525.812,0.5 525.812,18 518,18 z M680.5,0.5 L688.312,0.5 688.312,18 680.5,18 z M807.699,0.5 L815.511,0.5 815.511,18 807.699,18 z" Height="18.5" Canvas.Left="113.688" Stretch="Fill" Stroke="Black" Canvas.Top="33.167" Width="816.011"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy2" Height="19.825" Canvas.Left="107.662" Canvas.Top="105.872" Width="7.17" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms20.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy" Height="19.825" Canvas.Left="127.294" Canvas.Top="105.122" Width="10.399" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms20.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy1" Height="19.825" Canvas.Left="151.301" Canvas.Top="105.372" Width="9.322" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms20.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy3" Height="19.825" Canvas.Left="173.12" Canvas.Top="104.622" Width="10.184" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms20.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy4" Height="19.825" Canvas.Left="340.555" Canvas.Top="105.372" Width="8.031" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms22.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy5" Height="19.825" Canvas.Left="370.12" Canvas.Top="106.622" Width="8.462" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms22.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy6" Height="19.825" Canvas.Left="555.495" Canvas.Top="105.955" Width="7.17" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms21.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy7" Height="19.825" Canvas.Left="573.773" Canvas.Top="106.955" Width="8.892" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms21.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy8" Height="19.825" Canvas.Left="624.384" Canvas.Top="105.955" Width="8.031" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms21.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy9" Height="19.825" Canvas.Left="643.918" Canvas.Top="106.955" Width="8.247" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms21.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy10" Height="19.825" Canvas.Left="787.851" Canvas.Top="106.955" Width="7.314" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms23.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy11" Height="19.825" Canvas.Left="804.61" Canvas.Top="106.622" Width="7.888" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms23.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy12" Height="19.825" Canvas.Left="914.11" Canvas.Top="105.955" Width="7.888" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms23.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy13" Height="19.825" Canvas.Left="931.61" Canvas.Top="104.955" Width="7.888" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms23.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <Path Data="M311.25,443.75 L326.75,444" Height="4.25" Canvas.Left="99.833" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="442" Width="19.5"/>
+            <Path x:Name="l63" Data="M24.622999,86.483988 L24.622999,73.233988 26.23,73.233988 M34.973995,59.828991 L24.730266,59.818563 24.622999,51.650998 M24.622997,36.483988 L24.396995,7.1089876 30.60122,0.5 43.896997,0.65087572 M24.146997,29.900988 L17.396997,23.650654 6.7303306,23.316995 0.50000046,29.861995" Height="86.984" Canvas.Left="85.603" Stretch="Fill" Stroke="Black" Canvas.Top="356.016" Width="44.397"/>
+            <Path x:Name="l59_Copy" Data="M12.437,4.8279999 L8.1089998,0.5 8.1089998,9.1559999 z" Height="11.5" Canvas.Left="91.891" Stretch="Fill" Stroke="Black" Canvas.Top="416.869" Width="7.366"/>
+            <Path x:Name="l64" Data="M98.356,422.5 L111.16667,422.66667" Height="1.167" Canvas.Left="98.356" Stretch="Fill" Stroke="Black" Canvas.Top="422.5" Width="13.811"/>
+            <Path x:Name="l62_Copy" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l64}" Height="6.626" Canvas.Left="110.19" Stretch="Fill" Stroke="Black" Canvas.Top="419.136" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l65" Data="M0.5,45.208333 L9.9160043,45.249994 9.9156785,37.25 M9.9170142,25.75 L9.9590016,0.50000123 17.749999,0.5" Height="45.75" Canvas.Left="132.417" Stretch="Fill" Stroke="Black" Canvas.Top="345.25" Width="18.25"/>
+            <Path x:Name="l66" Data="M0.56000244,84.25 L0.5,89 87.000002,89.25 93.250002,82.75 93.375002,0.5 M97.000002,5.2083299 L93.291669,1.0829898 89.125002,5.25" Height="89.75" Canvas.Left="161.25" Stretch="Fill" Stroke="Black" Canvas.Top="267.375" Width="97.5"/>
+            <Path x:Name="l67" Data="M0.50000001,134.375 L42.687999,134.375 M57.688,134.625 L136.93125,134.875 143.4307,128.5 143.461,0.5 M139.813,5.8540102 L143.36538,0.50700686 147.52099,5.4166667" Height="135.375" Canvas.Left="132.312" Stretch="Fill" Stroke="Black" Canvas.Top="267.375" Width="148.021"/>
+            <Path x:Name="l68" Height="281.917" Canvas.Left="152.98" Stretch="Fill" Stroke="Black" Canvas.Top="354.75" Width="5.958">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="3.85300510246648,281.417007812502">
+                            <LineSegment Point="3.68699497001276,250.25"/>
+                        </PathFigure>
+                        <PathFigure IsClosed="True" StartPoint="0.500000036239612,247.875">
+                            <BezierSegment IsSmoothJoin="True" Point3="2.97900023885862,245.562" Point2="1.60988617645376,245.562" Point1="0.500000036239612,246.597565348018"/>
+                            <BezierSegment Point3="5.45800003623961,247.875" Point2="5.45800003623961,246.597565348018" Point1="4.34811430126348,245.562"/>
+                            <BezierSegment IsSmoothJoin="True" Point3="2.9789998336206,250.188" Point2="4.34811389602546,250.188" Point1="5.45800003623961,249.152434651982"/>
+                            <BezierSegment Point3="0.500000036239612,247.875" Point2="0.500000036239612,249.152434651982" Point1="1.60988597383476,250.188"/>
+                        </PathFigure>
+                        <PathFigure IsClosed="True" StartPoint="0.500000036239612,231.25">
+                            <BezierSegment IsSmoothJoin="True" Point3="2.97900023885862,228.937" Point2="1.60988617645376,228.937" Point1="0.500000036239612,229.972565348018"/>
+                            <BezierSegment Point3="5.45800003623961,231.25" Point2="5.45800003623961,229.972565348018" Point1="4.34811430126348,228.937"/>
+                            <BezierSegment IsSmoothJoin="True" Point3="2.9789998336206,233.563" Point2="4.34811389602546,233.563" Point1="5.45800003623961,232.527434651982"/>
+                            <BezierSegment Point3="0.500000036239612,231.25" Point2="0.500000036239612,232.527434651982" Point1="1.60988597383476,233.563"/>
+                        </PathFigure>
+                        <PathFigure StartPoint="3.68699258995056,228.936988281251">
+                            <LineSegment Point="3.68699258995056,0.5"/>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+            <Path x:Name="l142_Copy5" Data="M5.4164999,0 L0,5.4165 10.833,5.4165 z" Height="5.339" Canvas.Left="152.98" Stretch="Fill" Canvas.Top="349.411" Width="6.611" Stroke="Black" Fill="{Binding Stroke, ElementName=l68}"/>
+            <Path x:Name="l69" Height="222.461" Canvas.Left="162.979" Stretch="Fill" Stroke="Black" Canvas.Top="413.875" Width="20.688">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="3.68633843457701,281.08295229781">
+                            <LineSegment Point="3.68699497001276,208.58239329453"/>
+                        </PathFigure>
+                        <PathFigure IsClosed="True" StartPoint="0.500000036239612,206.20739329453">
+                            <BezierSegment IsSmoothJoin="True" Point3="2.97900023885862,203.89439329453" Point2="1.60988617645376,203.89439329453" Point1="0.500000036239612,204.929958642548"/>
+                            <BezierSegment Point3="5.45800003623961,206.20739329453" Point2="5.45800003623961,204.929958642548" Point1="4.34811430126348,203.89439329453"/>
+                            <BezierSegment IsSmoothJoin="True" Point3="2.9789998336206,208.52039329453" Point2="4.34811389602546,208.52039329453" Point1="5.45800003623961,207.484827946512"/>
+                            <BezierSegment Point3="0.500000036239612,206.20739329453" Point2="0.500000036239612,207.484827946512" Point1="1.60988597383476,208.52039329453"/>
+                        </PathFigure>
+                        <PathFigure IsClosed="True" StartPoint="12.375000190105,194.999997062031">
+                            <BezierSegment IsSmoothJoin="True" Point3="14.854000392724,192.686997062031" Point2="13.4848863303192,192.686997062031" Point1="12.375000190105,193.722562410049"/>
+                            <BezierSegment Point3="17.3330001901052,194.999997062031" Point2="17.3330001901052,193.722562410049" Point1="16.223114455129,192.686997062031"/>
+                            <BezierSegment IsSmoothJoin="True" Point3="14.853999987486,197.312997062031" Point2="16.2231140498909,197.312997062031" Point1="17.3330001901052,196.277431714012"/>
+                            <BezierSegment Point3="12.375000190105,194.999997062031" Point2="12.375000190105,196.277431714012" Point1="13.4848861277002,197.312997062031"/>
+                        </PathFigure>
+                        <PathFigure StartPoint="17.7285737467135,194.186970906439">
+                            <PolyLineSegment Points="20.190607,194.24778 20.148601,59.624079"/>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+            <Path x:Name="l142_Copy" Data="M5.4164999,0 L0,5.4165 10.833,5.4165 z" Height="5.339" Canvas.Left="179.761" Stretch="Fill" Canvas.Top="408.88" Width="6.611" Stroke="Black" Fill="{Binding Stroke, ElementName=l69}"/>
+            <Path x:Name="l70" Height="259.777" Canvas.Left="153.625" Stretch="Fill" Stroke="Black" Canvas.Top="376.5" Width="79.208">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="3.68633843457701,302.533160537208">
+                            <LineSegment Point="3.68699497001276,208.58239329453"/>
+                        </PathFigure>
+                        <PathFigure IsClosed="True" StartPoint="0.500000036239612,206.20739329453">
+                            <BezierSegment IsSmoothJoin="True" Point3="2.97900023885862,203.89439329453" Point2="1.60988617645376,203.89439329453" Point1="0.500000036239612,204.929958642548"/>
+                            <BezierSegment Point3="5.45800003623961,206.20739329453" Point2="5.45800003623961,204.929958642548" Point1="4.34811430126348,203.89439329453"/>
+                            <BezierSegment IsSmoothJoin="True" Point3="2.9789998336206,208.52039329453" Point2="4.34811389602546,208.52039329453" Point1="5.45800003623961,207.484827946512"/>
+                            <BezierSegment Point3="0.500000036239612,206.20739329453" Point2="0.500000036239612,207.484827946512" Point1="1.60988597383476,208.52039329453"/>
+                        </PathFigure>
+                        <PathFigure IsClosed="True" StartPoint="16.8746760992071,206.333802639403">
+                            <BezierSegment IsSmoothJoin="True" Point3="19.3536763018261,204.020802639403" Point2="17.9845622394213,204.020802639403" Point1="16.8746760992071,205.056367987421"/>
+                            <BezierSegment Point3="21.8326760992073,206.333802639403" Point2="21.8326760992073,205.056367987421" Point1="20.7227903642311,204.020802639403"/>
+                            <BezierSegment IsSmoothJoin="True" Point3="19.3536758965881,208.646802639403" Point2="20.722789958993,208.646802639403" Point1="21.8326760992073,207.611237291384"/>
+                            <BezierSegment Point3="16.8746760992071,206.333802639403" Point2="16.8746760992071,207.611237291384" Point1="17.9845620368023,208.646802639403"/>
+                        </PathFigure>
+                        <PathFigure StartPoint="22.2282496558155,206.854243750507">
+                            <PolyLineSegment Points="40.17779,206.91505 40.288651,51.723125 32.215568,43.805602 -37.82051,43.722258"/>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+            <Path x:Name="l34_Copy" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l70}" Height="6.916" Canvas.Left="148.867" Stretch="Fill" Stroke="Black" Canvas.Top="373.477" Width="5.375"/>
+            <Path x:Name="l71" Data="M24.082001,84.896004 L24.089045,71.688004 26.437001,71.750472 M35.156251,57.343802 L24.062001,57.406005 24.101205,49.145795 M24.082,28.441166 L17.000001,20.937999 7.2500005,20.813004 0.50000074,27.563004 0.62500075,37.688354 6.9375007,44.250991 M24.112581,34.562733 L24.123812,6.7504091 30.624463,0.56250288 40.813001,0.50000354" Height="85.396" Canvas.Left="296.25" Stretch="Fill" Stroke="Black" Canvas.Top="357.437" Width="41.313"/>
+            <Path x:Name="l48_Copy" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l71}" Height="6.626" Canvas.Left="336.5" Stretch="Fill" Stroke="Black" Canvas.Top="354.75" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l72" Data="M24.082001,84.896004 L24.089045,71.688004 26.437001,71.750472 M35.156251,57.343802 L24.062001,57.406005 24.101205,49.145795 24.101743,48.137573 M24.082,28.441166 L17.000001,20.937999 7.2500005,20.813004 0.50000074,27.563004 0.62500075,37.688354 6.9375007,44.250991 M24.108485,35.494537 L24.112581,27.812733 24.123812,6.7504091 30.624463,0.56250288 40.813001,0.50000354" Height="85.396" Canvas.Left="426.941" Stretch="Fill" Stroke="Black" Canvas.Top="357.437" Width="40.792" RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path x:Name="l34_Copy1" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l72}" Height="6.916" Canvas.Left="420.381" Stretch="Fill" Stroke="Black" Canvas.Top="354.75" Width="5.375"/>
+            <Path x:Name="l73" Data="M24.715985,85.396006 L24.715985,71.813009 22.854995,71.89634 M14.688,57.615012 L25.063,57.615012 25.0005,50.146 M25.049981,34.396006 L25.105354,6.8960062 31.604462,0.56301581 37.061986,0.49999999 M24.716001,27.725016 L18.541377,21.495506 6.603638,21.495017 0.81252222,27.708503 0.5,37.208498 7.5630002,44.645993" Height="85.896" Canvas.Left="747.562" Stretch="Fill" Stroke="Black" Canvas.Top="357.104" Width="37.562"/>
+            <Path x:Name="l74" Data="M754.78125,401.6875 L760.59375,401.625" Height="1.063" Canvas.Left="754.312" Stretch="Fill" Stroke="Black" Canvas.Top="401.187" Width="7.219"/>
+            <Path x:Name="l75" Data="M747.875,401.90625 L754.312,401.9375" Height="1.032" Canvas.Left="747.156" Stretch="Fill" Stroke="Black" Canvas.Top="401.255" Width="8.281"/>
+            <Path x:Name="l48_Copy1" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l74}" Height="6.626" Canvas.Left="760.462" Stretch="Fill" Stroke="Black" Canvas.Top="398.395" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l48_Copy2" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l73}" Height="6.626" Canvas.Left="785.124" Stretch="Fill" Stroke="Black" Canvas.Top="354.75" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l76" Data="M468.6875,401.6875 L460,401.625" Height="1.063" Canvas.Left="460.062" Stretch="Fill" Stroke="Black" Canvas.Top="401.187" Width="9.688"/>
+            <Path x:Name="l77" Data="M460.9375,401.65625 L455.0625,401.65625" Height="1" Canvas.Left="455.093" Stretch="Fill" Stroke="Black" Canvas.Top="401.187" Width="6.876"/>
+            <Path x:Name="l34_Copy2" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l77}" Height="6.916" Canvas.Left="450.687" Stretch="Fill" Stroke="Black" Canvas.Top="398.105" Width="5.375"/>
+            <Path x:Name="l34_Copy3" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l78}" Height="6.916" Canvas.Left="437.187" Stretch="Fill" Stroke="Black" Canvas.Top="418.846" Width="5.375"/>
+            <Path x:Name="l78" Data="M455.093,422.5 L441.16667,422.5" Height="1" Canvas.Left="441.136" Stretch="Fill" Stroke="Black" Canvas.Top="421" Width="14.926"/>
+            <Path x:Name="l34_Copy4" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l79}" Height="6.916" Canvas.Left="765.945" Stretch="Fill" Stroke="Black" Canvas.Top="418.428" Width="5.375"/>
+            <Path x:Name="l79" Data="M455.093,422.5 L441.16667,422.5" Height="1" Canvas.Left="769.47" Stretch="Fill" Stroke="Black" Canvas.Top="421" Width="14.926"/>
+            <Path x:Name="l80" Data="M24.082001,84.896004 L24.089045,71.688004 26.437001,71.750472 M35.156251,57.343802 L24.062001,57.406005 24.101205,49.145795 24.103011,45.759076 M24.082,28.441166 L17.000001,20.937999 7.2500005,20.813004 0.50000074,27.563004 0.62500075,37.688354 6.9375007,44.250991 M24.106949,32.365238 L24.112581,27.812733 24.123812,6.7504091 30.624463,0.56250288 40.813001,0.50000354" Height="85.396" Canvas.Left="871.565" Stretch="Fill" Stroke="Black" Canvas.Top="357.437" Width="40.792" RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path x:Name="l34_Copy5" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l80}" Height="6.916" Canvas.Left="870.838" Stretch="Fill" Stroke="Black" Canvas.Top="353.958" Width="5.375"/>
+            <Path x:Name="l81" Data="M468.6875,401.6875 L460,401.625" Height="1.063" Canvas.Left="904.686" Stretch="Fill" Stroke="Black" Canvas.Top="401.187" Width="9.688"/>
+            <Path x:Name="l82" Data="M460.9375,401.65625 L455.0625,401.65625" Height="1" Canvas.Left="899.717" Stretch="Fill" Stroke="Black" Canvas.Top="401.187" Width="6.876"/>
+            <Path x:Name="l34_Copy6" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l82}" Height="6.916" Canvas.Left="895.311" Stretch="Fill" Stroke="Black" Canvas.Top="398.105" Width="5.375"/>
+            <Path x:Name="l34_Copy7" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l83}" Height="6.916" Canvas.Left="881.811" Stretch="Fill" Stroke="Black" Canvas.Top="418.846" Width="5.375"/>
+            <Path x:Name="l83" Data="M455.093,422.5 L441.16667,422.5" Height="1" Canvas.Left="885.76" Stretch="Fill" Stroke="Black" Canvas.Top="421" Width="14.926"/>
+            <Path x:Name="l85" Data="M302.79167,401.79167 L308.04167,401.79167" Height="1" Canvas.Left="923.334" Stretch="Fill" Stroke="Black" Canvas.Top="401.287" Width="6.25"/>
+            <Path x:Name="l48_Copy3" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l85}" Height="6.626" Canvas.Left="928.487" Stretch="Fill" Stroke="Black" Canvas.Top="398.395" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l84" Data="M24.082001,84.896004 L24.089045,71.688004 26.437001,71.750472 M35.156251,57.343802 L24.062001,57.406005 24.101205,49.145795 24.101858,47.921097 M24.082,28.441166 L17.000001,20.937999 7.2500005,20.813004 0.50000074,27.563004 0.62500075,37.688354 6.9375007,44.250991 M24.11127,30.271806 L24.112581,27.812733 24.123812,6.7504091 30.624463,0.56250288 40.813001,0.50000354" Height="85.396" Canvas.Left="917.084" Stretch="Fill" Stroke="Black" Canvas.Top="357.437" Width="41.313"/>
+            <Path x:Name="l48_Copy4" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l84}" Height="6.626" Canvas.Left="955.251" Stretch="Fill" Stroke="Black" Canvas.Top="354.248" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path x:Name="l86" Data="M295.29907,401.79167 L308.04167,401.79167" Height="1" Canvas.Left="930.682" Stretch="Fill" Stroke="Black" Canvas.Top="421.291" Width="13.765"/>
+            <Path x:Name="l48_Copy5" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l86}" Height="6.626" Canvas.Left="943.35" Stretch="Fill" Stroke="Black" Canvas.Top="418.399" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <Path Data="M917.6875,401.287 L924.487,401.287" Height="1" Canvas.Left="917.688" Stretch="Fill" Stroke="Black" Canvas.Top="401.287" Width="7.799"/>
+            <Path x:Name="l87" Data="M24.082001,84.896004 L24.089045,71.688004 26.437001,71.750472 M35.156251,57.343802 L24.062001,57.406005 24.101205,49.145795 M24.082,28.441166 L17.000001,20.937999 7.2500005,20.813004 0.50000074,27.563004 0.62500075,37.688354 6.9375007,44.250991 M24.110543,31.635035 L24.112581,27.812733 24.123812,6.7504091 30.624463,0.56250288 40.813001,0.50000354" Height="85.396" Canvas.Left="1043.065" Stretch="Fill" Stroke="Black" Canvas.Top="357.437" Width="40.792" RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path x:Name="l34_Copy8" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l87}" Height="6.916" Canvas.Left="1042.338" Stretch="Fill" Stroke="Black" Canvas.Top="353.958" Width="5.375"/>
+            <Path x:Name="l88" Data="M468.6875,401.6875 L460,401.625" Height="1.063" Canvas.Left="1076.186" Stretch="Fill" Stroke="Black" Canvas.Top="401.187" Width="9.688"/>
+            <Path x:Name="l89" Data="M460.9375,401.65625 L455.0625,401.65625" Height="1" Canvas.Left="1071.217" Stretch="Fill" Stroke="Black" Canvas.Top="401.187" Width="6.876"/>
+            <Path x:Name="l34_Copy9" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l89}" Height="6.916" Canvas.Left="1066.811" Stretch="Fill" Stroke="Black" Canvas.Top="398.105" Width="5.375"/>
+            <Path x:Name="l34_Copy10" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l90}" Height="6.916" Canvas.Left="1053.311" Stretch="Fill" Stroke="Black" Canvas.Top="418.846" Width="5.375"/>
+            <Path x:Name="l90" Data="M455.093,422.5 L441.16667,422.5" Height="1" Canvas.Left="1057.26" Stretch="Fill" Stroke="Black" Canvas.Top="421" Width="14.926"/>
+            <Path x:Name="l102" Data="M176.75,90 L196.25,90" Height="4" Canvas.Left="174.75" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="#FF0E0D0D" StrokeThickness="4" Canvas.Top="286" Width="23.5"/>
+            <Path x:Name="l103" Data="M2,1 L2,19 M1,38 L1.0649976,329.75 30.564998,329.75" Height="330.75" Canvas.Left="350.81" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328" Width="31.565"/>
+            <Path x:Name="l104" Data="M381.25,645 L381.125,658.75" Height="15.75" Canvas.Left="380.125" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="644" Width="2.125"/>
+            <Path x:Name="l105" Data="M382.25,614.835 L382.375,442" Height="174.835" Canvas.Left="381.25" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="441" Width="2.125"/>
+            <Path x:Name="l106" Data="M12.332985,115.66667 L1.332995,115.66701 1.0000054,37.999996 M1.0000001,1 L1.0000001,19" Height="116.667" Canvas.Left="369" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328" Width="13.333"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy7" Height="18.614" Canvas.Left="341.258" Canvas.Top="346.05" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy" Height="18.614" Canvas.Left="358.507" Canvas.Top="346.217" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy1" Height="21.126" Canvas.Left="326.535" Canvas.Top="413.205" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="391.557"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy2" Height="16.62" Canvas.Left="304.913" Canvas.Top="391.183" Width="15.666" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="360.47"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <Path x:Name="l109" Data="M343.63287,689.00474 L344.15678,650.50441 340.83376,646.74997" Height="43.255" Canvas.Left="341.083" Stretch="Fill" Stroke="Black" Canvas.Top="644.417" Width="4.324"/>
+            <Path x:Name="l48_Copy6" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l109}" Height="6.626" Canvas.Left="338.667" Stretch="Fill" Stroke="{Binding Stroke, ElementName=l109}" Canvas.Top="641.75" Width="6.476" RenderTransformOrigin="0.229,0.459">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-138.775"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path x:Name="l110" Data="M319.37501,638.40625 L313.24984,643.37526 313.24985,652.00025 302.12457,652.00024 301.24955,427.62501 307.4997,421.5 320.00002,421.5" Height="231.5" Canvas.Left="301.25" Stretch="Fill" Stroke="Black" Canvas.Top="421.5" Width="19.75"/>
+            <Path x:Name="l48_Copy7" Data="M6.3329998,1.625 L5.2079999,0.5 5.2079999,2.75 z" Fill="{Binding Stroke, ElementName=l110}" Height="6.626" Canvas.Left="321" Stretch="Fill" Stroke="{Binding Stroke, ElementName=l110}" Canvas.Top="419.136" Width="6.476" RenderTransformOrigin="0.229,0.459"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy3" Height="38.908" Canvas.Left="314.656" Canvas.Top="604.592" Width="25.895" Template="{DynamicResource _3StateKeyControlTemplate1}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms25.ValueState}"/>
+            <Path x:Name="lud36" Data="M20,136.037 L23,136.12" Height="1.083" Canvas.Left="20" Stretch="Fill" Stroke="Black" Canvas.Top="136.037" Width="1.371"/>
+            <Path x:Name="lv5" Data="M30,136.037 L35.5,136.037" Height="1" Canvas.Left="30" Stretch="Fill" Stroke="Black" Canvas.Top="136.037" Width="1.263"/>
+            <mnemoLib:MnemoPathCenter x:Name="MPC1" DCanvas="{Binding ElementName=LayoutRoot}" PenPatch="pack://application:,,,/ResourceFiles;component/Data/My.xml" >
+
+                <mnemoLib:MnemoPathCenter.Marshrut>
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms20red" NodesPenA="penRed" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms20blue" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms21red" NodesPenA="penRed" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms21blue" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms22red" NodesPenA="penRed" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms22blue" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms23red" NodesPenA="penRed" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms23blue" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms24red" NodesPenA="penRed" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms24blue" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms27" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms27" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_D7" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_V5" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_D9" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_D11" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_12_60c" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_AC2" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_D13" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_G17" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_12_180c" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_D15" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_D17" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_D8" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_12_12m" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_D5" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms25" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+                    <mnemoLib:MnemoPathNodes NameNodes="H_ms28" NodesPenA="pBlue" NodesPenD="pBlack" NodesPenL="penRed" NodesPenR="penRed" />
+
+                </mnemoLib:MnemoPathCenter.Marshrut>
+            </mnemoLib:MnemoPathCenter>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_9" Height="15.284" Canvas.Left="149.319" Canvas.Top="585.507" Width="9.974" Template="{StaticResource _3StateKeyControlTemplate_knopka}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mM_krus3.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_9_Copy" Height="15.284" Canvas.Left="167.345" Canvas.Top="547.453" Width="9.974" Template="{StaticResource _3StateKeyControlTemplate_knopka}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mM_krus3.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="44.208"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_9_Copy1" Height="15.284" Canvas.Left="197.722" Canvas.Top="530.429" Width="9.974" Template="{StaticResource _3StateKeyControlTemplate_knopka}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mM_krus3.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.018"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <Path Data="M4.3417969,6.1238279 C4.2988281,6.9011717 4.1503906,7.7761717 3.8964844,8.7488279 C3.6425779,9.7214842 3.3281248,10.60625 2.953125,11.403125 L5.7714844,11.403125 L5.7714844,6.1238279 z M2.8066406,4.5476561 L7.6699219,4.5476561 L7.6699219,11.403125 L8.8652344,11.403125 L8.8652344,15.241015 L7.2011719,15.241015 L7.2011719,12.95 L1.8691406,12.95 L1.8691406,15.241015 L0.2285157,15.241015 L0.2285157,11.403125 L1.0078125,11.403125 C2.09375,9.4382811 2.6933594,7.1531248 2.8066406,4.5476561 z M12.39375,4.4070311 C13.311719,4.4070311 14.023633,4.5974607 14.529492,4.9783201 C15.035352,5.35918 15.288281,5.8757815 15.288281,6.5281248 C15.288281,7.0398436 15.144727,7.4744139 14.857617,7.8318357 C14.570508,8.1892576 14.161328,8.4304686 13.630078,8.5554686 L13.630078,8.5847654 C14.227735,8.6628904 14.695508,8.8787107 15.033399,9.2322264 C15.371288,9.585742 15.540234,10.024219 15.540235,10.547656 C15.540234,11.35625 15.247265,11.983203 14.661328,12.428515 C14.075391,12.873828 13.231641,13.096484 12.130078,13.096484 C11.083203,13.096484 10.280469,12.94414 9.7218752,12.639453 L9.7218752,10.98125 C10.389844,11.430469 11.14961,11.655078 12.001172,11.655078 C13.05586,11.655078 13.583203,11.274219 13.583203,10.5125 C13.583203,9.7390623 13.003125,9.3523436 11.842969,9.3523436 L10.764844,9.3523436 L10.764844,7.9343748 L11.796094,7.9343748 C12.827344,7.9343748 13.342969,7.5710936 13.342969,6.8445311 C13.342969,6.180469 12.903516,5.8484378 12.02461,5.8484373 C11.395703,5.8484378 10.723828,6.0476565 10.008985,6.4460936 L10.008985,4.8992186 C10.727735,4.5710936 11.522656,4.4070311 12.39375,4.4070311 z M16.964272,4.5476561 L21.968178,4.5476561 L21.968178,6.1121092 L18.85685,6.1121092 L18.85685,12.95 L16.964272,12.95 z" Fill="Black" Height="8.915" Canvas.Left="123.005" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="589.433" Width="20.153">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M4.3417969,6.1238279 C4.2988281,6.9011717 4.1503906,7.7761717 3.8964844,8.7488279 C3.6425779,9.7214842 3.3281248,10.60625 2.953125,11.403125 L5.7714844,11.403125 L5.7714844,6.1238279 z M2.8066406,4.5476561 L7.6699219,4.5476561 L7.6699219,11.403125 L8.8652344,11.403125 L8.8652344,15.241015 L7.2011719,15.241015 L7.2011719,12.95 L1.8691406,12.95 L1.8691406,15.241015 L0.2285157,15.241015 L0.2285157,11.403125 L1.0078125,11.403125 C2.09375,9.4382811 2.6933594,7.1531248 2.8066406,4.5476561 z M10.260938,4.5476561 L12.153516,4.5476561 L12.153516,8.5203123 L12.182813,8.5203123 C12.229688,8.4109373 12.307813,8.2546873 12.417188,8.0515623 L14.7375,4.5476561 L16.993359,4.5476561 L14.063672,8.5554686 L17.245312,12.95 L14.854688,12.95 L12.405469,9.2996092 C12.358594,9.2292967 12.284375,9.0749998 12.182813,8.8367186 L12.153516,8.8367186 L12.153516,12.95 L10.260938,12.95 z M20.842525,4.3601561 L21.961666,4.3601561 L21.961666,12.95 L20.115963,12.95 L20.115963,6.4460936 C20.0144,6.5359378 19.894283,6.6208987 19.755611,6.7009764 C19.61694,6.781055 19.469479,6.8533206 19.313229,6.9177732 C19.156979,6.9822264 18.994869,7.0369139 18.8269,7.0818357 C18.658932,7.1267576 18.492916,7.1589842 18.328854,7.1785154 L18.328854,5.6199217 C18.809322,5.4792972 19.262447,5.2996097 19.688229,5.0808592 C20.11401,4.8621092 20.498775,4.6218748 20.842525,4.3601561 z" Fill="Black" Height="6.572" Canvas.Left="157.547" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="542.441" Width="18.421">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-48.17"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M4.3417969,6.1238279 C4.2988281,6.9011717 4.1503906,7.7761717 3.8964844,8.7488279 C3.6425779,9.7214842 3.3281248,10.60625 2.953125,11.403125 L5.7714844,11.403125 L5.7714844,6.1238279 z M2.8066406,4.5476561 L7.6699219,4.5476561 L7.6699219,11.403125 L8.8652344,11.403125 L8.8652344,15.241015 L7.2011719,15.241015 L7.2011719,12.95 L1.8691406,12.95 L1.8691406,15.241015 L0.2285157,15.241015 L0.2285157,11.403125 L1.0078125,11.403125 C2.09375,9.4382811 2.6933594,7.1531248 2.8066406,4.5476561 z M10.260938,4.5476561 L12.153516,4.5476561 L12.153516,8.5203123 L12.182813,8.5203123 C12.229688,8.4109373 12.307813,8.2546873 12.417188,8.0515623 L14.7375,4.5476561 L16.993359,4.5476561 L14.063672,8.5554686 L17.245312,12.95 L14.854688,12.95 L12.405469,9.2996092 C12.358594,9.2292967 12.284375,9.0749998 12.182813,8.8367186 L12.153516,8.8367186 L12.153516,12.95 L10.260938,12.95 z M20.449947,4.4070311 C20.875729,4.4070311 21.257565,4.4626951 21.595455,4.5740232 C21.933346,4.6853514 22.219479,4.8445311 22.453854,5.0515623 C22.688229,5.258594 22.86694,5.5095706 22.989986,5.804492 C23.113033,6.0994143 23.174557,6.4285159 23.174557,6.7917967 C23.174557,7.1785154 23.114986,7.5222654 22.995846,7.8230467 C22.876705,8.1238279 22.718502,8.3972654 22.521236,8.6433592 C22.323971,8.8894529 22.096432,9.1150389 21.838619,9.320117 C21.580807,9.5251951 21.313229,9.7234373 21.035885,9.9148436 C20.848385,10.047656 20.667721,10.179492 20.493893,10.310351 C20.320065,10.441211 20.166744,10.570117 20.033932,10.69707 C19.901119,10.824023 19.79565,10.948047 19.717525,11.06914 C19.6394,11.190234 19.600338,11.305469 19.600338,11.414844 L23.162838,11.414844 L23.162838,12.95 L17.572994,12.95 L17.572994,12.317187 C17.572994,11.8875 17.64526,11.501758 17.789791,11.159961 C17.934322,10.818164 18.115963,10.511523 18.334713,10.240039 C18.553463,9.9685545 18.792721,9.7283201 19.052486,9.5193357 C19.312252,9.3103514 19.559322,9.1218748 19.793697,8.9539061 C20.039791,8.7781248 20.255611,8.6101561 20.441158,8.4499998 C20.626705,8.2898436 20.782955,8.1306639 20.909908,7.9724607 C21.036861,7.8142576 21.131588,7.6541014 21.194088,7.491992 C21.256588,7.3298826 21.287838,7.1570311 21.287838,6.9734373 C21.287838,6.6140628 21.186275,6.3425784 20.98315,6.1589842 C20.780025,5.9753909 20.469479,5.883594 20.05151,5.8835936 C19.328854,5.883594 18.637447,6.1707034 17.977291,6.7449217 L17.977291,5.1160154 C18.70776,4.6433592 19.531979,4.4070311 20.449947,4.4070311 z" Fill="Black" Height="8.957" Canvas.Left="197.227" RenderTransformOrigin="0.345,-0.137" Stretch="Fill" Canvas.Top="545.591" Width="19.316">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M28.964,93.370148 C20.144708,92.908477 12.315,95.085669 7.0580535,92.243543 2.5858048,89.825657 0.5,86.58118 0.5,83.253678 0.5,80.124537 1.8054521,76.562303 5.8062851,74.217855 10.166506,71.662809 16.516774,73.066422 23.83175,72.215001 M34.700924,103.99467 C27.902372,94.848289 24.974999,83.21841 24.974999,71.164199 24.974999,40.16766 51.388184,15.04 83.970499,15.04 116.55281,15.04 142.966,40.16766 142.966,71.164199 142.966,83.255371 140.69884,94.937015 133.86221,104.099 M79.034998,14.008 C79.034998,7.1636489 79.132981,0.49999999 82.349305,0.49999999 83.557716,0.49999999 84.432783,1.4422896 85.054411,2.9818018 86.087319,5.5398798 85.79473,9.7351226 85.79473,14.007972 M74.736998,16.178 C71.398886,24.189573 61.123953,46.095518 57.785999,56.944 M57.879999,56.902001 C54.875769,74.260263 27.336999,70.083153 27.336999,57.569059 M89.173998,15.51 C93.764222,21.351707 94.452555,23.340995 101.13731,30.965647 106.47822,37.057515 119.88941,48.281867 120.83241,57.753846 M120.636,57.319149 C120.636,67.643337 99.915865,73.008001 89.257839,73.008001 78.599814,73.008001 58.213998,67.059189 58.213998,56.735001 M142.667,66.225527 C142.667,74.379911 119.05002,68.835798 120.71907,57.820028 M128.824,103.96802 L134.3,103.96802 M41.605995,103.96802 L34.109004,103.96802" Height="104.599" Canvas.Left="119.371" Stretch="Fill" Stroke="Black" Canvas.Top="511.236" Width="143.466"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy4" Height="21.126" Canvas.Left="423.654" Canvas.Top="415.76" Width="11.907" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="313.905"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <Path x:Name="l112" Data="M58.91475,39.185011 L59.243988,116.54599 51.320981,116.54492 M1.0283662,1.0000014 L1.0000003,12.731207 59.577043,12.731207 59.695993,21.493997" Height="117.546" Canvas.Left="331.972" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="327" Width="60.696"/>
+            <Path Data="M31.460001,33.333023 L31.459736,329.34903 1,329.26596 M31.292999,1 L31.542987,19.994001" Height="330.349" Canvas.Left="380.123" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328.333" Width="32.543"/>
+            <TextBlock Height="18.36" Canvas.Left="21.791" TextWrapping="Wrap" Canvas.Top="143.64" Width="35.211" FontWeight="Bold" FontSize="10.667" Foreground="{Binding Stroke, ElementName=lv5}"><Run Language="ru-ru" Text="ПК-В5"/></TextBlock>
+            <TextBlock Height="18.36" Canvas.Left="21.791" TextWrapping="Wrap" Canvas.Top="156.14" Width="30.475" FontWeight="Bold" FontSize="10.667" Foreground="{Binding Stroke, ElementName=lud36}"><Run Language="ru-ru" Text="УД36"/></TextBlock>
+            <TextBlock Height="16.437" Canvas.Left="63.875" TextWrapping="Wrap" Canvas.Top="414.966" Width="28.016" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="АС-2"/></TextBlock>
+            <TextBlock Height="16.437" Canvas.Left="174.75" TextWrapping="Wrap" Canvas.Top="325" Width="28.016" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="АС-2"/></TextBlock>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy5" Height="16.944" Canvas.Left="152.209" Canvas.Top="341.164" Width="14.335" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="69.392"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy6" Height="18.614" Canvas.Left="141.892" Canvas.Top="364.409" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="358.672"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy8" Height="16.62" Canvas.Left="95.116" Canvas.Top="390.683" Width="15.666" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="360.47"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy9" Height="21.126" Canvas.Left="115.716" Canvas.Top="412.914" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="1">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="391.557"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <TextBlock Height="10.929" Canvas.Left="172.362" TextWrapping="Wrap" Canvas.Top="346.196" Width="78.535" FontSize="8" FontWeight="Bold"><Run Language="ru-ru" Text="&quot;Начало стыковки&quot;"/></TextBlock>
+            <TextBlock Height="16.437" Canvas.Left="170.234" TextWrapping="Wrap" Canvas.Top="361.125" Width="28.016" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="АС-3"/></TextBlock>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy10" Height="18.614" Canvas.Left="176.4" Canvas.Top="398.165" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="91.244"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <TextBlock Height="16.437" Canvas.Left="239.39" TextWrapping="Wrap" Canvas.Top="386.313" Width="28.016" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="АС-1"/></TextBlock>
+            <TextBlock Height="16.437" Canvas.Left="251.177" TextWrapping="Wrap" Canvas.Top="250.938" Width="32.494" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="СУБК"/></TextBlock>
+            <TextBlock Height="11.016" Canvas.Left="109.488" TextWrapping="Wrap" Canvas.Top="293.749" Width="16.179" FontSize="8"><Run Language="ru-ru" Text="+"/><Run Text="A"/></TextBlock>
+            <TextBlock Height="11.016" Canvas.Left="129.667" TextWrapping="Wrap" Canvas.Top="293.749" Width="16.179" FontSize="8"><Run Language="ru-ru" Text="+Б"/></TextBlock>
+            <TextBlock Height="11.016" Canvas.Left="153.667" TextWrapping="Wrap" Canvas.Top="293.749" Width="16.179" FontSize="8"><Run Language="ru-ru" Text="+В"/></TextBlock>
+            <TextBlock Height="11.016" Canvas.Left="179.761" TextWrapping="Wrap" Canvas.Top="293.749" Width="16.179" FontSize="8"><Run Language="ru-ru" Text="&quot;-&quot;"/></TextBlock>
+            <TextBlock Height="16.437" Canvas.Left="99.833" TextWrapping="Wrap" Canvas.Top="335.579" Width="28.016" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="-ДК"/></TextBlock>
+            <TextBlock Height="22.235" Canvas.Left="110.19" TextWrapping="Wrap" Canvas.Top="304.765" Width="85.75" FontSize="8"><Run Language="ru-ru" Text="ШИНЫ АВТОМАТИКИ"/></TextBlock>
+            <TextBlock Height="16.437" Canvas.Left="314.656" TextWrapping="Wrap" Canvas.Top="306.563" Width="30.751" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="+ППЗ"/></TextBlock>
+            <TextBlock Height="16.437" Canvas.Left="387.492" TextWrapping="Wrap" Canvas.Top="307.896" Width="30.751" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="-ППЗ"/></TextBlock>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy11" Height="18.614" Canvas.Left="390.644" Canvas.Top="347.761" Width="12.369" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" >
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy12" Height="18.614" Canvas.Left="410.547" Canvas.Top="347.385" Width="12.369" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <Path Data="M29.043,15.0215 C29.043,22.765361 22.765361,29.043 15.0215,29.043 C7.2776394,29.043 1,22.765361 1,15.0215 C1,7.2776394 7.2776394,1 15.0215,1 C22.765361,1 29.043,7.2776394 29.043,15.0215 z" Height="30.043" Canvas.Left="367.145" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="613.457" Width="30.043"/>
+            <Path Data="M1.55,1 L9.5990002,1 L9.5990002,2.5879999 L1.55,2.5879999 z M1,31.793 L8.3469999,31.793 L8.3469999,33.048 L1,33.048 z M24.367,5.719 L30.754,5.719 30.754,29.418001 24.367,29.418001 24.367,24.659532 26.621277,24.784709 26.746454,9.513078 24.367,9.513078 z" Height="34.048" Canvas.Left="376.7" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="611.116" Width="31.754" Fill="#FF040404"/>
+            <Path Data="M0,2.251 L4.451,2.251 L4.451,3.602 L0,3.602 z M14.310409,-3.5527137E-15 L15.089732,-3.5527137E-15 L15.089732,2.3614085 L17.457,2.3614085 L17.457,3.1465915 L15.089732,3.1465915 L15.089732,5.508 L14.310409,5.508 L14.310409,3.1465915 L11.949,3.1465915 L11.949,2.3614085 L14.310409,2.3614085 z M12.262,46.337 L16.713,46.337 16.713,47.688 12.262,47.688 z M2.7374085,45.127 L3.5167319,45.127 3.5167319,47.488409 5.884,47.488409 5.884,48.273591 3.5167319,48.273591 3.5167319,50.635 2.7374085,50.635 2.7374085,48.273591 0.376,48.273591 0.376,47.488409 2.7374085,47.488409 z" Fill="Black" Height="50.635" Canvas.Left="373.299" RenderTransformOrigin="0.127484671285298,0.0577959908555383" Stretch="Fill" Canvas.Top="604.592" Width="17.457">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <TextBlock Height="27.953" Canvas.Left="128.25" TextWrapping="Wrap" Canvas.Top="655.714" Width="39.908" FontSize="16" FontWeight="Bold"><Run Language="ru-ru" Text="АСА"/></TextBlock>
+            <TextBlock Height="27.953" Canvas.Left="277.882" TextWrapping="Wrap" Canvas.Top="583.111" Width="39.908" FontSize="16" FontWeight="Bold"><Run Language="ru-ru" Text="ПЗ"/></TextBlock>
+            <TextBlock Height="18.915" Canvas.Left="62.462" TextWrapping="Wrap" Canvas.Top="446.25" Width="90.518" FontSize="16" FontWeight="Bold"><Run Language="ru-ru" Text="АБУ-ССВП"/></TextBlock>
+            <TextBlock Height="21.573" Canvas.Left="318.875" TextWrapping="Wrap" Canvas.Top="593.594" Width="25.146" FontSize="13.333"><Run Language="ru-ru" Text="лиз"/></TextBlock>
+            <Path Data="M4.736178,0.99999999 L5.2710105,64.996021 1.3559904,64.995241 M1,81.016942 L5.3717687,80.966021 4.9446037,330.80902 41.359966,330.56955" Height="331.809" Canvas.Left="507.573" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328.458" Width="42.36"/>
+            <Path Data="M0,2.251 L4.451,2.251 L4.451,3.602 L0,3.602 z M14.310409,-3.5527137E-15 L15.089732,-3.5527137E-15 L15.089732,2.3614085 L17.457,2.3614085 L17.457,3.1465915 L15.089732,3.1465915 L15.089732,5.508 L14.310409,5.508 L14.310409,3.1465915 L11.949,3.1465915 L11.949,2.3614085 L14.310409,2.3614085 z M12.262,46.337 L16.713,46.337 16.713,47.688 12.262,47.688 z M2.7374085,45.127 L3.5167319,45.127 3.5167319,47.488409 5.884,47.488409 5.884,48.273591 3.5167319,48.273591 3.5167319,50.635 2.7374085,50.635 2.7374085,48.273591 0.376,48.273591 0.376,47.488409 2.7374085,47.488409 z" Fill="Black" Height="50.635" Canvas.Left="541.02" RenderTransformOrigin="0.127484671285298,0.0577959908555383" Stretch="Fill" Canvas.Top="604.592" Width="17.457">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M1.55,1 L9.5990002,1 L9.5990002,2.5879999 L1.55,2.5879999 z M1,31.793 L8.3469999,31.793 L8.3469999,33.048 L1,33.048 z M24.367,5.719 L30.754,5.719 30.754,29.418001 24.367,29.418001 24.367,24.659532 26.621277,24.784709 26.746454,9.513078 24.367,9.513078 z" Height="34.048" Canvas.Left="543.582" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="612.122" Width="31.754" Fill="#FF040404"/>
+            <Path Data="M29.043,15.0215 C29.043,22.765361 22.765361,29.043 15.0215,29.043 C7.2776394,29.043 1,22.765361 1,15.0215 C1,7.2776394 7.2776394,1 15.0215,1 C22.765361,1 29.043,7.2776394 29.043,15.0215 z" Height="30.043" Canvas.Left="533.915" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="614.704" Width="30.043"/>
+            <Path Data="M548.7773,658.75 L548.71472,646.17" Height="14.58" Canvas.Left="547.715" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="645.17" Width="2.062"/>
+            <Path Data="M549.777,612.122 L549.933,443.50319" Height="170.619" Canvas.Left="547.777" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="442" Width="2.156"/>
+            <Path Data="M1,80.329272 L5.1308862,80.329002 5.1308862,115.75391 21.52898,115.87899 M1.0000062,65.932993 L4.8816698,65.932993 4.882,1.0000024" Height="116.879" Canvas.Left="527.123" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328.25" Width="22.529"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy14" Height="19.825" Canvas.Left="498.456" Canvas.Top="391.454" Width="10.758" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms21.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy15" Height="19.825" Canvas.Left="518.775" Canvas.Top="391.955" Width="9.61" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms21.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy16" Height="19.825" Canvas.Left="567.926" Canvas.Top="391.509" Width="11.406" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy17" Height="19.825" Canvas.Left="587.992" Canvas.Top="391.509" Width="12.136" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy18" Height="19.825" Canvas.Left="623.244" Canvas.Top="391.123" Width="10.184" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms21.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy19" Height="19.825" Canvas.Left="642.746" Canvas.Top="390.202" Width="10.471" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms21.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy20" Height="19.825" Canvas.Left="692.739" Canvas.Top="391.509" Width="12.554" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_2_Copy21" Height="19.825" Canvas.Left="710.432" Canvas.Top="391.509" Width="11.901" Template="{StaticResource _3StateKeyControlTemplate_Sep}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5"/>
+            <TextBlock Height="27.953" Canvas.Left="463.665" TextWrapping="Wrap" Canvas.Top="583.111" Width="39.908" FontSize="14.667" FontWeight="Bold"><Run Language="ru-ru" Text="ПСМ"/></TextBlock>
+            <Path Data="M15.584,71.223 L15.396233,62.043339 0.79212002,62.12679 0.50000001,15.56891 15.363296,15.727873 15.455925,6.882 M15.495,3.127371 L15.52035,0.70645815 110.05907,0.50000001 110.265,77.085134 16.007041,77.251004 15.975984,74.632916 M15.495,28.913 L15.495,49.192001 M15.495,50.976 L15.495,62.335 M15.339995,15.059979 L15.464989,25.867007" Height="77.751" Stretch="Fill" Stroke="Black" Width="110.765" StrokeDashArray="1 1 1" Canvas.Left="487.608" Canvas.Top="591.716"/>
+            <Path Data="M500.08333,618.083 L505.34078,618.083" Height="1" Canvas.Left="500.083" Stretch="Fill" Stroke="Black" Canvas.Top="618.083" Width="6.258"/>
+            <Path Data="M500.083,620.46217 L505.46596,620.37872" Height="1.083" Canvas.Left="500.083" Stretch="Fill" Stroke="Black" Canvas.Top="620.379" Width="6.383"/>
+            <Path Data="M500.35455,640.78262 L505.59113,640.76176" Height="1.021" Canvas.Left="500.355" Stretch="Fill" Stroke="Black" Canvas.Top="640.762" Width="6.236"/>
+            <Path Data="M500.355,642.55597 L505.59113,642.51424" Height="1.042" Canvas.Left="500.355" Stretch="Fill" Stroke="Black" Canvas.Top="642.514" Width="6.236"/>
+            <Path Data="M500.083,663.28324 L505.62243,663.31454" Height="1.032" Canvas.Left="499.802" Stretch="Fill" Stroke="Black" Canvas.Top="663.158" Width="6.539"/>
+            <Path Data="M500.083,663.28324 L505.62243,663.31454" Height="1.032" Canvas.Left="499.802" Stretch="Fill" Stroke="Black" Canvas.Top="666.492" Width="6.539"/>
+            <Path Data="M4.006,2.1935 C4.006,3.1287942 3.2211552,3.887 2.253,3.887 C1.2848448,3.887 0.5,3.1287942 0.5,2.1935 C0.5,1.2582058 1.2848448,0.5 2.253,0.5 C3.2211552,0.5 4.006,1.2582058 4.006,2.1935 z" Fill="Black" Height="2.964" Canvas.Left="486.69" Stretch="Fill" Stroke="Black" Canvas.Top="629.015" Width="2.831" />
+            <Path Data="M4.006,2.1935 C4.006,3.1287942 3.2211552,3.887 2.253,3.887 C1.2848448,3.887 0.5,3.1287942 0.5,2.1935 C0.5,1.2582058 1.2848448,0.5 2.253,0.5 C3.2211552,0.5 4.006,1.2582058 4.006,2.1935 z" Fill="Black" Height="2.964" Canvas.Left="501.75" Stretch="Fill" Stroke="Black" Canvas.Top="629.015" Width="2.831" />
+            <Path Data="M500.08333,618.083 L505.34078,618.083" Height="1" Canvas.Left="500.083" Stretch="Fill" Stroke="Black" Canvas.Top="594.745" Width="6.258"/>
+            <Path Data="M500.08333,618.083 L505.34078,618.083" Height="1" Canvas.Left="500.083" Stretch="Fill" Stroke="Black" Canvas.Top="598.079" Width="6.258"/>
+            <Path Data="M477.84422,630.56049 L547.27591,629.39135" Height="2.169" Canvas.Left="477.844" Stretch="Fill" Stroke="Black" Canvas.Top="629.392" Width="70.432" StrokeDashArray="2 2 1"/>
+            <Path Data="M8.5155,0.5 C12.942338,0.5 16.531,7.7867896 16.531,16.7755 16.531,25.76421 12.942338,33.051 8.5155,33.051" Height="33.551" Canvas.Left="469.985" Stretch="Fill" Stroke="Black" Canvas.Top="614.704" Width="9.015"/>
+            <Path x:Name="l34_Copy11" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l72}" Height="6.916" Canvas.Left="465.381" Stretch="Fill" Stroke="Black" Canvas.Top="612.25" Width="5.375"/>
+            <Path x:Name="l34_Copy12" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l72}" Height="6.916" Canvas.Left="465.381" Stretch="Fill" Stroke="Black" Canvas.Top="644.417" Width="5.375"/>
+            <Path Data="M1,116.29199 L16.868399,116.17071 16.868399,81.246245 19.747002,81.171985 M16.765354,1.0000006 L16.724965,67.351284 19.638999,67.392991" Height="117.292" Canvas.Left="548.933" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="327.708" Width="20.747"/>
+            <Path Data="M1.0028325,1 L1,20.337434 41.390114,20.504379 41.377383,64.689002 43.623008,64.629829 M44.249027,81.278207 L42.121981,81.278016 42.40154,330.94563 4.1710369,331.029" Height="332.029" Canvas.Left="544.773" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="327.989" Width="45.249"/>
+            <Path Data="M4.006,2.1935 C4.006,3.1287942 3.2211552,3.887 2.253,3.887 C1.2848448,3.887 0.5,3.1287942 0.5,2.1935 C0.5,1.2582058 1.2848448,0.5 2.253,0.5 C3.2211552,0.5 4.006,1.2582058 4.006,2.1935 z" Fill="Black" Height="2.964" Canvas.Left="501.75" Stretch="Fill" Stroke="Black" Canvas.Top="606.295" Width="2.831" />
+            <Path Data="M4.006,2.1935 C4.006,3.1287942 3.2211552,3.887 2.253,3.887 C1.2848448,3.887 0.5,3.1287942 0.5,2.1935 C0.5,1.2582058 1.2848448,0.5 2.253,0.5 C3.2211552,0.5 4.006,1.2582058 4.006,2.1935 z" Fill="Black" Height="2.964" Canvas.Left="501.75" Stretch="Fill" Stroke="Black" Canvas.Top="652.263" Width="2.831" />
+            <Path Data="M4.736178,0.99999999 L5.2710105,64.996021 1.3559904,64.995241 M1,81.016942 L5.3717687,80.966021 4.9446037,330.80902 41.359966,330.56955" Height="331.809" Canvas.Left="631.323" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328.458" Width="42.36"/>
+            <Path Data="M1,80.329272 L5.1308862,80.329002 5.1308862,115.75391 21.52898,115.87899 M1.0000062,65.932993 L4.8816698,65.932993 4.882,1.0000024" Height="116.879" Canvas.Left="651.457" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328.25" Width="22.529"/>
+            <Path Data="M1,116.29199 L16.868399,116.17071 16.868399,81.246245 19.747002,81.171985 M16.765354,1.0000006 L16.724965,67.351284 19.638999,67.392991" Height="117.292" Canvas.Left="673.605" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="327.708" Width="20.747"/>
+            <Path Data="M1.0028325,1 L1,20.337434 41.390114,20.504379 41.377383,64.689002 43.623008,64.629829 M44.249027,81.278207 L42.121981,81.278016 42.40154,330.94563 4.1710369,331.029" Height="332.029" Canvas.Left="667.447" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="327.989" Width="45.249"/>
+            <Path Data="M549.777,612.122 L549.933,443.50319" Height="170.619" Canvas.Left="671.785" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="442" Width="2.156"/>
+            <Path Data="M0,2.251 L4.451,2.251 L4.451,3.602 L0,3.602 z M14.310409,-3.5527137E-15 L15.089732,-3.5527137E-15 L15.089732,2.3614085 L17.457,2.3614085 L17.457,3.1465915 L15.089732,3.1465915 L15.089732,5.508 L14.310409,5.508 L14.310409,3.1465915 L11.949,3.1465915 L11.949,2.3614085 L14.310409,2.3614085 z M12.262,46.337 L16.713,46.337 16.713,47.688 12.262,47.688 z M2.7374085,45.127 L3.5167319,45.127 3.5167319,47.488409 5.884,47.488409 5.884,48.273591 3.5167319,48.273591 3.5167319,50.635 2.7374085,50.635 2.7374085,48.273591 0.376,48.273591 0.376,47.488409 2.7374085,47.488409 z" Fill="Black" Height="50.635" Canvas.Left="664.341" RenderTransformOrigin="0.127484671285298,0.0577959908555383" Stretch="Fill" Canvas.Top="604.592" Width="17.457">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M1.55,1 L9.5990002,1 L9.5990002,2.5879999 L1.55,2.5879999 z M1,31.793 L8.3469999,31.793 L8.3469999,33.048 L1,33.048 z M24.367,5.719 L30.754,5.719 30.754,29.418001 24.367,29.418001 24.367,24.659532 26.621277,24.784709 26.746454,9.513078 24.367,9.513078 z" Height="34.048" Canvas.Left="666.903" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="612.122" Width="31.754" Fill="#FF040404"/>
+            <Path Data="M29.043,15.0215 C29.043,22.765361 22.765361,29.043 15.0215,29.043 C7.2776394,29.043 1,22.765361 1,15.0215 C1,7.2776394 7.2776394,1 15.0215,1 C22.765361,1 29.043,7.2776394 29.043,15.0215 z" Height="30.043" Canvas.Left="657.236" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="614.704" Width="30.043"/>
+            <Path Data="M548.7773,658.75 L548.71472,646.17" Height="14.58" Canvas.Left="671.036" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="645.17" Width="2.062"/>
+            <Path Data="M473.6505,630.39308 L547.27591,629.39135" Height="2.002" Canvas.Left="596.971" Stretch="Fill" Stroke="Black" Canvas.Top="629.392" Width="74.626" StrokeDashArray="2 2 1"/>
+            <Path Data="M4.0060279,2.1935 C4.0060279,3.1287942 3.2211552,3.887 2.253,3.887 1.2848448,3.887 0.5,3.1287942 0.5,2.1935 0.5,1.2582058 1.2848448,0.5 2.253,0.5 3.2211552,0.5 4.0060279,1.2582058 4.0060279,2.1935 z" Fill="Black" Height="2.964" Canvas.Left="596.132" Stretch="Fill" Stroke="Black" Canvas.Top="629.015" Width="2.83" />
+            <Path x:Name="l77_Copy1" Data="M10.782,3.582 L4.906,3.582 M0.49999999,3.458 L4.8749999,0.50000002 4.8749999,6.416 z" Height="6.916" Canvas.Left="529.491" Stretch="Fill" Stroke="Black" Canvas.Top="398.105" Width="11.282" Fill="{Binding Stroke, ElementName=l77_Copy1}"/>
+            <Path x:Name="l77_Copy2" Data="M10.782,3.582 L4.906,3.582 M0.49999999,3.458 L4.8749999,0.50000002 4.8749999,6.416 z" Height="6.916" Canvas.Left="600.128" Stretch="Fill" Stroke="Black" Canvas.Top="398.105" Width="11.282" Fill="{Binding Stroke, ElementName=l77_Copy2}"/>
+            <Path x:Name="l77_Copy3" Data="M10.782,3.582 L4.906,3.582 M0.49999999,3.458 L4.8749999,0.50000002 4.8749999,6.416 z" Height="6.916" Canvas.Left="654.468" Stretch="Fill" Stroke="Black" Canvas.Top="398.105" Width="11.282" Fill="{Binding Stroke, ElementName=l77_Copy3}"/>
+            <Path x:Name="l77_Copy4" Data="M10.782,3.582 L4.906,3.582 M0.49999999,3.458 L4.8749999,0.50000002 4.8749999,6.416 z" Height="6.916" Canvas.Left="720.529" Stretch="Fill" Stroke="Black" Canvas.Top="398.105" Width="11.282" Fill="{Binding Stroke, ElementName=l77_Copy4}"/>
+            <Path x:Name="l47_Copy" Data="M-2.7933201,3.3920135 L5.75,3.3920135 M11.128987,3.313 L5.6529874,0.49999999 5.6529874,6.126 z" Height="6.626" Canvas.Left="484.882" Stretch="Fill" Stroke="Black" Canvas.Top="398.105" Width="14.947" Fill="Black"/>
+            <Path x:Name="l47_Copy1" Data="M-2.7933201,3.3920135 L5.75,3.3920135 M11.128987,3.313 L5.6529874,0.49999999 5.6529874,6.126 z" Height="6.626" Canvas.Left="551.97" Stretch="Fill" Stroke="Black" Canvas.Top="398.105" Width="14.947" Fill="Black"/>
+            <Path x:Name="l47_Copy2" Data="M-2.7933201,3.3920135 L5.75,3.3920135 M11.128987,3.313 L5.6529874,0.49999999 5.6529874,6.126 z" Height="6.626" Canvas.Left="610.424" Stretch="Fill" Stroke="Black" Canvas.Top="398.105" Width="14.947" Fill="Black"/>
+            <Path x:Name="l47_Copy3" Data="M-2.7933201,3.3920135 L5.75,3.3920135 M11.128987,3.313 L5.6529874,0.49999999 5.6529874,6.126 z" Height="6.626" Canvas.Left="679.405" Stretch="Fill" Stroke="Black" Canvas.Top="398.105" Width="14.947" Fill="Black"/>
+            <Path x:Name="l112_Copy" Data="M58.91475,39.185011 L59.243988,116.54599 51.320981,116.54492 M1.0283662,1.0000014 L1.0000003,12.731207 59.577043,12.731207 59.695993,21.493997" Height="117.546" Canvas.Left="781.972" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="327" Width="60.696"/>
+            <Path x:Name="l103_Copy" Data="M2,1 L2,19 M1,38 L1.0649976,329.75 30.564998,329.75" Height="330.75" Canvas.Left="799.725" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328" Width="31.565"/>
+            <Path x:Name="l106_Copy" Data="M12.332985,115.66667 L1.332995,115.66701 1.0000054,37.999996 M1.0000001,1 L1.0000001,19" Height="116.667" Canvas.Left="819" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328" Width="13.333"/>
+            <Path Data="M31.460001,33.333023 L31.459736,329.34903 1,329.26596 M31.292999,1 L31.542987,19.994001" Height="330.349" Canvas.Left="830.123" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328.333" Width="32.543"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy13" Height="18.614" Canvas.Left="790.469" Canvas.Top="346.05" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy14" Height="18.614" Canvas.Left="808.328" Canvas.Top="346.05" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy15" Height="18.614" Canvas.Left="840.718" Canvas.Top="347.656" Width="12.369" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy16" Height="18.614" Canvas.Left="860.621" Canvas.Top="347.531" Width="12.369" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <Path Data="M0,2.251 L4.451,2.251 L4.451,3.602 L0,3.602 z M14.310409,-3.5527137E-15 L15.089732,-3.5527137E-15 L15.089732,2.3614085 L17.457,2.3614085 L17.457,3.1465915 L15.089732,3.1465915 L15.089732,5.508 L14.310409,5.508 L14.310409,3.1465915 L11.949,3.1465915 L11.949,2.3614085 L14.310409,2.3614085 z M12.262,46.337 L16.713,46.337 16.713,47.688 12.262,47.688 z M2.7374085,45.127 L3.5167319,45.127 3.5167319,47.488409 5.884,47.488409 5.884,48.273591 3.5167319,48.273591 3.5167319,50.635 2.7374085,50.635 2.7374085,48.273591 0.376,48.273591 0.376,47.488409 2.7374085,47.488409 z" Fill="Black" Height="50.635" Canvas.Left="823.529" RenderTransformOrigin="0.127484671285298,0.0577959908555383" Stretch="Fill" Canvas.Top="604.592" Width="17.457">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M1.55,1 L9.5990002,1 L9.5990002,2.5879999 L1.55,2.5879999 z M1,31.793 L8.3469999,31.793 L8.3469999,33.048 L1,33.048 z M24.367,5.719 L30.754,5.719 30.754,29.418001 24.367,29.418001 24.367,24.659532 26.621277,24.784709 26.746454,9.513078 24.367,9.513078 z" Height="34.048" Canvas.Left="826.091" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="612.122" Width="31.754" Fill="#FF040404"/>
+            <Path Data="M29.043,15.0215 C29.043,22.765361 22.765361,29.043 15.0215,29.043 C7.2776394,29.043 1,22.765361 1,15.0215 C1,7.2776394 7.2776394,1 15.0215,1 C22.765361,1 29.043,7.2776394 29.043,15.0215 z" Height="30.043" Canvas.Left="816.424" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="614.704" Width="30.043"/>
+            <Path Data="M548.7773,658.75 L548.71472,646.17" Height="14.58" Canvas.Left="830.224" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="645.17" Width="2.062"/>
+            <TextBlock Height="27.953" Canvas.Left="746.174" TextWrapping="Wrap" Canvas.Top="583.111" Width="39.908" FontSize="14.667" FontWeight="Bold"><Run Language="ru-ru" Text="ПГС"/></TextBlock>
+            <Path Data="M15.584,71.223 L15.396233,62.043339 0.79212002,62.12679 0.50000001,15.56891 15.363296,15.727873 15.455925,6.882 M15.495,3.127371 L15.52035,0.70645815 110.05907,0.50000001 110.265,77.085134 16.007041,77.251004 15.975984,74.632916 M15.495,28.913 L15.495,49.192001 M15.495,50.976 L15.495,62.335 M15.339995,15.059979 L15.464989,25.867007" Height="77.751" Stretch="Fill" Stroke="Black" Width="110.765" StrokeDashArray="1 1 1" Canvas.Left="770.117" Canvas.Top="591.716"/>
+            <Path Data="M500.08333,618.083 L505.34078,618.083" Height="1" Canvas.Left="782.592" Stretch="Fill" Stroke="Black" Canvas.Top="618.083" Width="6.258"/>
+            <Path Data="M500.083,620.46217 L505.46596,620.37872" Height="1.083" Canvas.Left="782.592" Stretch="Fill" Stroke="Black" Canvas.Top="620.379" Width="6.383"/>
+            <Path Data="M500.35455,640.78262 L505.59113,640.76176" Height="1.021" Canvas.Left="782.864" Stretch="Fill" Stroke="Black" Canvas.Top="640.762" Width="6.236"/>
+            <Path Data="M500.355,642.55597 L505.59113,642.51424" Height="1.042" Canvas.Left="782.864" Stretch="Fill" Stroke="Black" Canvas.Top="642.514" Width="6.236"/>
+            <Path Data="M4.006,2.1935 C4.006,3.1287942 3.2211552,3.887 2.253,3.887 C1.2848448,3.887 0.5,3.1287942 0.5,2.1935 C0.5,1.2582058 1.2848448,0.5 2.253,0.5 C3.2211552,0.5 4.006,1.2582058 4.006,2.1935 z" Fill="Black" Height="2.964" Canvas.Left="769.199" Stretch="Fill" Stroke="Black" Canvas.Top="629.015" Width="2.831" />
+            <Path Data="M4.006,2.1935 C4.006,3.1287942 3.2211552,3.887 2.253,3.887 C1.2848448,3.887 0.5,3.1287942 0.5,2.1935 C0.5,1.2582058 1.2848448,0.5 2.253,0.5 C3.2211552,0.5 4.006,1.2582058 4.006,2.1935 z" Fill="Black" Height="2.964" Canvas.Left="784.259" Stretch="Fill" Stroke="Black" Canvas.Top="629.015" Width="2.831" />
+            <Path Data="M500.08333,618.083 L505.34078,618.083" Height="1" Canvas.Left="782.592" Stretch="Fill" Stroke="Black" Canvas.Top="594.745" Width="6.258"/>
+            <Path Data="M500.08333,618.083 L505.34078,618.083" Height="1" Canvas.Left="782.592" Stretch="Fill" Stroke="Black" Canvas.Top="598.079" Width="6.258"/>
+            <Path Data="M477.84422,630.56049 L547.27591,629.39135" Height="2.169" Canvas.Left="760.353" Stretch="Fill" Stroke="Black" Canvas.Top="629.392" Width="70.432" StrokeDashArray="2 2 1"/>
+            <Path Data="M8.5155,0.5 C12.942338,0.5 16.531,7.7867896 16.531,16.7755 16.531,25.76421 12.942338,33.051 8.5155,33.051" Height="33.551" Canvas.Left="752.494" Stretch="Fill" Stroke="Black" Canvas.Top="614.704" Width="9.015"/>
+            <Path x:Name="l34_Copy13" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l72}" Height="6.916" Canvas.Left="747.89" Stretch="Fill" Stroke="Black" Canvas.Top="612.25" Width="5.375"/>
+            <Path x:Name="l34_Copy14" Data="M0.5,5.125 L5.1249999,0.5 5.1249999,9.75 z" Fill="{Binding Stroke, ElementName=l72}" Height="6.916" Canvas.Left="747.89" Stretch="Fill" Stroke="Black" Canvas.Top="644.417" Width="5.375"/>
+            <Path Data="M4.006,2.1935 C4.006,3.1287942 3.2211552,3.887 2.253,3.887 C1.2848448,3.887 0.5,3.1287942 0.5,2.1935 C0.5,1.2582058 1.2848448,0.5 2.253,0.5 C3.2211552,0.5 4.006,1.2582058 4.006,2.1935 z" Fill="Black" Height="2.964" Canvas.Left="784.259" Stretch="Fill" Stroke="Black" Canvas.Top="606.295" Width="2.831" />
+            <Path Data="M4.006,2.1935 C4.006,3.1287942 3.2211552,3.887 2.253,3.887 C1.2848448,3.887 0.5,3.1287942 0.5,2.1935 C0.5,1.2582058 1.2848448,0.5 2.253,0.5 C3.2211552,0.5 4.006,1.2582058 4.006,2.1935 z" Fill="Black" Height="2.964" Canvas.Left="784.259" Stretch="Fill" Stroke="Black" Canvas.Top="652.263" Width="2.831" />
+            <Path Data="M0,2.251 L4.451,2.251 L4.451,3.602 L0,3.602 z M14.310409,-3.5527137E-15 L15.089732,-3.5527137E-15 L15.089732,2.3614085 L17.457,2.3614085 L17.457,3.1465915 L15.089732,3.1465915 L15.089732,5.508 L14.310409,5.508 L14.310409,3.1465915 L11.949,3.1465915 L11.949,2.3614085 L14.310409,2.3614085 z M12.262,46.337 L16.713,46.337 16.713,47.688 12.262,47.688 z M2.7374085,45.127 L3.5167319,45.127 3.5167319,47.488409 5.884,47.488409 5.884,48.273591 3.5167319,48.273591 3.5167319,50.635 2.7374085,50.635 2.7374085,48.273591 0.376,48.273591 0.376,47.488409 2.7374085,47.488409 z" Fill="Black" Height="50.635" Canvas.Left="991.35" RenderTransformOrigin="0.127484671285298,0.0577959908555383" Stretch="Fill" Canvas.Top="604.592" Width="17.457">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M1.55,1 L9.5990002,1 L9.5990002,2.5879999 L1.55,2.5879999 z M1,31.793 L8.3469999,31.793 L8.3469999,33.048 L1,33.048 z M24.367,5.719 L30.754,5.719 30.754,29.418001 24.367,29.418001 24.367,24.659532 26.621277,24.784709 26.746454,9.513078 24.367,9.513078 z" Height="34.048" Canvas.Left="993.912" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="612.122" Width="31.754" Fill="#FF040404"/>
+            <Path Data="M29.043,15.0215 C29.043,22.765361 22.765361,29.043 15.0215,29.043 C7.2776394,29.043 1,22.765361 1,15.0215 C1,7.2776394 7.2776394,1 15.0215,1 C22.765361,1 29.043,7.2776394 29.043,15.0215 z" Height="30.043" Canvas.Left="984.245" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="614.704" Width="30.043"/>
+            <Path Data="M548.7773,658.75 L548.71472,646.17" Height="14.58" Canvas.Left="998.045" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="645.17" Width="2.062"/>
+            <Path Data="M473.6505,630.39308 L547.27591,629.39135" Height="2.002" Canvas.Left="879.73" Stretch="Fill" Stroke="Black" Canvas.Top="629.392" Width="118.876" StrokeDashArray="2 2 1"/>
+            <Path Data="M4.0060279,2.1935 C4.0060279,3.1287942 3.2211552,3.887 2.253,3.887 1.2848448,3.887 0.5,3.1287942 0.5,2.1935 0.5,1.2582058 1.2848448,0.5 2.253,0.5 3.2211552,0.5 4.0060279,1.2582058 4.0060279,2.1935 z" Fill="Black" Height="2.964" Canvas.Left="878.641" Stretch="Fill" Stroke="Black" Canvas.Top="629.015" Width="2.83" />
+            <TextBlock Height="16.004" Canvas.Left="517.135" TextWrapping="Wrap" Canvas.Top="604.592" Width="23.885" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="ЭД1"/></TextBlock>
+            <TextBlock Height="16.004" Canvas.Left="640.456" TextWrapping="Wrap" Canvas.Top="605.626" Width="23.885" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="ЭД2"/></TextBlock>
+            <TextBlock Height="16.004" Canvas.Left="803.149" TextWrapping="Wrap" Canvas.Top="604.592" Width="23.885" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="ЭД1"/></TextBlock>
+            <TextBlock Height="16.004" Canvas.Left="970.97" TextWrapping="Wrap" Canvas.Top="605.626" Width="23.885" FontSize="10.667" FontWeight="Bold"><Run Language="ru-ru" Text="ЭД2"/></TextBlock>
+            <Path Data="M549.777,612.122 L549.933,443.50319" Height="170.619" Canvas.Left="831.793" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="442" Width="2.156"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy17" Height="18.614" Canvas.Left="443.557" Canvas.Top="387.409" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="358.672"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy18" Height="18.614" Canvas.Left="887.581" Canvas.Top="386.992" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="358.672"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy19" Height="16.62" Canvas.Left="757.792" Canvas.Top="391.308" Width="15.666" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="360.47"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy20" Height="21.126" Canvas.Left="754.964" Canvas.Top="414.523" Width="11.907" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="1">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="333.463"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy21" Height="21.126" Canvas.Left="871.083" Canvas.Top="413.949" Width="11.907" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="1">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="334.035"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <Path x:Name="l103_Copy1" Data="M2,1 L2,19 M1,38 L1.0649976,329.75 33.068544,329.75" Height="330.75" Canvas.Left="965.725" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328" Width="34.069"/>
+            <Path Data="M31.460001,33.333023 L31.459736,329.34903 -1.5035451,329.26596 M31.292999,1 L31.542987,19.994001" Height="330.349" Canvas.Left="998.619" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328.333" Width="35.047"/>
+            <Path Data="M549.777,612.122 L549.933,443.50319" Height="170.619" Canvas.Left="997.793" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="442" Width="2.156"/>
+            <Path x:Name="l112_Copy1" Data="M58.91475,39.185011 L59.243988,116.54599 51.320981,116.54492 M1.0283662,1.0000014 L1.0000003,12.731207 59.577043,12.731207 59.695993,21.493997" Height="117.546" Canvas.Left="948.972" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="327" Width="60.696"/>
+            <Path x:Name="l106_Copy1" Data="M12.332985,115.66667 L1.332995,115.66701 1.0000054,37.999996 M1.0000001,1 L1.0000001,19" Height="116.667" Canvas.Left="986" Stretch="Fill" Stroke="Black" StrokeThickness="2" Canvas.Top="328" Width="13.333"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy22" Height="18.614" Canvas.Left="956.382" Canvas.Top="346.05" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy23" Height="18.614" Canvas.Left="975.652" Canvas.Top="346.05" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy24" Height="18.614" Canvas.Left="1007.643" Canvas.Top="347.656" Width="12.369" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy25" Height="18.614" Canvas.Left="1033.5" Canvas.Top="347.531" Width="12.369" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <TextBlock Height="18.915" Canvas.Left="588.853" TextWrapping="Wrap" Canvas.Top="445.129" Width="83.384" FontSize="14.667" FontWeight="Bold"><Run Language="ru-ru" Text="БУП-1"/></TextBlock>
+            <TextBlock Height="18.915" Canvas.Left="892.783" TextWrapping="Wrap" Canvas.Top="446.833" Width="83.384" FontSize="14.667" FontWeight="Bold"><Run Language="ru-ru" Text="БУП-2"/></TextBlock>
+            <TextBlock Height="24" Canvas.Left="940.86" TextWrapping="Wrap" Canvas.Top="60" Width="17.537" FontWeight="Bold"><Run Language="ru-ru" Text="-Б"/></TextBlock>
+            <TextBlock Height="24" Canvas.Left="803.5" TextWrapping="Wrap" Canvas.Top="64" Width="17.537" FontWeight="Bold"><Run Language="ru-ru" Text="-Б"/></TextBlock>
+            <TextBlock Height="24" Canvas.Left="648.213" TextWrapping="Wrap" Canvas.Top="60" Width="17.537" FontWeight="Bold"><Run Language="ru-ru" Text="-Б"/></TextBlock>
+            <TextBlock Height="24" Canvas.Left="577.588" TextWrapping="Wrap" Canvas.Top="60" Width="17.537" FontWeight="Bold"><Run Language="ru-ru" Text="-Б"/></TextBlock>
+            <TextBlock Height="24" Canvas.Left="370.75" TextWrapping="Wrap" Canvas.Top="64" Width="17.537" FontWeight="Bold"><Run Language="ru-ru" Text="-Б"/></TextBlock>
+            <TextBlock Height="24" Canvas.Left="178.403" TextWrapping="Wrap" Canvas.Top="60" Width="17.537" FontWeight="Bold"><Run Language="ru-ru" Text="-Б"/></TextBlock>
+            <TextBlock Height="24" Canvas.Left="480.213" TextWrapping="Wrap" Canvas.Top="-3" Width="17.537" FontWeight="Bold" RenderTransformOrigin="0.242,0.504"><Run Language="ru-ru" Text="+Б"/></TextBlock>
+            <Path Data="M2.4414063,4.4341145 L3.2304688,4.4341145 L3.2304688,5.9458332 L4.734375,5.9458332 L4.734375,6.738802 L3.2304688,6.738802 L3.2304688,8.2427082 L2.4414063,8.2427082 L2.4414063,6.738802 L0.9296875,6.738802 L0.9296875,5.9458332 L2.4414063,5.9458332 z M6.2972918,3.0317707 L11.141042,3.0317707 L11.141042,8.6333332 L9.879323,8.6333332 L9.879323,4.1333332 L7.5590105,4.1333332 L7.5590105,8.6333332 L6.2972918,8.6333332 z M12.417292,3.0317707 L17.261042,3.0317707 L17.261042,8.6333332 L15.999323,8.6333332 L15.999323,4.1333332 L13.67901,4.1333332 L13.67901,8.6333332 L12.417292,8.6333332 z M21.170105,2.9380207 C21.71698,2.9380207 22.177917,3.0070314 22.552917,3.145052 L22.552917,4.3598957 C22.177917,4.1359377 21.750834,4.0239582 21.271667,4.0239582 C20.745626,4.0239582 20.321146,4.1893229 19.99823,4.520052 C19.675314,4.8507814 19.513855,5.2986979 19.513855,5.863802 C19.513855,6.4054689 19.666199,6.8371096 19.970886,7.1587238 C20.275574,7.4803386 20.68573,7.6411457 21.201355,7.6411457 C21.693542,7.6411457 22.144062,7.5213542 22.552917,7.2817707 L22.552917,8.4341145 C22.144062,8.6320314 21.610209,8.7309895 20.951355,8.7309895 C20.09198,8.7309895 19.416199,8.478385 18.924011,7.973177 C18.431824,7.4679689 18.18573,6.7947917 18.18573,5.9536457 C18.18573,5.0578127 18.462423,4.3312502 19.015808,3.7739582 C19.569193,3.2166667 20.287292,2.9380207 21.170105,2.9380207 z M23.530624,3.0317707 L25.378281,3.0317707 L26.522812,6.3520832 C26.613958,6.6177082 26.680365,6.8846354 26.722031,7.1528645 L26.745468,7.1528645 C26.815781,6.8429689 26.889999,6.5734377 26.968124,6.3442707 L28.112656,3.0317707 L29.913437,3.0317707 L29.913437,8.6333332 L28.667343,8.6333332 L28.667343,5.2817707 C28.667343,4.9197917 28.682968,4.520052 28.714218,4.082552 L28.682968,4.082552 C28.617863,4.426302 28.559269,4.6736979 28.507187,4.8247395 L27.194687,8.6333332 L26.163437,8.6333332 L24.827499,4.863802 C24.79104,4.7622395 24.732447,4.5018229 24.651718,4.082552 L24.616562,4.082552 C24.650415,4.6346354 24.667343,5.1190104 24.667343,5.535677 L24.667343,8.6333332 L23.530624,8.6333332 z M33.050575,2.9067707 L33.796669,2.9067707 L33.796669,8.6333332 L32.5662,8.6333332 L32.5662,4.2973957 C32.498489,4.3572917 32.418411,4.4139323 32.325966,4.4673176 C32.233517,4.5207033 32.135208,4.5688801 32.031044,4.6118488 C31.926876,4.6548176 31.818802,4.6912761 31.706823,4.7212238 C31.594845,4.7511721 31.484167,4.7726564 31.374792,4.785677 L31.374792,3.7466145 C31.695105,3.6528645 31.997189,3.5330729 32.281044,3.3872395 C32.564896,3.2414064 32.821407,3.0812502 33.050575,2.9067707 z" Fill="Black" Height="8.009" Canvas.Left="481.94" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="313.324" Width="24.651">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M3.2304688,5.9458332 L4.734375,5.9458332 4.734375,6.738802 3.2304688,6.738802 2.4414063,6.738802 0.9296875,6.738802 0.9296875,5.9458332 2.4414063,5.9458332 z M6.2972918,3.0317707 L11.141042,3.0317707 11.141042,8.6333332 9.879323,8.6333332 9.879323,4.1333332 7.5590105,4.1333332 7.5590105,8.6333332 6.2972918,8.6333332 z M12.417292,3.0317707 L17.261042,3.0317707 17.261042,8.6333332 15.999323,8.6333332 15.999323,4.1333332 13.67901,4.1333332 13.67901,8.6333332 12.417292,8.6333332 z M21.170105,2.9380207 C21.71698,2.9380207 22.177917,3.0070314 22.552917,3.145052 L22.552917,4.3598957 C22.177917,4.1359377 21.750834,4.0239582 21.271667,4.0239582 20.745626,4.0239582 20.321146,4.1893229 19.99823,4.520052 19.675314,4.8507814 19.513855,5.2986979 19.513855,5.863802 19.513855,6.4054689 19.666199,6.8371096 19.970886,7.1587238 20.275574,7.4803386 20.68573,7.6411457 21.201355,7.6411457 21.693542,7.6411457 22.144062,7.5213542 22.552917,7.2817707 L22.552917,8.4341145 C22.144062,8.6320314 21.610209,8.7309895 20.951355,8.7309895 20.09198,8.7309895 19.416199,8.478385 18.924011,7.973177 18.431824,7.4679689 18.18573,6.7947917 18.18573,5.9536457 18.18573,5.0578127 18.462423,4.3312502 19.015808,3.7739582 19.569193,3.2166667 20.287292,2.9380207 21.170105,2.9380207 z M23.530624,3.0317707 L25.378281,3.0317707 26.522812,6.3520832 C26.613958,6.6177082 26.680365,6.8846354 26.722031,7.1528645 L26.745468,7.1528645 C26.815781,6.8429689 26.889999,6.5734377 26.968124,6.3442707 L28.112656,3.0317707 29.913437,3.0317707 29.913437,8.6333332 28.667343,8.6333332 28.667343,5.2817707 C28.667343,4.9197917 28.682968,4.520052 28.714218,4.082552 L28.682968,4.082552 C28.617863,4.426302 28.559269,4.6736979 28.507187,4.8247395 L27.194687,8.6333332 26.163437,8.6333332 24.827499,4.863802 C24.79104,4.7622395 24.732447,4.5018229 24.651718,4.082552 L24.616562,4.082552 C24.650415,4.6346354 24.667343,5.1190104 24.667343,5.535677 L24.667343,8.6333332 23.530624,8.6333332 z M33.050575,2.9067707 L33.796669,2.9067707 33.796669,8.6333332 32.5662,8.6333332 32.5662,4.2973957 C32.498489,4.3572917 32.418411,4.4139323 32.325966,4.4673176 32.233517,4.5207033 32.135208,4.5688801 32.031044,4.6118488 31.926876,4.6548176 31.818802,4.6912761 31.706823,4.7212238 31.594845,4.7511721 31.484167,4.7726564 31.374792,4.785677 L31.374792,3.7466145 C31.695105,3.6528645 31.997189,3.5330729 32.281044,3.3872395 32.564896,3.2414064 32.821407,3.0812502 33.050575,2.9067707 z" Fill="Black" Height="8.009" Canvas.Left="519.599" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="313.074" Width="24.651">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M2.4414063,4.4341145 L3.2304688,4.4341145 L3.2304688,5.9458332 L4.734375,5.9458332 L4.734375,6.738802 L3.2304688,6.738802 L3.2304688,8.2427082 L2.4414063,8.2427082 L2.4414063,6.738802 L0.9296875,6.738802 L0.9296875,5.9458332 L2.4414063,5.9458332 z M6.2972918,3.0317707 L11.141042,3.0317707 L11.141042,8.6333332 L9.879323,8.6333332 L9.879323,4.1333332 L7.5590105,4.1333332 L7.5590105,8.6333332 L6.2972918,8.6333332 z M12.417292,3.0317707 L17.261042,3.0317707 L17.261042,8.6333332 L15.999323,8.6333332 L15.999323,4.1333332 L13.67901,4.1333332 L13.67901,8.6333332 L12.417292,8.6333332 z M21.170105,2.9380207 C21.71698,2.9380207 22.177917,3.0070314 22.552917,3.145052 L22.552917,4.3598957 C22.177917,4.1359377 21.750834,4.0239582 21.271667,4.0239582 C20.745626,4.0239582 20.321146,4.1893229 19.99823,4.520052 C19.675314,4.8507814 19.513855,5.2986979 19.513855,5.863802 C19.513855,6.4054689 19.666199,6.8371096 19.970886,7.1587238 C20.275574,7.4803386 20.68573,7.6411457 21.201355,7.6411457 C21.693542,7.6411457 22.144062,7.5213542 22.552917,7.2817707 L22.552917,8.4341145 C22.144062,8.6320314 21.610209,8.7309895 20.951355,8.7309895 C20.09198,8.7309895 19.416199,8.478385 18.924011,7.973177 C18.431824,7.4679689 18.18573,6.7947917 18.18573,5.9536457 C18.18573,5.0578127 18.462423,4.3312502 19.015808,3.7739582 C19.569193,3.2166667 20.287292,2.9380207 21.170105,2.9380207 z M23.530624,3.0317707 L25.378281,3.0317707 L26.522812,6.3520832 C26.613958,6.6177082 26.680365,6.8846354 26.722031,7.1528645 L26.745468,7.1528645 C26.815781,6.8429689 26.889999,6.5734377 26.968124,6.3442707 L28.112656,3.0317707 L29.913437,3.0317707 L29.913437,8.6333332 L28.667343,8.6333332 L28.667343,5.2817707 C28.667343,4.9197917 28.682968,4.520052 28.714218,4.082552 L28.682968,4.082552 C28.617863,4.426302 28.559269,4.6736979 28.507187,4.8247395 L27.194687,8.6333332 L26.163437,8.6333332 L24.827499,4.863802 C24.79104,4.7622395 24.732447,4.5018229 24.651718,4.082552 L24.616562,4.082552 C24.650415,4.6346354 24.667343,5.1190104 24.667343,5.535677 L24.667343,8.6333332 L23.530624,8.6333332 z M33.050575,2.9067707 L33.796669,2.9067707 L33.796669,8.6333332 L32.5662,8.6333332 L32.5662,4.2973957 C32.498489,4.3572917 32.418411,4.4139323 32.325966,4.4673176 C32.233517,4.5207033 32.135208,4.5688801 32.031044,4.6118488 C31.926876,4.6548176 31.818802,4.6912761 31.706823,4.7212238 C31.594845,4.7511721 31.484167,4.7726564 31.374792,4.785677 L31.374792,3.7466145 C31.695105,3.6528645 31.997189,3.5330729 32.281044,3.3872395 C32.564896,3.2414064 32.821407,3.0812502 33.050575,2.9067707 z" Fill="Black" Height="8.009" Canvas.Left="568.864" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="313.324" Width="24.651">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M2.4414063,4.4341145 L3.2304688,4.4341145 L3.2304688,5.9458332 L4.734375,5.9458332 L4.734375,6.738802 L3.2304688,6.738802 L3.2304688,8.2427082 L2.4414063,8.2427082 L2.4414063,6.738802 L0.9296875,6.738802 L0.9296875,5.9458332 L2.4414063,5.9458332 z M6.2972918,3.0317707 L11.141042,3.0317707 L11.141042,8.6333332 L9.879323,8.6333332 L9.879323,4.1333332 L7.5590105,4.1333332 L7.5590105,8.6333332 L6.2972918,8.6333332 z M12.417292,3.0317707 L17.261042,3.0317707 L17.261042,8.6333332 L15.999323,8.6333332 L15.999323,4.1333332 L13.67901,4.1333332 L13.67901,8.6333332 L12.417292,8.6333332 z M21.170105,2.9380207 C21.71698,2.9380207 22.177917,3.0070314 22.552917,3.145052 L22.552917,4.3598957 C22.177917,4.1359377 21.750834,4.0239582 21.271667,4.0239582 C20.745626,4.0239582 20.321146,4.1893229 19.99823,4.520052 C19.675314,4.8507814 19.513855,5.2986979 19.513855,5.863802 C19.513855,6.4054689 19.666199,6.8371096 19.970886,7.1587238 C20.275574,7.4803386 20.68573,7.6411457 21.201355,7.6411457 C21.693542,7.6411457 22.144062,7.5213542 22.552917,7.2817707 L22.552917,8.4341145 C22.144062,8.6320314 21.610209,8.7309895 20.951355,8.7309895 C20.09198,8.7309895 19.416199,8.478385 18.924011,7.973177 C18.431824,7.4679689 18.18573,6.7947917 18.18573,5.9536457 C18.18573,5.0578127 18.462423,4.3312502 19.015808,3.7739582 C19.569193,3.2166667 20.287292,2.9380207 21.170105,2.9380207 z M23.530624,3.0317707 L25.378281,3.0317707 L26.522812,6.3520832 C26.613958,6.6177082 26.680365,6.8846354 26.722031,7.1528645 L26.745468,7.1528645 C26.815781,6.8429689 26.889999,6.5734377 26.968124,6.3442707 L28.112656,3.0317707 L29.913437,3.0317707 L29.913437,8.6333332 L28.667343,8.6333332 L28.667343,5.2817707 C28.667343,4.9197917 28.682968,4.520052 28.714218,4.082552 L28.682968,4.082552 C28.617863,4.426302 28.559269,4.6736979 28.507187,4.8247395 L27.194687,8.6333332 L26.163437,8.6333332 L24.827499,4.863802 C24.79104,4.7622395 24.732447,4.5018229 24.651718,4.082552 L24.616562,4.082552 C24.650415,4.6346354 24.667343,5.1190104 24.667343,5.535677 L24.667343,8.6333332 L23.530624,8.6333332 z M32.788857,2.9380207 C33.072708,2.9380207 33.327267,2.9751301 33.552528,3.0493488 C33.777786,3.1235676 33.968544,3.2296877 34.124794,3.3677082 C34.281044,3.5057292 34.400185,3.6730471 34.482216,3.8696613 C34.564247,4.0662761 34.605263,4.285677 34.605263,4.5278645 C34.605263,4.785677 34.565548,5.0148439 34.486122,5.2153645 C34.406693,5.4158854 34.301224,5.598177 34.169716,5.7622395 C34.038204,5.926302 33.886513,6.0766926 33.714638,6.2134113 C33.542763,6.3501301 33.364376,6.4822917 33.179482,6.6098957 C33.054482,6.6984377 32.934036,6.7863283 32.818153,6.8735676 C32.702267,6.9608073 32.600052,7.0467448 32.511513,7.1313801 C32.42297,7.2160158 32.352657,7.2986979 32.300575,7.379427 C32.248489,7.4601564 32.222446,7.5369792 32.22245,7.6098957 L34.59745,7.6098957 L34.59745,8.6333332 L30.870886,8.6333332 L30.870886,8.2114582 C30.870886,7.9249997 30.919064,7.6678386 31.015417,7.4399738 C31.111771,7.2121096 31.232864,7.0076823 31.378698,6.8266926 C31.524532,6.6457033 31.684036,6.4855471 31.857214,6.3462238 C32.030392,6.2069011 32.195103,6.0812502 32.351357,5.9692707 C32.515415,5.8520832 32.659298,5.7401042 32.782997,5.6333332 C32.906693,5.5265627 33.01086,5.4204426 33.095497,5.3149738 C33.18013,5.2095051 33.243282,5.1027346 33.28495,4.9946613 C33.326614,4.8865886 33.34745,4.7713542 33.34745,4.6489582 C33.34745,4.4093752 33.279739,4.2283854 33.144325,4.1059895 C33.008907,3.9835939 32.801876,3.9223957 32.523232,3.9223957 C32.041458,3.9223957 31.580521,4.113802 31.140417,4.4966145 L31.140417,3.410677 C31.627396,3.0955729 32.176876,2.9380207 32.788857,2.9380207 z" Fill="Black" Height="8.297" Canvas.Left="603.5" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="314.703" Width="29.419">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M2.4414063,4.4341145 L3.2304688,4.4341145 L3.2304688,5.9458332 L4.734375,5.9458332 L4.734375,6.738802 L3.2304688,6.738802 L3.2304688,8.2427082 L2.4414063,8.2427082 L2.4414063,6.738802 L0.9296875,6.738802 L0.9296875,5.9458332 L2.4414063,5.9458332 z M6.2972918,3.0317707 L11.141042,3.0317707 L11.141042,8.6333332 L9.879323,8.6333332 L9.879323,4.1333332 L7.5590105,4.1333332 L7.5590105,8.6333332 L6.2972918,8.6333332 z M12.417292,3.0317707 L17.261042,3.0317707 L17.261042,8.6333332 L15.999323,8.6333332 L15.999323,4.1333332 L13.67901,4.1333332 L13.67901,8.6333332 L12.417292,8.6333332 z M21.170105,2.9380207 C21.71698,2.9380207 22.177917,3.0070314 22.552917,3.145052 L22.552917,4.3598957 C22.177917,4.1359377 21.750834,4.0239582 21.271667,4.0239582 C20.745626,4.0239582 20.321146,4.1893229 19.99823,4.520052 C19.675314,4.8507814 19.513855,5.2986979 19.513855,5.863802 C19.513855,6.4054689 19.666199,6.8371096 19.970886,7.1587238 C20.275574,7.4803386 20.68573,7.6411457 21.201355,7.6411457 C21.693542,7.6411457 22.144062,7.5213542 22.552917,7.2817707 L22.552917,8.4341145 C22.144062,8.6320314 21.610209,8.7309895 20.951355,8.7309895 C20.09198,8.7309895 19.416199,8.478385 18.924011,7.973177 C18.431824,7.4679689 18.18573,6.7947917 18.18573,5.9536457 C18.18573,5.0578127 18.462423,4.3312502 19.015808,3.7739582 C19.569193,3.2166667 20.287292,2.9380207 21.170105,2.9380207 z M23.530624,3.0317707 L25.378281,3.0317707 L26.522812,6.3520832 C26.613958,6.6177082 26.680365,6.8846354 26.722031,7.1528645 L26.745468,7.1528645 C26.815781,6.8429689 26.889999,6.5734377 26.968124,6.3442707 L28.112656,3.0317707 L29.913437,3.0317707 L29.913437,8.6333332 L28.667343,8.6333332 L28.667343,5.2817707 C28.667343,4.9197917 28.682968,4.520052 28.714218,4.082552 L28.682968,4.082552 C28.617863,4.426302 28.559269,4.6736979 28.507187,4.8247395 L27.194687,8.6333332 L26.163437,8.6333332 L24.827499,4.863802 C24.79104,4.7622395 24.732447,4.5018229 24.651718,4.082552 L24.616562,4.082552 C24.650415,4.6346354 24.667343,5.1190104 24.667343,5.535677 L24.667343,8.6333332 L23.530624,8.6333332 z M32.788857,2.9380207 C33.072708,2.9380207 33.327267,2.9751301 33.552528,3.0493488 C33.777786,3.1235676 33.968544,3.2296877 34.124794,3.3677082 C34.281044,3.5057292 34.400185,3.6730471 34.482216,3.8696613 C34.564247,4.0662761 34.605263,4.285677 34.605263,4.5278645 C34.605263,4.785677 34.565548,5.0148439 34.486122,5.2153645 C34.406693,5.4158854 34.301224,5.598177 34.169716,5.7622395 C34.038204,5.926302 33.886513,6.0766926 33.714638,6.2134113 C33.542763,6.3501301 33.364376,6.4822917 33.179482,6.6098957 C33.054482,6.6984377 32.934036,6.7863283 32.818153,6.8735676 C32.702267,6.9608073 32.600052,7.0467448 32.511513,7.1313801 C32.42297,7.2160158 32.352657,7.2986979 32.300575,7.379427 C32.248489,7.4601564 32.222446,7.5369792 32.22245,7.6098957 L34.59745,7.6098957 L34.59745,8.6333332 L30.870886,8.6333332 L30.870886,8.2114582 C30.870886,7.9249997 30.919064,7.6678386 31.015417,7.4399738 C31.111771,7.2121096 31.232864,7.0076823 31.378698,6.8266926 C31.524532,6.6457033 31.684036,6.4855471 31.857214,6.3462238 C32.030392,6.2069011 32.195103,6.0812502 32.351357,5.9692707 C32.515415,5.8520832 32.659298,5.7401042 32.782997,5.6333332 C32.906693,5.5265627 33.01086,5.4204426 33.095497,5.3149738 C33.18013,5.2095051 33.243282,5.1027346 33.28495,4.9946613 C33.326614,4.8865886 33.34745,4.7713542 33.34745,4.6489582 C33.34745,4.4093752 33.279739,4.2283854 33.144325,4.1059895 C33.008907,3.9835939 32.801876,3.9223957 32.523232,3.9223957 C32.041458,3.9223957 31.580521,4.113802 31.140417,4.4966145 L31.140417,3.410677 C31.627396,3.0955729 32.176876,2.9380207 32.788857,2.9380207 z" Fill="Black" Height="8.297" Canvas.Left="691.833" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="314.703" Width="29.419">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Data="M3.2304688,5.9458332 L4.734375,5.9458332 4.734375,6.738802 3.2304688,6.738802 2.4414063,6.738802 0.9296875,6.738802 0.9296875,5.9458332 2.4414063,5.9458332 z M6.2972918,3.0317707 L11.141042,3.0317707 11.141042,8.6333332 9.879323,8.6333332 9.879323,4.1333332 7.5590105,4.1333332 7.5590105,8.6333332 6.2972918,8.6333332 z M12.417292,3.0317707 L17.261042,3.0317707 17.261042,8.6333332 15.999323,8.6333332 15.999323,4.1333332 13.67901,4.1333332 13.67901,8.6333332 12.417292,8.6333332 z M21.170105,2.9380207 C21.71698,2.9380207 22.177917,3.0070314 22.552917,3.145052 L22.552917,4.3598957 C22.177917,4.1359377 21.750834,4.0239582 21.271667,4.0239582 20.745626,4.0239582 20.321146,4.1893229 19.99823,4.520052 19.675314,4.8507814 19.513855,5.2986979 19.513855,5.863802 19.513855,6.4054689 19.666199,6.8371096 19.970886,7.1587238 20.275574,7.4803386 20.68573,7.6411457 21.201355,7.6411457 21.693542,7.6411457 22.144062,7.5213542 22.552917,7.2817707 L22.552917,8.4341145 C22.144062,8.6320314 21.610209,8.7309895 20.951355,8.7309895 20.09198,8.7309895 19.416199,8.478385 18.924011,7.973177 18.431824,7.4679689 18.18573,6.7947917 18.18573,5.9536457 18.18573,5.0578127 18.462423,4.3312502 19.015808,3.7739582 19.569193,3.2166667 20.287292,2.9380207 21.170105,2.9380207 z M23.530624,3.0317707 L25.378281,3.0317707 26.522812,6.3520832 C26.613958,6.6177082 26.680365,6.8846354 26.722031,7.1528645 L26.745468,7.1528645 C26.815781,6.8429689 26.889999,6.5734377 26.968124,6.3442707 L28.112656,3.0317707 29.913437,3.0317707 29.913437,8.6333332 28.667343,8.6333332 28.667343,5.2817707 C28.667343,4.9197917 28.682968,4.520052 28.714218,4.082552 L28.682968,4.082552 C28.617863,4.426302 28.559269,4.6736979 28.507187,4.8247395 L27.194687,8.6333332 26.163437,8.6333332 24.827499,4.863802 C24.79104,4.7622395 24.732447,4.5018229 24.651718,4.082552 L24.616562,4.082552 C24.650415,4.6346354 24.667343,5.1190104 24.667343,5.535677 L24.667343,8.6333332 23.530624,8.6333332 z M32.788857,2.9380207 C33.072708,2.9380207 33.327267,2.9751301 33.552528,3.0493488 33.777786,3.1235676 33.968544,3.2296877 34.124794,3.3677082 34.281044,3.5057292 34.400185,3.6730471 34.482216,3.8696613 34.564247,4.0662761 34.605263,4.285677 34.605263,4.5278645 34.605263,4.785677 34.565548,5.0148439 34.486122,5.2153645 34.406693,5.4158854 34.301224,5.598177 34.169716,5.7622395 34.038204,5.926302 33.886513,6.0766926 33.714638,6.2134113 33.542763,6.3501301 33.364376,6.4822917&#xa;33.179482,6.6098957 33.054482,6.6984377 32.934036,6.7863283 32.818153,6.8735676 32.702267,6.9608073 32.600052,7.0467448 32.511513,7.1313801 32.42297,7.2160158 32.352657,7.2986979 32.300575,7.379427 32.248489,7.4601564 32.222446,7.5369792 32.22245,7.6098957 L34.59745,7.6098957 34.59745,8.6333332 30.870886,8.6333332 30.870886,8.2114582 C30.870886,7.9249997 30.919064,7.6678386 31.015417,7.4399738 31.111771,7.2121096 31.232864,7.0076823 31.378698,6.8266926 31.524532,6.6457033 31.684036,6.4855471 31.857214,6.3462238 32.030392,6.2069011 32.195103,6.0812502 32.351357,5.9692707 32.515415,5.8520832 32.659298,5.7401042 32.782997,5.6333332 32.906693,5.5265627 33.01086,5.4204426 33.095497,5.3149738 33.18013,5.2095051 33.243282,5.1027346 33.28495,4.9946613 33.326614,4.8865886 33.34745,4.7713542&#xa;33.34745,4.6489582 33.34745,4.4093752 33.279739,4.2283854 33.144325,4.1059895 33.008907,3.9835939 32.801876,3.9223957 32.523232,3.9223957 32.041458,3.9223957 31.580521,4.113802 31.140417,4.4966145 L31.140417,3.410677 C31.627396,3.0955729 32.176876,2.9380207 32.788857,2.9380207 z" Fill="Black" Height="8.297" Canvas.Left="657.86" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="314.703" Width="29.419">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <TextBlock Height="16.437" Canvas.Left="748.813" TextWrapping="Wrap" Canvas.Top="307.896" Width="47.65" FontSize="9.333" FontWeight="Bold"><Run Language="ru-ru" Text="+ППГС1"/></TextBlock>
+            <TextBlock Height="16.437" Canvas.Left="932" TextWrapping="Wrap" Canvas.Top="307.896" Width="47.65" FontSize="9.333" FontWeight="Bold"><Run Language="ru-ru" Text="+ППГС"/><Run Text="2"/></TextBlock>
+            <TextBlock Height="16.437" Canvas.Left="997.793" TextWrapping="Wrap" Canvas.Top="307.896" Width="47.65" FontSize="9.333" FontWeight="Bold"><Run Text="-"/><Run Language="ru-ru" Text="ППГС"/><Run Text="2"/></TextBlock>
+            <TextBlock Height="16.437" Canvas.Left="821.514" TextWrapping="Wrap" Canvas.Top="307.896" Width="47.65" FontSize="9.333" FontWeight="Bold"><Run Text="-"/><Run Language="ru-ru" Text="ППГС1"/></TextBlock>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy26" Height="21.126" Canvas.Left="947.557" Canvas.Top="412.881" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="1">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="391.557"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy27" Height="18.614" Canvas.Left="940.529" Canvas.Top="388.283" Width="12.333" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="358.672"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy28" Height="21.126" Canvas.Left="1042.338" Canvas.Top="414.056" Width="11.907" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="1">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="330.012"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <Path Data="M791.6,116.08 L934.369,114.833" Height="1.247" Canvas.Left="791.6" Stretch="Fill" Canvas.Top="114.833" Width="142.769" Stroke="Black" StrokeDashArray="1 1"/>
+            <WPFMnemoLibrary_ControlLibrary:_3StateKey x:Name="key_1_Copy29" Height="16.62" Canvas.Left="1044.987" Canvas.Top="391.738" Width="15.666" Template="{StaticResource _3StateKeyControlTemplate_R}" ActivColor="#FF006CFD" RenderTransformOrigin="0.5,0.5" KeyValue="{Binding mH_ms24.ValueState}">
+                <WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="360.47"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </WPFMnemoLibrary_ControlLibrary:_3StateKey.RenderTransform>
+
+            </WPFMnemoLibrary_ControlLibrary:_3StateKey>
+            <Path Data="M588.27259,112.87057 L615.15102,113.31349" Height="1.103" Canvas.Left="345.811" Stretch="Fill" Canvas.Top="114.332" Width="27.69" Stroke="Black" StrokeDashArray="1 1"/>
+            <TextBlock Height="22.5" Canvas.Left="60.774" TextWrapping="Wrap" Canvas.Top="90" Width="26.823" FontWeight="Bold" FontSize="13.333"><Run Language="ru-ru" Text="-12"/></TextBlock>
+            <Path Data="M588.27259,112.87057 L650.90823,113.31416" Height="1.103" Canvas.Left="350" Stretch="Fill" Canvas.Top="355" Width="11.538" Stroke="Black" StrokeDashArray="1 1"/>
+            <Path Data="M588.27259,112.87057 L650.90823,113.31416" Height="1.103" Canvas.Left="400.981" Stretch="Fill" Canvas.Top="354" Width="11.538" Stroke="Black" StrokeDashArray="1 1"/>
+            <Path Data="M588.27259,112.87057 L650.90823,113.31416" Height="1.103" Canvas.Left="507.379" Stretch="Fill" Canvas.Top="401" Width="11.538" Stroke="Black" StrokeDashArray="1 1"/>
+            <Path Data="M588.27259,112.87057 L650.90823,113.31416" Height="1.103" Canvas.Left="582.287" Stretch="Fill" Canvas.Top="400.897" Width="11.538" Stroke="Black" StrokeDashArray="1 1"/>
+            <Path Data="M588.27259,112.87057 L650.90823,113.31416" Height="1.103" Canvas.Left="629.974" Stretch="Fill" Canvas.Top="401" Width="11.538" Stroke="Black" StrokeDashArray="1 1"/>
+            <Path Data="M588.27259,112.87057 L650.90823,113.31416" Height="1.103" Canvas.Left="705.777" Stretch="Fill" Canvas.Top="401.765" Width="11.538" Stroke="Black" StrokeDashArray="1 1"/>
+            <Path Data="M588.27259,112.87057 L650.90823,113.31416" Height="1.103" Canvas.Left="800.217" Stretch="Fill" Canvas.Top="355.772" Width="11.538" Stroke="Black" StrokeDashArray="1 1"/>
+            <Path Data="M588.27259,112.87057 L650.90823,113.31416" Height="1.103" Canvas.Left="851.234" Stretch="Fill" Canvas.Top="356" Width="11.538" Stroke="Black" StrokeDashArray="1 1"/>
+            <Path Data="M588.27259,112.87057 L650.90823,113.31416" Height="1.103" Canvas.Left="964.846" Stretch="Fill" Canvas.Top="357" Width="11.538" Stroke="Black" StrokeDashArray="1 1"/>
+            <Path Data="M588.27259,112.87057 L650.90823,113.31416" Height="1.103" Canvas.Left="1022.509" Stretch="Fill" Canvas.Top="357" Width="11.538" Stroke="Black" StrokeDashArray="1 1"/>
+        </Canvas>
+    </Viewbox>
+</UserControl>

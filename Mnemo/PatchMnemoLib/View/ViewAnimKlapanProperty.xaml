@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="PatchMnemoLib.View.ViewAnimKlapanProperty"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:vm="clr-namespace:PatchMnemoLib.ViewModelMElement"
+               xmlns:libconvert="clr-namespace:MUtilites;assembly=MUtilites"
+             mc:Ignorable="d" 
+             d:DesignHeight="461" d:DesignWidth="452" xmlns:my="clr-namespace:PatchMnemoLib.UtilControl">
+    <UserControl.Resources>
+        <vm:ViewModelAnimKlapan x:Key="VmK"/>
+        <libconvert:ColorToBrushConverter x:Key="convColorToBrush"/>
+    </UserControl.Resources>
+    <Grid DataContext="{Binding Source={StaticResource VmK}}" Height="450" Width="449" Name="root">
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,10,196,0" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="161" />
+        <Label Content="Name" Height="27" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="73" />
+        <TabControl Height="395" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="435">
+            <TabItem Header="Ключ">
+                <Grid>
+                    <ListBox Height="242" HorizontalAlignment="Left" Margin="1,14,0,0" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" DataContext="{Binding Path=GraphicsData}" Name="ListItem">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border Margin="5" BorderThickness="2" BorderBrush="{Binding GPen, 
+                               Converter={StaticResource convColorToBrush}}" Background="{Binding GBrush, Mode=OneWay,
+                               Converter={StaticResource convColorToBrush}}" CornerRadius="4">
+                                    <Grid >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock FontWeight="Bold" Text="{Binding Path=GData}"/>
+
+
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Label Content="FrameElement" Height="28" HorizontalAlignment="Left" Margin="121,302,0,0" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="225,306,0,0" VerticalAlignment="Top" Width="120" Text="{Binding Path=FrameElement, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <StackPanel Height="287" HorizontalAlignment="Left" Margin="207,14,0,0" VerticalAlignment="Top" Width="211"  DataContext="{Binding ElementName=ListItem, Path=SelectedItem}" Name="sp">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Height="23" Name="textBox1" Width="88" Text="{Binding Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Path=GBrush}" />
+                            <Border BorderBrush="Silver" BorderThickness="1" Height="27" Width="30" Background="{Binding GBrush, Mode=OneWay,
+                               Converter={StaticResource convColorToBrush}}" />
+                            <Button Content="Цвет Заливки" Height="23" Width="89" Click="Button_Click" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Height="23" Name="textBox2" Width="88" Text="{Binding Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Path=GPen}"/>
+                            <Border BorderBrush="Silver" BorderThickness="1" Height="25" Width="30" Background="{Binding GPen, Mode=OneWay,
+                               Converter={StaticResource convColorToBrush}}" />
+                            <Button Content="Цвет Пера" Height="23" Width="89" Click="Button_Click_1" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Height="23" Width="90" Text="{Binding Mode=TwoWay, Path=GpenSize, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Height="23" Text="Размер Пера" Width="72" />
+                        </StackPanel>
+
+                        <Label Content="дата фигуры" Height="28" />
+                        <TextBox Height="89" Text="{Binding Mode=TwoWay, Path=GData, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" />
+                        <Button Content="Calc Mov" Height="23" Name="button3" Width="75" Click="button3_Click" />
+                        <CheckBox x:Name="checkBox" Content="Анимировать элемент" IsChecked="{Binding Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Path=IsAnimate}"   />
+                        <TextBox Height="23" x:Name="textBox1_Copy" Text="{Binding Xrotate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,123,0" />
+                        <TextBox Height="23" x:Name="textBox1_Copy1" Text="{Binding Yrotate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,123,0" />
+                    </StackPanel>
+                    <Button Content="Добавить" Height="23" HorizontalAlignment="Left" Margin="19,261,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+                    <Button Content="Удалить" Height="23" HorizontalAlignment="Left" Margin="100,261,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
+                    <Label Content="Left" Height="28" HorizontalAlignment="Left" Margin="10,325,0,0" Name="label1" VerticalAlignment="Top" RenderTransformOrigin="-0.333,1.464" />
+                    <Label Content="Top" Height="28" HorizontalAlignment="Left" Margin="112,329,0,0" Name="label2" VerticalAlignment="Top" RenderTransformOrigin="0.172,1.786" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="57,330,0,0" Name="tbLeft" VerticalAlignment="Top" Width="50" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="146,334,0,0" Name="tbTop" VerticalAlignment="Top" Width="69" />
+                    <Button Content="Сдвинуть" Height="23" HorizontalAlignment="Right" Margin="0,334,129,0" Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" RenderTransformOrigin="0.333,2.174" />
+                    <TextBox x:Name="textBox" TextWrapping="Wrap" Text="{Binding AnimName}" Margin="309,337,0,7"/>
+                    <CheckBox Content="RedrawType" Height="16" HorizontalAlignment="Left" Margin="23,309,0,0" Name="checkBox1" VerticalAlignment="Top" IsChecked="{Binding Path=ReDrawType}" RenderTransformOrigin="0.452,3.312" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Положение">
+
+                <Grid>
+                    <my:UserControlMaket HorizontalAlignment="Left" Margin="0,6,0,0" x:Name="ucM" VerticalAlignment="Top" Height="320" Width="418" />
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Кисти"></TabItem>
+        </TabControl>
+    </Grid>
+
+</UserControl>
+
