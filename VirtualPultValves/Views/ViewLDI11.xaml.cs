@@ -20,11 +20,19 @@ namespace VirtualPultValves.Views
     /// </summary>
     public partial class ViewLDI11 : UserControl
     {
+        //свойство признак включенного лди
+        public static readonly DependencyProperty PowerLDIProperty = DependencyProperty.Register(
+        "IsPowerLDI", typeof(bool), typeof(ViewLDI11), new FrameworkPropertyMetadata(false));
+        public bool IsPowerLDI
+        {
+            get { return (bool)GetValue(PowerLDIProperty); }
+            set { this.SetValue(PowerLDIProperty, value); }
+        }
 
         #region Event
-      
+
         //Измерить
-        
+
         public static readonly RoutedEvent MeasureEvent = EventManager.RegisterRoutedEvent("Measure", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(ViewLDI11));
         public static readonly RoutedEvent EndMeasureEvent = EventManager.RegisterRoutedEvent("EndMeasure", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(ViewLDI11));
         public new event RoutedEventHandler Measure
@@ -91,7 +99,7 @@ namespace VirtualPultValves.Views
         {
            if (cb.IsChecked==true) RaiseEvent(new RoutedEventArgs(EndMeasureEvent));
         }
-        private void slb(object Sender, MouseButtonEventArgs E)
+      /*  private void slb(object Sender, MouseButtonEventArgs E)
         {
           if (cb.IsChecked==true)  RaiseEvent(new RoutedEventArgs(StartingEvent));
         }
@@ -109,18 +117,26 @@ namespace VirtualPultValves.Views
         {
             RaiseEvent(new RoutedEventArgs(SwitchoffEvent));
         }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        */
+      /*  private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
             
-        }
+        }*/
 
         private void cb_Click(object sender, RoutedEventArgs e)
         {
-            if (cb.IsChecked==true) RaiseEvent(new RoutedEventArgs(SwitchonEvent)); else
-                RaiseEvent(new RoutedEventArgs(SwitchoffEvent));
+            if (cb.IsChecked == true)
+            {
+                RaiseEvent(new RoutedEventArgs(SwitchonEvent));
+                IsPowerLDI = true;
+            }
+            else
+            {
 
-           // if (cb.IsChecked == true) Debug.WriteLine("VKL"); else Debug.WriteLine("---");
+
+                RaiseEvent(new RoutedEventArgs(SwitchoffEvent));
+                IsPowerLDI = false;
+            }
         }
 
     }
