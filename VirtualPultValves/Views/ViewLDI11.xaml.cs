@@ -84,21 +84,21 @@ namespace VirtualPultValves.Views
 
         private void mlb(object Sender, MouseButtonEventArgs E)
         {
-            RaiseEvent(new RoutedEventArgs(MeasureEvent));
+           if (cb.IsChecked==true) RaiseEvent(new RoutedEventArgs(MeasureEvent));
         }
 
         private void mlbu(object Sender, MouseButtonEventArgs E)
         {
-            RaiseEvent(new RoutedEventArgs(EndMeasureEvent));
+           if (cb.IsChecked==true) RaiseEvent(new RoutedEventArgs(EndMeasureEvent));
         }
         private void slb(object Sender, MouseButtonEventArgs E)
         {
-            RaiseEvent(new RoutedEventArgs(StartingEvent));
+          if (cb.IsChecked==true)  RaiseEvent(new RoutedEventArgs(StartingEvent));
         }
 
         private void slbu(object Sender, MouseButtonEventArgs E)
         {
-            RaiseEvent(new RoutedEventArgs(EndStartingEvent));
+          if (cb.IsChecked==true)  RaiseEvent(new RoutedEventArgs(EndStartingEvent));
         }
 
         private void TurnOn(object Sender, MouseButtonEventArgs E)
