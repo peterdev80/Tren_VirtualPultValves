@@ -39,7 +39,7 @@
         <Viewbox x:Name="r4" DataContext="{Binding Source={StaticResource model4}}">
             <my:MnemoCanvas Width="1440" Height="1000" Visibility="Visible" x:Name="MC4"   />
         </Viewbox>
-        <Viewbox x:Name="uprav" Visibility="Collapsed">
+        <Viewbox x:Name="uprav">
             <Canvas Width="1440" Height="900" Visibility="Visible" x:Name="UR" DataContext="{Binding Mode=OneWay, Source={StaticResource vShowModel}}"   >
                 <Rectangle x:Name="bx1" Fill="#FF5A5A61" Stroke="Black" Width="566" Opacity="0.7" Height="1130" Canvas.Left="-265" Visibility="{Binding K1.ValueState, Converter={StaticResource BitToVisibleConverter}}"/>
                 <Rectangle x:Name="bx2" Fill="#FF5A5A61" Stroke="Black" Width="1070" Opacity="0.7" Height="1130" Canvas.Left="645" Visibility="{Binding K2.ValueState, Converter={StaticResource BitToVisibleConverter}}"/>

@@ -1,5 +1,4 @@
-﻿using fmslapi.Bindings.WPF;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,8 +8,7 @@ using System.Windows;
 
 namespace ValueModel.BaseModel
 {
-    [UseNamedVariablesContext(typeof(IGetVariablesContextName))]
-    public abstract class VarClass : DependencyObject, IGetVariablesContextName//, INotifyPropertyChanged
+    public abstract class VarClass : DependencyObject//, INotifyPropertyChanged
     {
 
         private string _VarName = String.Empty;
@@ -37,11 +35,6 @@ namespace ValueModel.BaseModel
             }
         }
         public string VarID
-        {
-            get { return _VarID; }
-        }
-
-        string IGetVariablesContextName.Name
         {
             get { return _VarID; }
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ArrayOfRoute xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ArrayOfRoute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Route>
     <Name>H_pt10</Name>
     <NamePen>
@@ -211,6 +211,18 @@
       <StringItem>
         <Value>kl171_78</Value>
       </StringItem>
+      <StringItem>
+        <Value>vl309_11</Value>
+      </StringItem>
+      <StringItem>
+        <Value>kl312_89</Value>
+      </StringItem>
+      <StringItem>
+        <Value>l310_229</Value>
+      </StringItem>
+      <StringItem>
+        <Value>kl311_245</Value>
+      </StringItem>
     </NameGraphics>
     <ValueName>__PitSSWP_1</ValueName>
     <TypRoute>0</TypRoute>
@@ -229,13 +241,7 @@
     </NamePen>
     <NameGraphics>
       <StringItem>
-        <Value>l39_30</Value>
-      </StringItem>
-      <StringItem>
-        <Value>l93_53</Value>
-      </StringItem>
-      <StringItem>
-        <Value>kl97_53</Value>
+        <Value>kl40_14</Value>
       </StringItem>
     </NameGraphics>
     <ValueName>__PitSSWP_1</ValueName>
@@ -313,17 +319,7 @@
         <Value>pBlue</Value>
       </StringItem>
     </NamePen>
-    <NameGraphics>
-      <StringItem>
-        <Value>l93_57</Value>
-      </StringItem>
-      <StringItem>
-        <Value>kl95_13</Value>
-      </StringItem>
-      <StringItem>
-        <Value>kl95_40</Value>
-      </StringItem>
-    </NameGraphics>
+    <NameGraphics />
     <ValueName>__PitSSWP_1</ValueName>
     <TypRoute>0</TypRoute>
     <ValueType>BitStruct</ValueType>
@@ -339,17 +335,7 @@
         <Value>pBlue</Value>
       </StringItem>
     </NamePen>
-    <NameGraphics>
-      <StringItem>
-        <Value>l91_29</Value>
-      </StringItem>
-      <StringItem>
-        <Value>kl94_0</Value>
-      </StringItem>
-      <StringItem>
-        <Value>kl96_60</Value>
-      </StringItem>
-    </NameGraphics>
+    <NameGraphics />
     <ValueName>__PitSSWP_1</ValueName>
     <TypRoute>0</TypRoute>
     <ValueType>BitStruct</ValueType>
@@ -625,6 +611,9 @@
       <StringItem>
         <Value>kl136_106</Value>
       </StringItem>
+      <StringItem>
+        <Value>kl133_107</Value>
+      </StringItem>
     </NameGraphics>
     <ValueName>__PitSSWP_1</ValueName>
     <TypRoute>0</TypRoute>
@@ -647,9 +636,6 @@
       </StringItem>
       <StringItem>
         <Value>kl56_29</Value>
-      </StringItem>
-      <StringItem>
-        <Value>kl133_107</Value>
       </StringItem>
     </NameGraphics>
     <ValueName>__PitSSWP_1</ValueName>
@@ -687,11 +673,7 @@
         <Value>pBlue</Value>
       </StringItem>
     </NamePen>
-    <NameGraphics>
-      <StringItem>
-        <Value>kl276_269</Value>
-      </StringItem>
-    </NameGraphics>
+    <NameGraphics />
     <ValueName>__PitSSWP_1</ValueName>
     <TypRoute>0</TypRoute>
     <ValueType>BitStruct</ValueType>
@@ -767,9 +749,6 @@
     </NamePen>
     <NameGraphics>
       <StringItem>
-        <Value>kl55_9</Value>
-      </StringItem>
-      <StringItem>
         <Value>l61_42</Value>
       </StringItem>
       <StringItem>
@@ -792,6 +771,9 @@
       </StringItem>
       <StringItem>
         <Value>kl419_224</Value>
+      </StringItem>
+      <StringItem>
+        <Value>kl186_54</Value>
       </StringItem>
     </NameGraphics>
     <ValueName>__PitSSWP_1</ValueName>
@@ -1667,5 +1649,167 @@
     <TypRoute>0</TypRoute>
     <ValueType>BitStruct</ValueType>
     <ValuePos>17</ValuePos>
+  </Route>
+  <Route>
+    <Name>Hi_35</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pBlue</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>l39_30</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__PitSSWP_2</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>18</ValuePos>
+  </Route>
+  <Route>
+    <Name>Hi34_H_DZG</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pBlue</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>l91_29</Value>
+      </StringItem>
+      <StringItem>
+        <Value>kl96_60</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__PitSSWP_2</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>19</ValuePos>
+  </Route>
+  <Route>
+    <Name>Hi33_PA_5</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pen1</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pen1</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>kl94_0</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__PitSSWP_2</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>20</ValuePos>
+  </Route>
+  <Route>
+    <Name>Hi32_H_DK_1</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pBlue</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>l93_57</Value>
+      </StringItem>
+      <StringItem>
+        <Value>kl95_40</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__PitSSWP_2</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>21</ValuePos>
+  </Route>
+  <Route>
+    <Name>Hi31_SSWP_DK1</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pen1</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pen1</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>kl95_13</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__PitSSWP_2</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>22</ValuePos>
+  </Route>
+  <Route>
+    <Name>Hi14_H_DK2</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pBlue</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>l93_53</Value>
+      </StringItem>
+      <StringItem>
+        <Value>kl97_53</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__PitSSWP_2</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>23</ValuePos>
+  </Route>
+  <Route>
+    <Name>Hi13_SSWP_DK2</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pen1</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pen1</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>kl94_76</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__PitSSWP_2</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>24</ValuePos>
+  </Route>
+  <Route>
+    <Name>LIS</Name>
+    <NamePen />
+    <NameGraphics>
+      <StringItem>
+        <Value>lkl420_28</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__PIT_SSWP</ValueName>
+    <TypRoute>2</TypRoute>
+    <ValueType>Float</ValueType>
+    <ValuePos>0</ValuePos>
   </Route>
 </ArrayOfRoute>

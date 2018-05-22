@@ -214,6 +214,9 @@
     <Compile Include="View\ViewSios.xaml.cs">
       <DependentUpon>ViewSios.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ViewSKGS_MC.xaml.cs">
+      <DependentUpon>ViewSKGS_MC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ViewSUSl.xaml.cs">
       <DependentUpon>ViewSUSl.xaml</DependentUpon>
     </Compile>
@@ -376,6 +379,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\ViewSios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewSKGS_MC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

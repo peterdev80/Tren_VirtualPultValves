@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ArrayOfVariableM xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ArrayOfVariableM xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <VariableM>
     <VarID>Mnemo</VarID>
     <VarName>__SEP_3</VarName>
@@ -2799,5 +2799,85 @@
       <int>1</int>
     </Mask>
     <Remark>минуты </Remark>
+  </VariableM>
+  <VariableM>
+    <VarID>Mnemo</VarID>
+    <VarName>__PIT_SSWP</VarName>
+    <Typ>Float</Typ>
+    <Mask>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+    </Mask>
+    <Remark>показания ЛИЗ</Remark>
+  </VariableM>
+  <VariableM>
+    <VarID>Mnemo</VarID>
+    <VarName>__URO_6</VarName>
+    <Typ>BitStuct</Typ>
+    <Mask>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+    </Mask>
+    <Remark>дополняем разделение</Remark>
   </VariableM>
 </ArrayOfVariableM>

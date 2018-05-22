@@ -78,8 +78,7 @@ namespace VirtualPultValves.Model
 
         public LinkInpu()
         {
-
-            var m = Manager.GetAPI("VirtKlapany", new Guid("{0BDF2636-CF7F-42D3-AF39-7801EDAFEFD5}"));
+            var m = Manager.Current ?? (Manager.Current = Manager.GetAPI("VirtKlapany", new Guid("{0BDF2636-CF7F-42D3-AF39-7801EDAFEFD5}")));
 
             _chan = m.JoinChannel("IO_KLAPANS", null);
             _chan.SyncReceive = true;

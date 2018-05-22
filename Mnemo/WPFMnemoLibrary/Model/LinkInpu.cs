@@ -44,7 +44,6 @@ namespace WPFMnemoLibrary.Model
             _chan = m.JoinChannel("IO_MNEMO", null);
             _chan.SyncReceive = true;
 
-
             _dt = new DispatcherTimer(TimeSpan.FromMilliseconds(50), DispatcherPriority.Normal, OnTimer, Dispatcher.CurrentDispatcher);
             _dt.Start();
         }
@@ -133,9 +132,23 @@ namespace WPFMnemoLibrary.Model
                 ((BitIntVar)ViewModelVariableList.Instance.GetVariable("__PR12_MC_2").VarM).VarBitInt = (Int32)rd.ReadUInt32();
                 ((FloatVar)ViewModelVariableList.Instance.GetVariable("__PR12_MC_3").VarM).VaRStatefloat = rd.ReadSingle();
                 //Выбор схемы
-                ((IntVar)ViewModelVariableList.Instance.GetVariable("__select_MFL").VarM).VaRStateInt = (Int32)rd.ReadUInt32();
+                rd.ReadUInt32();
                 //PR12
                 ((FloatVar)ViewModelVariableList.Instance.GetVariable("__PR12_MC_4").VarM).VaRStatefloat = rd.ReadSingle();
+                //std
+                ((BitIntVar)ViewModelVariableList.Instance.GetVariable("__STD_1").VarM).VarBitInt = (Int32)rd.ReadUInt32();
+                ((BitIntVar)ViewModelVariableList.Instance.GetVariable("__STD_2").VarM).VarBitInt = (Int32)rd.ReadUInt32();
+                ((BitIntVar)ViewModelVariableList.Instance.GetVariable("__MNEMO_RES_52").VarM).VarBitInt = (Int32)rd.ReadUInt32();
+                //sr
+                ((BitIntVar)ViewModelVariableList.Instance.GetVariable("__URO_1").VarM).VarBitInt = (Int32)rd.ReadUInt32();
+                ((BitIntVar)ViewModelVariableList.Instance.GetVariable("__URO_2").VarM).VarBitInt = (Int32)rd.ReadUInt32();
+                ((BitIntVar)ViewModelVariableList.Instance.GetVariable("__URO_3").VarM).VarBitInt = (Int32)rd.ReadUInt32();
+                ((BitIntVar)ViewModelVariableList.Instance.GetVariable("__URO_4").VarM).VarBitInt = (Int32)rd.ReadUInt32();
+                ((BitIntVar)ViewModelVariableList.Instance.GetVariable("__URO_5").VarM).VarBitInt = (Int32)rd.ReadUInt32();
+                //PitSSwp add
+                ((FloatVar)ViewModelVariableList.Instance.GetVariable("__PIT_SSWP").VarM).VaRStatefloat = rd.ReadSingle();
+                //sr add
+                ((BitIntVar)ViewModelVariableList.Instance.GetVariable("__URO_6").VarM).VarBitInt = (Int32)rd.ReadUInt32();
             }
         }
     }

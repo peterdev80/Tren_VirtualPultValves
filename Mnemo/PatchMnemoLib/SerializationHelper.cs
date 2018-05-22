@@ -40,6 +40,7 @@ namespace PatchMnemoLib
          XmlArrayItem(typeof(PropertyarcBalon)),
          XmlArrayItem(typeof(PropertyVoltmetr)),
          XmlArrayItem(typeof(PropertyColorInd)),
+             XmlArrayItem(typeof(PropertyLispKlapanGraphics)),
             XmlArrayItem(typeof(PropertyAnimKlapanGraphics))]
          public PropertiesGraphicsBase[] Graphics
          {

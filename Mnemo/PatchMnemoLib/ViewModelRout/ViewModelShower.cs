@@ -317,6 +317,25 @@ namespace PatchMnemoLib.ViewModelRout
                         gp.Progress = ValueFloat;
                     }
                 }
+                if (gpe.TVisual == 122)
+                {
+                    ViewModelLispKlapan gp = (ViewModelLispKlapan)gpe;
+                    gp.TransformValue = ValueInt;
+                    if (ValueType == "Int")
+                    {
+                        gp.TransformValue = ValueInt;
+
+                    }
+                    if (ValueType == "Double")
+                    {
+                        gp.TransformValue = ValueDouble;
+                    }
+
+                    if (ValueType == "Float")
+                    {
+                        gp.TransformValue = ValueFloat;
+                    }
+                }
                 if (gpe.TVisual == 7)
                 {
                     ViewModelColorInd gp = (ViewModelColorInd)gpe;

@@ -1,9 +1,9 @@
-﻿using fmslapi.Bindings.WPF;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using fmslapi;
 using ValueModel.BaseType;
 
 
@@ -25,7 +25,7 @@ namespace ValueModel.BaseModelCommand
         //    if (pos != -1) { }
 
            
-            var v = VariablesDataContext.GetNamedContext(varID).VariablesChannel.GetBoolVariable(VarName);
+            var v = Manager.Current.VariablesChannel.GetBoolVariable(VarName);
             v.AutoSend = true;
             v.Value = val;
         }
@@ -37,7 +37,7 @@ namespace ValueModel.BaseModelCommand
             /*  var VaRSend = VHClass.Instance.GetVHPC(varID).VHCurr.GetIntVariable(VarName);
               VaRSend.AutoSend = true;
               VaRSend.Value = i;*/
-            var v = VariablesDataContext.GetNamedContext(varID).VariablesChannel.GetIntVariable(VarName);
+            var v = Manager.Current.VariablesChannel.GetIntVariable(VarName);
             v.AutoSend = true;
             v.Value = i;
         }
@@ -48,7 +48,7 @@ namespace ValueModel.BaseModelCommand
             /*  var VaRSend = VHClass.Instance.GetVHPC(varID).VHCurr.GetKVariable(VarName);
               VaRSend.AutoSend = true;
               VaRSend.Set();*/
-            var v = VariablesDataContext.GetNamedContext(varID).VariablesChannel.GetKVariable(VarName);
+            var v = Manager.Current.VariablesChannel.GetKVariable(VarName);
             v.AutoSend = true;
             v.Set();
         }
@@ -60,7 +60,7 @@ namespace ValueModel.BaseModelCommand
             /* var VaRSend = VHClass.Instance.GetVHPC(varID).VHCurr.GetIntVariable(VarName);
              VaRSend.AutoSend = true;
              VaRSend.Value = (int)_val;*/
-            var v = VariablesDataContext.GetNamedContext(varID).VariablesChannel.GetIntVariable(VarName);
+            var v = Manager.Current.VariablesChannel.GetIntVariable(VarName);
             v.AutoSend = true;
             v.Value = (int)_val;
         }

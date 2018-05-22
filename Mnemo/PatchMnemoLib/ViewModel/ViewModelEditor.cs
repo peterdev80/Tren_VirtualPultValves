@@ -73,7 +73,7 @@ namespace PatchMnemoLib.ViewModel
 
 
         #region Command
-        private RelayCommand _cmdNewPatch, _cmdEditPatch, _cmdVariableVar, _cmdroutedit, _cmdNewDp, _cmdNewKlapan, _cmdNewValueLabel, _cmdNewarcBalon;
+        private RelayCommand _cmdNewPatch, _cmdEditPatch, _cmdVariableVar, _cmdroutedit, _cmdNewDp, _cmdNewKlapan, _cmdNewValueLabel, _cmdNewarcBalon, _cmdNewLispKlapan;
         private RelayCommand _CopyPacte, _delete, _save;
         private RelayCommand _cmdNewVoltmetr, _cmdNewColorIndicator;
         private RelayCommand _cmdNewAnimKlapan;
@@ -103,6 +103,7 @@ namespace PatchMnemoLib.ViewModel
                             vmr.DeleteElementfromShower(MC.SelectedGraphics.Name);
                             vmr.DeleteElementfromRoute(MC.SelectedGraphics.Name);
                             MC.SelectedViewModelGraphics.DeleteElement();
+                            MC.SelectedGraphics = null;
                         }
 
                     });
@@ -164,6 +165,12 @@ namespace PatchMnemoLib.ViewModel
                                         vmp1 = new ViewModelAnimKlapan(MC);
                                         break;
 
+                                    }
+                                case 122:
+                                    {
+                                        vmp = (ViewModelLispKlapan)MC.SelectedViewModelGraphics;
+                                        vmp1 = new ViewModelLispKlapan(MC);
+                                        break;
                                     }
 
                             }
@@ -284,6 +291,24 @@ namespace PatchMnemoLib.ViewModel
                     }
 );
                 return _cmdNewKlapan;
+            }
+        }
+        public ICommand cmdNewLispKlapan
+        {
+            get
+            {
+                if (_cmdNewLispKlapan == null)
+                    _cmdNewLispKlapan = new RelayCommand(param =>
+                    {
+                        ViewModelLispKlapan vmp = new ViewModelLispKlapan(MC);
+                        Window wnd = new Window();
+                        wnd.Height = 470;
+                        wnd.Width = 300;
+                        wnd.Content = new View.ViewLispProperty(vmp);
+                        wnd.Show();
+                    }
+);
+                return _cmdNewLispKlapan;
             }
         }
         public ICommand cmdNewDp
@@ -409,7 +434,7 @@ namespace PatchMnemoLib.ViewModel
             if (MC.SelectedGraphics != null)
             {
                 Window wnd = new Window();
-
+              
                 switch (MC.SelectedGraphics.TVisual)
                 {
                     case 1:
@@ -448,6 +473,12 @@ namespace PatchMnemoLib.ViewModel
                             ViewModelAnimKlapan dp = (ViewModelAnimKlapan)MC.SelectedViewModelGraphics;
                             wnd.Content = new View.ViewAnimKlapanProperty(dp);
                             break;
+                        }
+                    case 122:
+                        {
+                            ViewModelLispKlapan dp = (ViewModelLispKlapan)MC.SelectedViewModelGraphics;
+                            wnd.Content = new View.ViewLispProperty(dp); break;
+
                         }
 
 

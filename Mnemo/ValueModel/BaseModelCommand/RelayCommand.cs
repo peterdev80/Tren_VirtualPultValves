@@ -60,7 +60,7 @@ namespace ValueModel.BaseModelCommand
 
         public void Execute(object parameter)
         {
-            if (_exprx != null)
+            if (_exprx != null && this is MnemoRelayCommand)
                 _exprx(new Action(() => _execute(parameter)));
             else
                 _execute(parameter);
@@ -76,5 +76,10 @@ namespace ValueModel.BaseModelCommand
 
             _exprx = Prx;
         }
+    }
+
+    public class MnemoRelayCommand : RelayCommand
+    {
+        public MnemoRelayCommand(Action<object> execute) : base(execute) { }
     }
 }

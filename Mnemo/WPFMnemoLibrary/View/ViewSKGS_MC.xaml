@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="WPFMnemoLibrary.View.ViewSKGS_MC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFMnemoLibrary.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+              xmlns:my="clr-namespace:PatchMnemoLib;assembly=PatchMnemoLib"
+             xmlns:vm="clr-namespace:PatchMnemoLib.ViewModel;assembly=PatchMnemoLib">
+
+        <UserControl.Resources>
+            <vm:ViewModelEditor x:Key="model1" RShema="pack://application:,,,/ResourceFiles;component/Data/SerializationSKGS_TMA_MC.xml" RRout="pack://application:,,,/ResourceFiles;component/Data/RoutedSKGS_TMA_MC.xml" />
+        <vm:ViewModelEditor x:Key="model2" RShema="pack://application:,,,/ResourceFiles;component/Data/SerializationSKGS_ST_MC.xml" RRout="pack://application:,,,/ResourceFiles;component/Data/RoutedSKGS_ST_MC.xml" />
+    </UserControl.Resources>
+        <Grid x:Name="root" >
+            <Viewbox x:Name="Vb1" DataContext="{Binding Source={StaticResource model1}}">
+                 <my:MnemoCanvas Width="1929" Height="980" Visibility="Visible" Name="MC_TMA"   />
+            </Viewbox>
+        <Viewbox x:Name="Vb2" DataContext="{Binding Source={StaticResource model2}}">
+            <my:MnemoCanvas Width="1929" Height="980" Visibility="Visible" Name="MC_ST"   />
+        </Viewbox>
+    </Grid>
+
+  
+</UserControl>

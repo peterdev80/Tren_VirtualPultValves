@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ArrayOfRoute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<ArrayOfRoute xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Route>
     <Name>АК3</Name>
     <NamePen>
@@ -318,21 +318,6 @@
     </NamePen>
     <NameGraphics>
       <StringItem>
-        <Value>vl277_271</Value>
-      </StringItem>
-      <StringItem>
-        <Value>kl109_106</Value>
-      </StringItem>
-      <StringItem>
-        <Value>l13_3</Value>
-      </StringItem>
-      <StringItem>
-        <Value>l15_5</Value>
-      </StringItem>
-      <StringItem>
-        <Value>kl179_124</Value>
-      </StringItem>
-      <StringItem>
         <Value>vl275_200</Value>
       </StringItem>
       <StringItem>
@@ -456,9 +441,6 @@
       </StringItem>
     </NamePen>
     <NameGraphics>
-      <StringItem>
-        <Value>kl180_43</Value>
-      </StringItem>
       <StringItem>
         <Value>l12_11</Value>
       </StringItem>
@@ -1187,6 +1169,9 @@
       <StringItem>
         <Value>kl313_0</Value>
       </StringItem>
+      <StringItem>
+        <Value>vl372_168</Value>
+      </StringItem>
     </NameGraphics>
     <ValueName>__STD_1</ValueName>
     <TypRoute>0</TypRoute>
@@ -1310,9 +1295,6 @@
       </StringItem>
       <StringItem>
         <Value>kl156_150</Value>
-      </StringItem>
-      <StringItem>
-        <Value>kl165_161</Value>
       </StringItem>
     </NameGraphics>
     <ValueName>__STD_2</ValueName>
@@ -2633,5 +2615,195 @@
     <TypRoute>0</TypRoute>
     <ValueType>BitStruct</ValueType>
     <ValuePos>4</ValuePos>
+  </Route>
+  <Route>
+    <Name>p66</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pRed</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>vl322_307</Value>
+      </StringItem>
+      <StringItem>
+        <Value>vl318_192</Value>
+      </StringItem>
+      <StringItem>
+        <Value>vl311_96</Value>
+      </StringItem>
+      <StringItem>
+        <Value>vl360_314</Value>
+      </StringItem>
+      <StringItem>
+        <Value>vl359_328</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__URO_6</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>23</ValuePos>
+  </Route>
+  <Route>
+    <Name>p65</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pRed</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>vl323_195</Value>
+      </StringItem>
+      <StringItem>
+        <Value>vl361_116</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__URO_6</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>24</ValuePos>
+  </Route>
+  <Route>
+    <Name>m5</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pBlue</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>vl306_228</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__URO_6</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>20</ValuePos>
+  </Route>
+  <Route>
+    <Name>p1.1</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pRed</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>vl321_230</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__MNEMO_RES_5</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>14</ValuePos>
+  </Route>
+  <Route>
+    <Name>p21.4</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pRed</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>vl364_31</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__MNEMO_RES_5</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>13</ValuePos>
+  </Route>
+  <Route>
+    <Name>m83</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pBlue</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>vl320_99</Value>
+      </StringItem>
+      <StringItem>
+        <Value>vl319_119</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__MNEMO_RES_5</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>15</ValuePos>
+  </Route>
+  <Route>
+    <Name>m85</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pBlue</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>vl378_281</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__MNEMO_RES_5</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>16</ValuePos>
+  </Route>
+  <Route>
+    <Name>KR_L1</Name>
+    <NamePen>
+      <StringItem>
+        <Value>pBlack</Value>
+      </StringItem>
+      <StringItem>
+        <Value>pBlue</Value>
+      </StringItem>
+    </NamePen>
+    <NameGraphics>
+      <StringItem>
+        <Value>l15_5</Value>
+      </StringItem>
+      <StringItem>
+        <Value>kl179_124</Value>
+      </StringItem>
+      <StringItem>
+        <Value>vl277_271</Value>
+      </StringItem>
+      <StringItem>
+        <Value>kl109_106</Value>
+      </StringItem>
+      <StringItem>
+        <Value>l13_3</Value>
+      </StringItem>
+    </NameGraphics>
+    <ValueName>__STD_1</ValueName>
+    <TypRoute>0</TypRoute>
+    <ValueType>BitStruct</ValueType>
+    <ValuePos>31</ValuePos>
   </Route>
 </ArrayOfRoute>

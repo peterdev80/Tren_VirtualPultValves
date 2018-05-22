@@ -85,6 +85,8 @@
     <Compile Include="Model\InpuColorIndicator.cs" />
     <Compile Include="Model\Klapan.cs" />
     <Compile Include="Model\KlapanItem.cs" />
+    <Compile Include="Model\LispKlapan.cs" />
+    <Compile Include="Model\LispKlapanItem.cs" />
     <Compile Include="Model\ProgressVolt.cs" />
     <Compile Include="Model\shower.cs" />
     <Compile Include="Model\UpravRotate.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="PropertyAnimKlapanGraphics.cs" />
     <Compile Include="PropertyarcBalon.cs" />
     <Compile Include="PropertyColorInd.cs" />
+    <Compile Include="PropertyLispKlapanGraphics.cs" />
     <Compile Include="PropertyVoltmetr.cs" />
     <Compile Include="ShowShemeClass.cs" />
     <Compile Include="UtilControl\KlapanItemVoltmetr.cs" />
@@ -137,6 +140,7 @@
     <Compile Include="ViewModelMElement\ViewModelarcBalon.cs" />
     <Compile Include="ViewModelMElement\ViewModelColorInd.cs" />
     <Compile Include="ViewModelMElement\ViewModelKlapan.cs" />
+    <Compile Include="ViewModelMElement\ViewModelLispKlapan.cs" />
     <Compile Include="ViewModelMElement\ViewModelProgressVolt.cs" />
     <Compile Include="ViewModelMElement\ViewModelValueLabel.cs" />
     <Compile Include="ViewModelRout\ViewModelShower.cs" />
@@ -172,6 +176,9 @@
     </Compile>
     <Compile Include="View\ViewLabelPropety.xaml.cs">
       <DependentUpon>ViewLabelPropety.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewLispProperty.xaml.cs">
+      <DependentUpon>ViewLispProperty.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ViewPatchProperty.xaml.cs">
       <DependentUpon>ViewPatchProperty.xaml</DependentUpon>
@@ -229,6 +236,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ViewLabelPropety.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewLispProperty.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

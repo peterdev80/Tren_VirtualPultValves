@@ -6,9 +6,7 @@
              mc:Ignorable="d" 
                xmlns:vm="clr-namespace:VirtualPultValves.ViewModel"
              xmlns:vv="clr-namespace:VirtualPultValves.Views"
-             d:DesignHeight="300" d:DesignWidth="300"
-             xmlns:lapi="clr-namespace:fmslapi.WPF;assembly=fmslapi"
-             xmlns:wvlapi="clr-namespace:fmslapi.WPF.Variables;assembly=fmslapi">
+             d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources >
         <vm:ViewModel_Main x:Key="vMain"/>
         <Style x:Key="MenuButton"  TargetType="{x:Type Button}" >
@@ -122,10 +120,6 @@
         </DataTemplate>
     </UserControl.Resources>
     <Grid >
-        <lapi:APIHost ComponentID="5B747427-1471-42CB-8953-F7730311B6D5" ID="Neptun" EndPoint="Neptun" >
-            <wvlapi:VariablesManager Key="PeterNeptun" />
-            <wvlapi:VariablesManager Key="PeterFMSControl" />
-        </lapi:APIHost>
         <DockPanel>
 
 

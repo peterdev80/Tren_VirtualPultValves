@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("WPFMnemoLibrary")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Авиаком")]
+[assembly: AssemblyCompany("Your Company Name")]
 [assembly: AssemblyProduct("WPFMnemoLibrary")]
-[assembly: AssemblyCopyright("Авиаком © 2018")]
+[assembly: AssemblyCopyright("Copyright © Your Company Name 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

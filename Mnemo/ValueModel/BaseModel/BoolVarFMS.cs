@@ -8,7 +8,6 @@ using ValueModel.BaseType;
 
 namespace ValueModel.BaseModel
 {
-    [UseNamedVariablesContext("inpudc")]
     public class BoolVarFMS : VarClass
     {
         public BoolVarFMS(string varID)

@@ -384,6 +384,8 @@ namespace PatchMnemoLib.ViewModel
                             new ViewModelColorInd(this, (InpuColorIndicator)el); break;
                        
                 case 8: new ViewModelAnimKlapan(this, (AnimKlapan)el); break;
+                    case 122:
+                        new ViewModelLispKlapan(this, (LispKlapan)el); break;
 
 
                 }
@@ -506,6 +508,7 @@ namespace PatchMnemoLib.ViewModel
                     if (el.TVisual == 5) _AllLabel.Add(el);
                     if (el.TVisual == 6) _AllLabel.Add(el);
                     if (el.TVisual == 7) _AllLabel.Add(el);
+                    if (el.TVisual == 122) _AllLabel.Add(el);
                 }
                 return _AllLabel;
 

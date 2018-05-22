@@ -6,8 +6,6 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Data;
 using VirtualPultValves.DataAccess;
-using fmslapi.WPF.Variables;
-using ut = fmslapi.UpdateTriggers;
 
 namespace VirtualPultValves.Model
 {
@@ -16,8 +14,6 @@ namespace VirtualPultValves.Model
       private string _tn = String.Empty;
       private Brush _PassiveColor;
       private int _ts = 12;
-
-      private static ut.TriggerBase Trigger;
 
         #region Public Property
       public int TextSize
