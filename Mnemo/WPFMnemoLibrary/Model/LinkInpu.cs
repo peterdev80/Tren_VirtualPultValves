@@ -21,7 +21,7 @@ namespace WPFMnemoLibrary.Model
 
         private static volatile LinkInpu instance;
         //private readonly SyncChannel _rcvchannel;
-        private readonly IChannel _chan;
+        private readonly SyncChannel _chan;
         private readonly DispatcherTimer _dt;
         public static LinkInpu Instance
         {
@@ -41,8 +41,7 @@ namespace WPFMnemoLibrary.Model
           
             var m = Manager.GetAPI("VirtMnemo", new Guid("{2F28CEAF-6867-4396-81C8-5A937B4B74CC}"));
 
-            _chan = m.JoinChannel("IO_MNEMO", null);
-            _chan.SyncReceive = true;
+            _chan = new SyncChannel(m.JoinChannel("IO_MNEMO", null));
 
             _dt = new DispatcherTimer(TimeSpan.FromMilliseconds(50), DispatcherPriority.Normal, OnTimer, Dispatcher.CurrentDispatcher);
             _dt.Start();

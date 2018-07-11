@@ -170,7 +170,8 @@ namespace VirtualPultValves.ViewModel
         {
             get 
             { 
-                return new RelayCommand(p => WagoIO.Instance.SetSendVar(false, 12, 6)); 
+         
+			   return new RelayCommand(p => WagoIO.Instance.SetSendVar(false, 15, 1)); 
             }
         }
 
@@ -178,7 +179,7 @@ namespace VirtualPultValves.ViewModel
         {
             get 
             { 
-                return new RelayCommand(p => WagoIO.Instance.SetSendVar(true, 12, 6)); 
+                return new RelayCommand(p => WagoIO.Instance.SetSendVar(true, 15, 1)); 
             }
         }
         #endregion

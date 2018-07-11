@@ -18,7 +18,7 @@ namespace VirtualPultValves.Model
         const int LOUTVAR = 7;
         private static volatile LinkInpu instance;
         //private readonly SyncChannel _rcvchannel;
-        private readonly IChannel _chan;
+        private readonly SyncChannel _chan;
         private readonly DispatcherTimer _dt;
         public static LinkInpu Instance
         {
@@ -80,8 +80,7 @@ namespace VirtualPultValves.Model
         {
             var m = Manager.Current ?? (Manager.Current = Manager.GetAPI("VirtKlapany", new Guid("{0BDF2636-CF7F-42D3-AF39-7801EDAFEFD5}")));
 
-            _chan = m.JoinChannel("IO_KLAPANS", null);
-            _chan.SyncReceive = true;
+            _chan = new SyncChannel(m.JoinChannel("IO_KLAPANS", null));
             //_rcvchannel = new SyncChannel(m.JoinChannel("MODEL_TO_KLAPANY", null));
 
             _dt = new DispatcherTimer(TimeSpan.FromMilliseconds(50), DispatcherPriority.Normal, OnTimer, Dispatcher.CurrentDispatcher);

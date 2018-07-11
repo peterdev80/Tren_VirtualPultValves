@@ -86,13 +86,8 @@ namespace VirtualPultValves.Model
         
         private void OnTimer(object sender, EventArgs e)
         {
-            while (_rcvchannel.HasMessages)
+            while (_rcvchannel.Receive(out var _, out var m))
             {
-                var m = _rcvchannel.TryGetMessage();
-
-                if (m == null)
-                    break;
-
                 var rd = new BinaryReader(new MemoryStream(m.Data));
 
                 if (rd.ReadUInt32() != 0x71AF5A13)
@@ -182,13 +177,13 @@ namespace VirtualPultValves.Model
                     }
                 }
 
-                if (v6.HasFlag(BitPosValue.key13))
+               /* if (v6.HasFlag(BitPosValue.key13))
                 {
                     for (var i = 0; i <= 23; i++)
                         ListTC[i].ValTC = true;
 
                     CentOgon.ValueState = false;
-                }
+                }*/
                 CentOgon.ValueState=v1.HasFlag(BitPosValue.key9);
                 DejRegim1.ValueState = v4.HasFlag(BitPosValue.key15);
                 DejRegim2.ValueState = v4.HasFlag(BitPosValue.key16);
